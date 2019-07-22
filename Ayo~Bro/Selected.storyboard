@@ -29,7 +29,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dRL-3U-Sve"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="찜" id="n6u-ZZ-ljz"/>
+                    <tabBarItem key="tabBarItem" title="찜" image="star (2)" id="n6u-ZZ-ljz"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Fo-4j-uIb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -37,4 +37,7 @@
             <point key="canvasLocation" x="155" y="169"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="star (2)" width="32" height="32"/>
+    </resources>
 </document>

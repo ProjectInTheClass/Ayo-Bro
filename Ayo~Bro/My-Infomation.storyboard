@@ -29,7 +29,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="njs-tX-sn9"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="내정보" id="29d-ga-lnZ"/>
+                    <tabBarItem key="tabBarItem" title="내정보" image="profile (3)" id="29d-ga-lnZ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ojT-KD-b3Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -37,4 +37,7 @@
             <point key="canvasLocation" x="96" y="143"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="profile (3)" width="21.333333969116211" height="21.333333969116211"/>
+    </resources>
 </document>

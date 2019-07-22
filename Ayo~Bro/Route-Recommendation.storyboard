@@ -29,7 +29,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="5ft-KN-5Jo"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="경로 최적화" id="Kc2-kb-5gw"/>
+                    <tabBarItem key="tabBarItem" title="경로 최적화" image="distance" id="Kc2-kb-5gw"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aj2-12-CIB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -37,4 +37,7 @@
             <point key="canvasLocation" x="93" y="142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="distance" width="32" height="32"/>
+    </resources>
 </document>
