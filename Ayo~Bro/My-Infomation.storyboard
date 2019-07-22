@@ -159,7 +159,7 @@
         <image name="Image" width="478" height="532"/>
         <image name="camera" width="93" height="91"/>
         <image name="profile (3)" width="21.333333969116211" height="21.333333969116211"/>
-        <image name="내정보" width="478" height="570"/>
+        <image name="내정보" width="478" height="562"/>
         <image name="로그인" width="1125" height="664"/>
     </resources>
     <inferredMetricsTieBreakers>
