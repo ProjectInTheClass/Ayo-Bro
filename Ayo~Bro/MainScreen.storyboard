@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--홈-->
         <scene sceneID="RcU-OA-DKy">
             <objects>
                 <viewController id="0kr-Ag-DHS" sceneMemberID="viewController">
@@ -29,7 +29,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="mil-f3-XYG"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="eka-IS-5WZ"/>
+                    <tabBarItem key="tabBarItem" title="홈" id="eka-IS-5WZ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uUb-ze-vcZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
