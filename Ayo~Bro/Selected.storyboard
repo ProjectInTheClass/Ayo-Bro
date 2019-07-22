@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--찜-->
+        <!--my 장소-->
         <scene sceneID="zEN-tT-fpZ">
             <objects>
                 <viewController id="aW2-H2-Nc7" sceneMemberID="viewController">
@@ -29,7 +29,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dRL-3U-Sve"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="찜" image="star (2)" id="n6u-ZZ-ljz"/>
+                    <tabBarItem key="tabBarItem" title="my 장소" image="star (2)" id="n6u-ZZ-ljz"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Fo-4j-uIb" userLabel="First Responder" sceneMemberID="firstResponder"/>

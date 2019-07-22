@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--경로 최적화-->
+        <!--코스-->
         <scene sceneID="r0v-4T-C5K">
             <objects>
                 <viewController id="ZuP-K0-AAI" sceneMemberID="viewController">
@@ -29,7 +29,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="5ft-KN-5Jo"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="경로 최적화" image="distance" id="Kc2-kb-5gw"/>
+                    <tabBarItem key="tabBarItem" title="코스" image="distance" id="Kc2-kb-5gw"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aj2-12-CIB" userLabel="First Responder" sceneMemberID="firstResponder"/>
