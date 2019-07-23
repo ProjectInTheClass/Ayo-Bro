@@ -208,6 +208,7 @@
         <image name="map___" width="1522" height="572"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Bkw-AA-zqq"/>
         <segue reference="H24-gc-aud"/>
     </inferredMetricsTieBreakers>
 </document>
