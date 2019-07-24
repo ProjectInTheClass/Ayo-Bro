@@ -69,3 +69,14 @@ let JeJuIsland_LocationInfo = LocationInfo(LocationInfo: ["제주도" : ["제주
 //    }
 //
 //}
+
+
+class Area {
+    var BigScope:String
+    var SmallScope:String
+    
+    init() {
+        self.BigScope="대구분"
+        self.SmallScope="소구분"
+    }
+}

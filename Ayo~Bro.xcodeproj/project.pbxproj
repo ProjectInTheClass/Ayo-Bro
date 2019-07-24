@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D420ADF922E875270090FEE5 /* LocalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D420ADF822E875270090FEE5 /* LocalTableViewController.swift */; };
 		D45A5E4422E59F2600D75C7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A5E4322E59F2600D75C7F /* AppDelegate.swift */; };
 		D45A5E4622E59F2600D75C7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A5E4522E59F2600D75C7F /* ViewController.swift */; };
 		D45A5E4922E59F2600D75C7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D45A5E4722E59F2600D75C7F /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D420ADF822E875270090FEE5 /* LocalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalTableViewController.swift; sourceTree = "<group>"; };
 		D45A5E4022E59F2600D75C7F /* Ayo~Bro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ayo~Bro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D45A5E4322E59F2600D75C7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D45A5E4522E59F2600D75C7F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				D45A5E4522E59F2600D75C7F /* ViewController.swift */,
 				D45A5E4722E59F2600D75C7F /* Main.storyboard */,
 				D45A5E5522E5A05000D75C7F /* MainScreen.storyboard */,
+				D420ADF822E875270090FEE5 /* LocalTableViewController.swift */,
 				D45A5E5922E5A0F000D75C7F /* Selected.storyboard */,
 				D45A5E5722E5A0CC00D75C7F /* Route-Recommendation.storyboard */,
 				D45A5E5B22E5A10600D75C7F /* My-Infomation.storyboard */,
@@ -197,6 +200,7 @@
 				D4A3219522E7096D003384BB /* RegionTableViewController.swift in Sources */,
 				D4A3219322E6EA85003384BB /* Models.swift in Sources */,
 				D45A5E4422E59F2600D75C7F /* AppDelegate.swift in Sources */,
+				D420ADF922E875270090FEE5 /* LocalTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
