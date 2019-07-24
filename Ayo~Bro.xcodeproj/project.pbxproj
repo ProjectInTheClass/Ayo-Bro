@@ -18,6 +18,8 @@
 		D45A5E5C22E5A10600D75C7F /* My-Infomation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D45A5E5B22E5A10600D75C7F /* My-Infomation.storyboard */; };
 		D4A3218C22E6D5A4003384BB /* PilotPlant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A3218A22E6D596003384BB /* PilotPlant.framework */; };
 		D4A3218D22E6D5A4003384BB /* PilotPlant.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4A3218A22E6D596003384BB /* PilotPlant.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D4A3219322E6EA85003384BB /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A3219222E6EA85003384BB /* Models.swift */; };
+		D4A3219522E7096D003384BB /* RegionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A3219422E7096D003384BB /* RegionTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,6 +49,8 @@
 		D45A5E5922E5A0F000D75C7F /* Selected.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Selected.storyboard; sourceTree = "<group>"; };
 		D45A5E5B22E5A10600D75C7F /* My-Infomation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "My-Infomation.storyboard"; sourceTree = "<group>"; };
 		D4A3218A22E6D596003384BB /* PilotPlant.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PilotPlant.framework; sourceTree = "<group>"; };
+		D4A3219222E6EA85003384BB /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		D4A3219422E7096D003384BB /* RegionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +68,10 @@
 		D45A5E3722E59F2600D75C7F = {
 			isa = PBXGroup;
 			children = (
+				D4A3219422E7096D003384BB /* RegionTableViewController.swift */,
 				D45A5E4222E59F2600D75C7F /* Ayo~Bro */,
 				D45A5E4122E59F2600D75C7F /* Products */,
+				D4A3219122E6E8D2003384BB /* Models */,
 				D4A3218922E6D596003384BB /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -101,6 +107,14 @@
 				D4A3218A22E6D596003384BB /* PilotPlant.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D4A3219122E6E8D2003384BB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D4A3219222E6EA85003384BB /* Models.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +194,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D45A5E4622E59F2600D75C7F /* ViewController.swift in Sources */,
+				D4A3219522E7096D003384BB /* RegionTableViewController.swift in Sources */,
+				D4A3219322E6EA85003384BB /* Models.swift in Sources */,
 				D45A5E4422E59F2600D75C7F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,6 +343,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -348,6 +365,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
