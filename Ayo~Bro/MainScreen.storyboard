@@ -77,7 +77,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="w5R-HH-wpr" kind="presentation" id="71p-K7-d2y"/>
+                                    <segue destination="5EV-99-oe5" kind="presentation" id="v8g-Bq-VZQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -90,73 +90,60 @@
             <point key="canvasLocation" x="1686.9565217391305" y="148.66071428571428"/>
         </scene>
         <!--대구분-->
-        <scene sceneID="aBi-Jw-N47">
+        <scene sceneID="NnA-o9-Fd8">
             <objects>
-                <tableViewController id="zph-va-Fg9" customClass="LocalTableViewController" customModule="Ayo_Bro" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="C22-U5-6PT">
+                <tableViewController id="FAx-nv-a2g" customClass="LocalTableViewController" customModule="Ayo_Bro" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="YFU-e5-Aec">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyTableCell" textLabel="tjq-5R-QTs" style="IBUITableViewCellStyleDefault" id="ySb-Eb-tVD">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyTableCell" id="XVs-X7-Zin">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ySb-Eb-tVD" id="mGT-qu-SLZ">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XVs-X7-Zin" id="BYk-TO-TzP">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="서울" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tjq-5R-QTs">
-                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
-                        <sections/>
                         <connections>
-                            <outlet property="dataSource" destination="zph-va-Fg9" id="RP3-OI-3Ka"/>
-                            <outlet property="delegate" destination="zph-va-Fg9" id="LbR-Xd-bwC"/>
+                            <outlet property="dataSource" destination="FAx-nv-a2g" id="jm0-NS-GZU"/>
+                            <outlet property="delegate" destination="FAx-nv-a2g" id="cC4-BP-EBo"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="대구분" id="We6-oX-jt1">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="yI1-MD-VZl">
+                    <navigationItem key="navigationItem" title="대구분" id="bPn-KK-LWG">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="B00-XB-fOT">
                             <connections>
-                                <action selector="Cancel:" destination="zph-va-Fg9" id="c8H-d2-mJh"/>
+                                <action selector="Cancel:" destination="FAx-nv-a2g" id="6gh-54-CgH"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="QjP-W0-glk">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="v8d-3y-eTy">
                             <connections>
-                                <action selector="Done:" destination="zph-va-Fg9" id="dZN-7R-db4"/>
+                                <action selector="Done:" destination="FAx-nv-a2g" id="mhM-0L-Xcy"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="seoul" destination="mGT-qu-SLZ" id="kqy-Tv-Bzr"/>
-                    </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YGu-Q6-2ks" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7QY-db-XdB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3561" y="191"/>
+            <point key="canvasLocation" x="3436" y="149"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="rIq-Vc-J9K">
+        <scene sceneID="4Dw-tj-ulF">
             <objects>
-                <navigationController id="w5R-HH-wpr" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LSW-Ze-WUz">
+                <navigationController id="5EV-99-oe5" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mxF-KE-w8Y">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="zph-va-Fg9" kind="relationship" relationship="rootViewController" id="HQH-H7-5De"/>
+                        <segue destination="FAx-nv-a2g" kind="relationship" relationship="rootViewController" id="T7b-QG-Ezl"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gEG-99-VY3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rfZ-ab-eUL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2826" y="178"/>
+            <point key="canvasLocation" x="2513" y="149"/>
         </scene>
         <!--홈-->
         <scene sceneID="dlq-0H-9BZ">

@@ -8,16 +8,25 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class LocalTableViewController: UITableViewController {
     let BigArea = ["서울","부산","대구"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+
     
+    @IBAction func Cancel(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     // MARK: - Table view data source
-    
+
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -32,30 +41,6 @@ class TableViewController: UITableViewController {
         cell.textLabel?.text = BigArea[indexPath.row]
         return cell
     }
-    
-}
-
-class LocalTableViewController: UITableViewController {
-
-    
-    @IBAction func Cancel(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    @IBAction func Done(_ sender: Any) {
-        
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
-
-    // MARK: - Table view data source
-
 /*    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
@@ -111,14 +96,22 @@ class LocalTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        // Get the new view controller using segue.destination.
+//        // Pass the selected object to the new view controller.
+//        if segue.identifier = "서울" as String as String as String {
+//            if let destination=segue.destination as ? ViewController{
+//                if let song = sender as? String{
+//                    destination.MyTableCell=song("서울")
+//                }
+//            }
+//
+//        }
+//    }
+   
 
 }

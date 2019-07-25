@@ -21,6 +21,7 @@
 		D4A3218D22E6D5A4003384BB /* PilotPlant.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4A3218A22E6D596003384BB /* PilotPlant.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D4A3219322E6EA85003384BB /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A3219222E6EA85003384BB /* Models.swift */; };
 		D4A3219522E7096D003384BB /* RegionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A3219422E7096D003384BB /* RegionTableViewController.swift */; };
+		D4A826E122E967EF00BE4519 /* PilotPlant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A826E022E967EF00BE4519 /* PilotPlant.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,6 +54,7 @@
 		D4A3218A22E6D596003384BB /* PilotPlant.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PilotPlant.framework; sourceTree = "<group>"; };
 		D4A3219222E6EA85003384BB /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		D4A3219422E7096D003384BB /* RegionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionTableViewController.swift; sourceTree = "<group>"; };
+		D4A826E022E967EF00BE4519 /* PilotPlant.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PilotPlant.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4A3218C22E6D5A4003384BB /* PilotPlant.framework in Frameworks */,
+				D4A826E122E967EF00BE4519 /* PilotPlant.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +110,7 @@
 		D4A3218922E6D596003384BB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D4A826E022E967EF00BE4519 /* PilotPlant.framework */,
 				D4A3218A22E6D596003384BB /* PilotPlant.framework */,
 			);
 			name = Frameworks;
