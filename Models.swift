@@ -13,11 +13,11 @@ struct Destination {
 }
 
 let Busan_Destination = Destination(Destination: [1 : ["광안리 해수욕장", "부산역", "순대국밥"],
-                                       2 : ["밀면","부산여행지1","부산여행지2"]
+                                                  2 : ["밀면","부산여행지1","부산여행지2"]
     ])
 
 let JejuIsland_Destination = Destination(Destination: [1 : ["제주도여행지1","제주도여행지2","제주도여행지3"],
-                                            2 : ["제주도여행지4","제주도여행지5","제주도여행지6"]
+                                                       2 : ["제주도여행지4","제주도여행지5","제주도여행지6"]
     ])
 
 
