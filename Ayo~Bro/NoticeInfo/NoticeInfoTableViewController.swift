@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class InfoTableViewController : UITableViewController{
+class NoticeInfoTableViewController : UITableViewController{
     
     var selectedIndex:Int = 0
     var ListNotice:NoticeList?

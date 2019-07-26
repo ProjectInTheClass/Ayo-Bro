@@ -8,7 +8,7 @@
 import UIKit
 import Foundation
 
-class InfoDetailViewController : UIViewController {
+class NoticeInfoDetailViewController : UIViewController {
     
     var ListNotice:NoticeList?
     

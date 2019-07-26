@@ -8,7 +8,7 @@
 import UIKit
 import Foundation
 
-class InfoTableViewCell : UITableViewCell {
+class NoticeInfoTableViewCell : UITableViewCell {
     @IBOutlet weak var labelTop:UILabel?
     @IBOutlet weak var labelMid:UILabel?
     @IBOutlet weak var labelBottom:UILabel?

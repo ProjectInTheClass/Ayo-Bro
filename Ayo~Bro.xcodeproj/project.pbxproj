@@ -20,10 +20,11 @@
 		D4A3219322E6EA85003384BB /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A3219222E6EA85003384BB /* Models.swift */; };
 		D4A3224F22EAD2FF003384BB /* SelectedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A3224E22EAD2FF003384BB /* SelectedTableViewController.swift */; };
 		D4A3225122EAD376003384BB /* SelectedDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A3225022EAD376003384BB /* SelectedDetailTableViewController.swift */; };
-		E477312A22EAD95E0072C057 /* InfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E477312922EAD95E0072C057 /* InfoTableViewController.swift */; };
+		E477312A22EAD95E0072C057 /* NoticeInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E477312922EAD95E0072C057 /* NoticeInfoTableViewController.swift */; };
 		E477312C22EAD9630072C057 /* NoticeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E477312B22EAD9630072C057 /* NoticeList.swift */; };
-		E477313222EAF8530072C057 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E477313122EAF8530072C057 /* InfoTableViewCell.swift */; };
-		E477313522EB0DBD0072C057 /* InfoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E477313422EB0DBD0072C057 /* InfoDetailViewController.swift */; };
+		E477313222EAF8530072C057 /* NoticeInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E477313122EAF8530072C057 /* NoticeInfoTableViewCell.swift */; };
+		E477313522EB0DBD0072C057 /* NoticeInfoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E477313422EB0DBD0072C057 /* NoticeInfoDetailViewController.swift */; };
+		E477313822EB13220072C057 /* MyInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E477313722EB13220072C057 /* MyInfoTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,10 +56,11 @@
 		D4A3219222E6EA85003384BB /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		D4A3224E22EAD2FF003384BB /* SelectedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedTableViewController.swift; sourceTree = "<group>"; };
 		D4A3225022EAD376003384BB /* SelectedDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedDetailTableViewController.swift; sourceTree = "<group>"; };
-		E477312922EAD95E0072C057 /* InfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTableViewController.swift; sourceTree = "<group>"; };
+		E477312922EAD95E0072C057 /* NoticeInfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticeInfoTableViewController.swift; sourceTree = "<group>"; };
 		E477312B22EAD9630072C057 /* NoticeList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticeList.swift; sourceTree = "<group>"; };
-		E477313122EAF8530072C057 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
-		E477313422EB0DBD0072C057 /* InfoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDetailViewController.swift; sourceTree = "<group>"; };
+		E477313122EAF8530072C057 /* NoticeInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeInfoTableViewCell.swift; sourceTree = "<group>"; };
+		E477313422EB0DBD0072C057 /* NoticeInfoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeInfoDetailViewController.swift; sourceTree = "<group>"; };
+		E477313722EB13220072C057 /* MyInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 		D45A5E4222E59F2600D75C7F /* Ayo~Bro */ = {
 			isa = PBXGroup;
 			children = (
+				E477313622EB13050072C057 /* MyInfo */,
 				E477313322EAF8E80072C057 /* NoticeInfo */,
 				D4A3224E22EAD2FF003384BB /* SelectedTableViewController.swift */,
 				D4A3225022EAD376003384BB /* SelectedDetailTableViewController.swift */,
@@ -129,12 +132,20 @@
 		E477313322EAF8E80072C057 /* NoticeInfo */ = {
 			isa = PBXGroup;
 			children = (
-				E477312922EAD95E0072C057 /* InfoTableViewController.swift */,
-				E477313422EB0DBD0072C057 /* InfoDetailViewController.swift */,
+				E477312922EAD95E0072C057 /* NoticeInfoTableViewController.swift */,
+				E477313422EB0DBD0072C057 /* NoticeInfoDetailViewController.swift */,
 				E477312B22EAD9630072C057 /* NoticeList.swift */,
-				E477313122EAF8530072C057 /* InfoTableViewCell.swift */,
+				E477313122EAF8530072C057 /* NoticeInfoTableViewCell.swift */,
 			);
 			path = NoticeInfo;
+			sourceTree = "<group>";
+		};
+		E477313622EB13050072C057 /* MyInfo */ = {
+			isa = PBXGroup;
+			children = (
+				E477313722EB13220072C057 /* MyInfoTableViewController.swift */,
+			);
+			path = MyInfo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,12 +227,13 @@
 				D4A3224F22EAD2FF003384BB /* SelectedTableViewController.swift in Sources */,
 				E477312C22EAD9630072C057 /* NoticeList.swift in Sources */,
 				D45A5E4622E59F2600D75C7F /* ViewController.swift in Sources */,
-				E477313222EAF8530072C057 /* InfoTableViewCell.swift in Sources */,
+				E477313222EAF8530072C057 /* NoticeInfoTableViewCell.swift in Sources */,
 				D4A3219322E6EA85003384BB /* Models.swift in Sources */,
 				D45A5E4422E59F2600D75C7F /* AppDelegate.swift in Sources */,
 				D420ADF922E875270090FEE5 /* LocalTableViewController.swift in Sources */,
-				E477313522EB0DBD0072C057 /* InfoDetailViewController.swift in Sources */,
-				E477312A22EAD95E0072C057 /* InfoTableViewController.swift in Sources */,
+				E477313522EB0DBD0072C057 /* NoticeInfoDetailViewController.swift in Sources */,
+				E477313822EB13220072C057 /* MyInfoTableViewController.swift in Sources */,
+				E477312A22EAD95E0072C057 /* NoticeInfoTableViewController.swift in Sources */,
 				D4A3225122EAD376003384BB /* SelectedDetailTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
