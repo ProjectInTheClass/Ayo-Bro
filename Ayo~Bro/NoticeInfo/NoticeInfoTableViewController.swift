@@ -36,7 +36,7 @@ class NoticeInfoTableViewController : UITableViewController{
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UpdateCell")! as! InfoTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "UpdateCell")! as! NoticeInfoTableViewCell
         
         cell.labelTop?.text = arrUpdate[indexPath.row].smallInfo
         cell.labelMid?.text = arrUpdate[indexPath.row].bigInfo
@@ -51,7 +51,7 @@ class NoticeInfoTableViewController : UITableViewController{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let cell = sender as! UITableViewCell
         let indexPath = tableView.indexPath(for: cell)!
-        let vc = segue.destination as! InfoDetailViewController
+        let vc = segue.destination as! NoticeInfoDetailViewController
         
         vc.ListNotice = arrUpdate[indexPath.row]
     }
