@@ -5,11 +5,34 @@
 //  Created by GW_19 on 25/07/2019.
 //  Copyright © 2019 GW_19. All rights reserved.
 //
+struct ScheduleByDay {
+    let dayInfo:String
+    let destinations:Array<String>
+}
+
+struct ScheculeByRegion {
+    let regionName:String
+    let schedules:Array<ScheduleByDay>
+}
+let seoul_Day1 = ScheduleByDay(dayInfo: "1일차", destinations: [ "서울여행지1", "서울여행지2", "서울여행지3" ])
+let seoul_Day2 = ScheduleByDay(dayInfo: "2일차", destinations: [ "서울여행지4", "서울여행지5", "서울여행지6" ])
+let seoul_Day3 = ScheduleByDay(dayInfo: "3일차", destinations: [ "서울여행지7", "서울여행지8", "서울여행지9" ])
+let seoulEntireSchedule = ScheculeByRegion(regionName: "서울", schedules: [ seoul_Day1, seoul_Day2, seoul_Day3 ])
+
+let jeju_Day1 = ScheduleByDay(dayInfo: "1일차", destinations: [ "제주여행지1", "제주여행지2", "제주여행지3" ])
+let jeju_Day2 = ScheduleByDay(dayInfo: "2일차", destinations: [ "제주여행지4", "제주여행지5", "제주여행지6" ])
+let jeju_Day3 = ScheduleByDay(dayInfo: "3일차", destinations: [ "제주여행지7", "제주여행지8", "제주여행지9" ])
+let jejuEntireSchedule = ScheculeByRegion(regionName: "제주", schedules: [ jeju_Day1, jeju_Day2, jeju_Day3 ])
+
+let busan_Day1 = ScheduleByDay(dayInfo: "1일차", destinations: [ "부산여행지1", "부산여행지2", "부산여행지3" ])
+let busan_Day2 = ScheduleByDay(dayInfo: "2일차", destinations: [ "부산여행지4", "부산여행지5", "부산여행지6" ])
+let busan_Day3 = ScheduleByDay(dayInfo: "3일차", destinations: [ "부산여행지7", "부산여행지8", "부산여행지9" ])
+let busanEntireSchedule = ScheculeByRegion(regionName: "부산", schedules: [ busan_Day1, busan_Day2, busan_Day3 ])
 
 import UIKit
 import Foundation
 
-class DetailTestTableViewController: UITableViewController {
+class SelectedDetailTableViewController: UITableViewController {
     
     //    @IBOutlet var lableCity:UILabel? = nil
     //    @IBOutlet var lableNation:UILabel? = nil
@@ -27,25 +50,47 @@ class DetailTestTableViewController: UITableViewController {
                                     "2일차","여행지4","여행지5","여행지6",
                                     "3일차","여행지7","여행지8","여행지9"]]
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return seoulEntireSchedule.schedules.count
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return seoulEntireSchedule.schedules[section].dayInfo
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        view.tintColor = UIColor.blue
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = UIColor.white
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return DetailArray[Region!]!.count
+        return seoulEntireSchedule.schedules[section].destinations.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyTableCell", for: indexPath)
-        let Destination = DetailArray[Region!]!
-        cell.textLabel?.text = Destination[indexPath.row]
+        let daySchedules:Array<ScheduleByDay>
+        if Region == "서울" {
+            daySchedules = seoulEntireSchedule.schedules
+        }
+        else if Region == "제주" {
+            daySchedules = jejuEntireSchedule.schedules
+        }
+        else if Region == "부산"{
+            daySchedules = busanEntireSchedule.schedules
+        }
+        else{
+            daySchedules = [ seoul_Day1, seoul_Day2, seoul_Day3 ]
+        }
+        let daySchedule = daySchedules[indexPath.section]
+        cell.textLabel?.text = daySchedule.destinations[indexPath.row]
         return cell
     }
     

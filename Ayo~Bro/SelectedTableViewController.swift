@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TestTableViewController: UITableViewController {
+class SelectedTableViewController: UITableViewController {
     
     var selectedIndex:Int = 0
     
@@ -45,7 +45,7 @@ class TestTableViewController: UITableViewController {
         
         let cell = sender as! UITableViewCell
         let indexPath = tableView.indexPath(for: cell)!
-        let vc = segue.destination as! DetailTestTableViewController
+        let vc = segue.destination as! SelectedDetailTableViewController
         
         //        vc.SelectedArray = Array[indexPath.row]
         vc.Region = Array[indexPath.row]

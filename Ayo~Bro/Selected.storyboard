@@ -84,12 +84,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Fo-4j-uIb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="284" y="-271"/>
+            <point key="canvasLocation" x="1057" y="-284"/>
         </scene>
         <!--찜-->
         <scene sceneID="BoF-SA-XBD">
             <objects>
-                <tableViewController id="O0Q-Z8-Wy2" customClass="TestTableViewController" customModule="Ayo_Bro" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="O0Q-Z8-Wy2" customClass="SelectedTableViewController" customModule="Ayo_Bro" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="igs-fg-pUt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -120,10 +120,10 @@
             </objects>
             <point key="canvasLocation" x="1025" y="435"/>
         </scene>
-        <!--Detail Test Table View Controller-->
+        <!--Selected Detail Table View Controller-->
         <scene sceneID="tTc-US-HNz">
             <objects>
-                <tableViewController id="P9d-vF-puG" customClass="DetailTestTableViewController" customModule="Ayo_Bro" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="P9d-vF-puG" customClass="SelectedDetailTableViewController" customModule="Ayo_Bro" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2Sb-ee-RUr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -285,7 +285,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HRA-ny-evn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1024.6376811594205" y="-271.20535714285711"/>
+            <point key="canvasLocation" x="1799" y="-284"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Llb-yy-6FI">
