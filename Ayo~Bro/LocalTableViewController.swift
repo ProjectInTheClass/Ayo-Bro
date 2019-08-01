@@ -9,22 +9,19 @@
 import UIKit
 
 class LocalTableViewController: UITableViewController {
-    let BigArea = ["서울","부산","대구"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        regionRegion.selectedIndex = indexPath.row
     }
 
-    
     @IBAction func Cancel(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -34,11 +31,11 @@ class LocalTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return BigArea.count
+        return regionRegion.regionRegion.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyTableCell", for: indexPath)
-        cell.textLabel?.text = BigArea[indexPath.row]
+        cell.textLabel?.text = regionRegion.regionRegion[indexPath.row].region
         return cell
     }
 /*    override func numberOfSections(in tableView: UITableView) -> Int {

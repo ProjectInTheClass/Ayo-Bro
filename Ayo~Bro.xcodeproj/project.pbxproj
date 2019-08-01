@@ -27,8 +27,8 @@
 		D4D714CF22F01B1B006552B0 /* DetailRegionInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D714CE22F01B1B006552B0 /* DetailRegionInfoViewController.swift */; };
 		D4D714D122F02089006552B0 /* RegionInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D714D022F02089006552B0 /* RegionInfoTableViewController.swift */; };
 		D4D714D322F02BA2006552B0 /* RighImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D714D222F02BA2006552B0 /* RighImageTableViewCell.swift */; };
+		D4D714D522F17674006552B0 /* FindTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D714D422F17674006552B0 /* FindTableViewController.swift */; };
 		E477312A22EAD95E0072C057 /* NoticeInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E477312922EAD95E0072C057 /* NoticeInfoTableViewController.swift */; };
-		E477312C22EAD9630072C057 /* NoticeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E477312B22EAD9630072C057 /* NoticeList.swift */; };
 		E477313222EAF8530072C057 /* NoticeInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E477313122EAF8530072C057 /* NoticeInfoTableViewCell.swift */; };
 		E477313522EB0DBD0072C057 /* NoticeInfoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E477313422EB0DBD0072C057 /* NoticeInfoDetailViewController.swift */; };
 		E477313822EB13220072C057 /* MyInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E477313722EB13220072C057 /* MyInfoTableViewController.swift */; };
@@ -70,8 +70,8 @@
 		D4D714CE22F01B1B006552B0 /* DetailRegionInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRegionInfoViewController.swift; sourceTree = "<group>"; };
 		D4D714D022F02089006552B0 /* RegionInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionInfoTableViewController.swift; sourceTree = "<group>"; };
 		D4D714D222F02BA2006552B0 /* RighImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RighImageTableViewCell.swift; sourceTree = "<group>"; };
+		D4D714D422F17674006552B0 /* FindTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindTableViewController.swift; sourceTree = "<group>"; };
 		E477312922EAD95E0072C057 /* NoticeInfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticeInfoTableViewController.swift; sourceTree = "<group>"; };
-		E477312B22EAD9630072C057 /* NoticeList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticeList.swift; sourceTree = "<group>"; };
 		E477313122EAF8530072C057 /* NoticeInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeInfoTableViewCell.swift; sourceTree = "<group>"; };
 		E477313422EB0DBD0072C057 /* NoticeInfoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeInfoDetailViewController.swift; sourceTree = "<group>"; };
 		E477313722EB13220072C057 /* MyInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoTableViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +129,7 @@
 				D4D714CE22F01B1B006552B0 /* DetailRegionInfoViewController.swift */,
 				D4D714D022F02089006552B0 /* RegionInfoTableViewController.swift */,
 				D4D714D222F02BA2006552B0 /* RighImageTableViewCell.swift */,
+				D4D714D422F17674006552B0 /* FindTableViewController.swift */,
 				D4A3220722E9773C003384BB /* New Group */,
 				D45A5E4322E59F2600D75C7F /* AppDelegate.swift */,
 				D45A5E4722E59F2600D75C7F /* Main.storyboard */,
@@ -163,7 +164,6 @@
 			children = (
 				E477312922EAD95E0072C057 /* NoticeInfoTableViewController.swift */,
 				E477313422EB0DBD0072C057 /* NoticeInfoDetailViewController.swift */,
-				E477312B22EAD9630072C057 /* NoticeList.swift */,
 				E477313122EAF8530072C057 /* NoticeInfoTableViewCell.swift */,
 			);
 			path = NoticeInfo;
@@ -255,9 +255,9 @@
 			files = (
 				D4A3224F22EAD2FF003384BB /* SelectedTableViewController.swift in Sources */,
 				D44533DA22F0194A005CAF17 /* DataViewController.swift in Sources */,
-				E477312C22EAD9630072C057 /* NoticeList.swift in Sources */,
 				D45A5E4622E59F2600D75C7F /* ViewController.swift in Sources */,
 				E477313222EAF8530072C057 /* NoticeInfoTableViewCell.swift in Sources */,
+				D4D714D522F17674006552B0 /* FindTableViewController.swift in Sources */,
 				D4A3219322E6EA85003384BB /* Models.swift in Sources */,
 				D45A5E4422E59F2600D75C7F /* AppDelegate.swift in Sources */,
 				D420ADF922E875270090FEE5 /* LocalTableViewController.swift in Sources */,

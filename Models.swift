@@ -7,6 +7,44 @@
 //
 
 import Foundation
+import UIKit
+
+struct ScheduleByDay {
+    let dayInfo:String
+    let destinations:Array<String>
+}
+
+struct ScheculeByRegion {
+    let regionName:String
+    let schedules:Array<ScheduleByDay>
+}
+let seoul_Day1 = ScheduleByDay(dayInfo: "1일차", destinations: [ "서울여행지1", "서울여행지2", "서울여행지3" ])
+let seoul_Day2 = ScheduleByDay(dayInfo: "2일차", destinations: [ "서울여행지4", "서울여행지5", "서울여행지6" ])
+let seoul_Day3 = ScheduleByDay(dayInfo: "3일차", destinations: [ "서울여행지7", "서울여행지8", "서울여행지9" ])
+let seoulEntireSchedule = ScheculeByRegion(regionName: "서울", schedules: [ seoul_Day1, seoul_Day2, seoul_Day3 ])
+
+let jeju_Day1 = ScheduleByDay(dayInfo: "1일차", destinations: [ "제주여행지1", "제주여행지2", "제주여행지3" ])
+let jeju_Day2 = ScheduleByDay(dayInfo: "2일차", destinations: [ "제주여행지4", "제주여행지5", "제주여행지6" ])
+let jeju_Day3 = ScheduleByDay(dayInfo: "3일차", destinations: [ "제주여행지7", "제주여행지8", "제주여행지9" ])
+let jejuEntireSchedule = ScheculeByRegion(regionName: "제주", schedules: [ jeju_Day1, jeju_Day2, jeju_Day3 ])
+
+let busan_Day1 = ScheduleByDay(dayInfo: "1일차", destinations: [ "부산여행지1", "부산여행지2", "부산여행지3" ])
+let busan_Day2 = ScheduleByDay(dayInfo: "2일차", destinations: [ "부산여행지4", "부산여행지5", "부산여행지6" ])
+let busan_Day3 = ScheduleByDay(dayInfo: "3일차", destinations: [ "부산여행지7", "부산여행지8", "부산여행지9" ])
+let busanEntireSchedule = ScheculeByRegion(regionName: "부산", schedules: [ busan_Day1, busan_Day2, busan_Day3 ])
+
+
+struct NoticeList {
+    let smallInfo:String
+    let bigInfo:String
+    let dateInfo:String
+    let textInfo:String
+}
+
+let update1 = NoticeList(smallInfo: "업데이트", bigInfo: "업데이트 안내 !", dateInfo: "2019.06.19",textInfo: "기존의 UI를 변경하였습니다.")
+let update2 = NoticeList(smallInfo: "공지사항", bigInfo: "공지사항 안내 !", dateInfo: "2019.07.21",textInfo: "정기점검 일정 안내 : 07.23일 15시 ~ 17시")
+let update3 = NoticeList(smallInfo: "업데이트", bigInfo: "업데이트 안내 !", dateInfo: "2019.07.25", textInfo: "새로운 기능을 추가하였습니다.")
+let arrUpdate:Array<NoticeList> = [update3, update2,update1]
 
 struct Destination {
     let Destination:[Int: [String]]
@@ -38,37 +76,6 @@ let Gyungnam_Ulsan_LocationInfo = LocationInfo(LocationInfo: ["경남/울산" : 
 let Jeonbuk_LocationInfo = LocationInfo(LocationInfo: ["전북" : ["전북전체","부안/김제","정읍/고창","임실/장수","무주/진안","군산/익산","전주/완주"]])
 let Jeonnam_Gwangju_LocationInfo = LocationInfo(LocationInfo: ["전남/광주" :["전남/광주전체","광주","여수/순천/광양","목포/신안/무안","해남/진도/완도","보성/고흥","영광/함평/장성","담양/곡성/구례","나주/화순","영암/장흥/강진"]])
 let JeJuIsland_LocationInfo = LocationInfo(LocationInfo: ["제주도" : ["제주전체","서귀포시","제주시"]])
-
-//여러개의 섹션을 가지는 테이븗뷰
-
-//let arrayLocation:
-
-
-
-
-//
-//struct Place {
-//    var name:String
-//}
-//struct TripPlan {
-//    var time:Int
-//}
-
-
-//import UIKit
-//import MapKit
-//class MapViewController : UIViewController {
-//    override func numberOFSections(in tableView: UITableVuew) -> Int {
-//        return 1
-//    }
-//    override func tableView(_ tableView: UITableview, numberOfRowsInSection section: Int) -> Int{
-//        return 100
-//    }
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) ->UITableViewCell {
-//        let cell = UITableViewCell(style: .value1 , reuseIdentifier)
-//    }
-//
-//}
 
 
 class Area {

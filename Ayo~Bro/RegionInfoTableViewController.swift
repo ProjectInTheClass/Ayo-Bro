@@ -11,11 +11,11 @@ class RegionInfoTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return regionRegion.count
+        return regionRegion.regionRegion.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let info = regionRegion[indexPath.row]
+        let info = regionRegion.regionRegion[indexPath.row]
         
         let identi = "BigCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: identi)! as! RightImageTableViewCell
@@ -37,7 +37,7 @@ class RegionInfoTableViewController: UITableViewController {
         let indexPath = tableView.indexPath(for: cell)!
         let vc = segue.destination as! DetailRegionInfoViewController
         
-        vc.infoRegion = regionRegion[indexPath.row]
+        vc.infoRegion = regionRegion.regionRegion[indexPath.row]
         
     }
 
