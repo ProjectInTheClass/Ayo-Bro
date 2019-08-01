@@ -17,16 +17,6 @@ class SelectedDetailTableViewController: UITableViewController {
     var SelectedArray:Array<String>?
     @IBOutlet var Region:String? = nil
     
-    let DetailArray = [ "서울" : ["1일차","서울여행지1","서울여행지2","서울여행지3",
-                                    "2일차","서울여행지4","서울여행지5","서울여행지6",
-                                    "3일차","서울여행지7","서울여행지8","서울여행지9"],
-                        "제주" : ["1일차","제주여행지1","제주여행지2","제주여행지3",
-                                    "2일차","제주여행지4","제주여행지5","제주여행지6",
-                                    "3일차","제주여행지7","제주여행지8","제주여행지9"],
-                        "부산" : ["1일차","여행지1","여행지2","여행지3",
-                                    "2일차","여행지4","여행지5","여행지6",
-                                    "3일차","여행지7","여행지8","여행지9"]]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

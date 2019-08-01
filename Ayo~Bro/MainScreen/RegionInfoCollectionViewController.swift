@@ -1,33 +1,17 @@
 import UIKit
 import Foundation
 
-struct RegionInfomation {
-    let region:String
-    let Explain:String
-    let image:UIImage?
-}
-
-struct MyRegionInfo {
-    let regionRegion:Array<RegionInfomation> = [RegionInfomation(region: "서울", Explain: "서울에는 서울사람이 많다.", image: UIImage(named: "seoul")),
-                                                RegionInfomation(region: "제주", Explain: "제주도 사람들은 섬사람이다.", image: UIImage(named: "jeju")),
-                                                RegionInfomation(region: "부산", Explain: "부산은 대체로 부산스러운 편이다.", image: UIImage(named: "busan"))]
-    var selectedIndex = 0
-}
-
-var regionRegion = MyRegionInfo()
-
-
 class RegionInfoCollectionViewController : UICollectionViewController {
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return regionRegion.regionRegion.count
+        return regionRegion.RegionInformation.count
     }
     override func collectionView(_ collectionView: UICollectionView,
                                  cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let info = regionRegion.regionRegion[indexPath.row]
+        let info = regionRegion.RegionInformation[indexPath.row]
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell1",
                                                       for: indexPath)
@@ -49,7 +33,7 @@ class RegionInfoCollectionViewController : UICollectionViewController {
         let indexPath = collectionView.indexPath(for: cell)!
         let vc = segue.destination as! DetailRegionInfoViewController
         
-        vc.infoRegion = regionRegion.regionRegion[indexPath.row]
+        vc.infoRegion = regionRegion.RegionInformation[indexPath.row]
         
     }
     

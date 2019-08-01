@@ -17,28 +17,19 @@ class FindTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        resultRegionValue.titleLabel?.text = regionRegion.regionRegion[regionRegion.selectedIndex].region
-
-    }
-    
-
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+        resultRegionValue.titleLabel?.text = regionRegion.RegionInformation[regionRegion.selectedIndex].region
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return regionRegion.regionRegion.count
+        return regionRegion.RegionInformation.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let info = regionRegion.regionRegion[indexPath.row]
+        let info = regionRegion.RegionInformation[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyTableCell") as! RightImageTableViewCell
 
         cell.labelRegion?.text = info.region
@@ -50,7 +41,6 @@ class FindTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.selectedIndex = indexPath.row
-        //        print(arrayLocation[indexPath.row])
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -61,10 +51,8 @@ class FindTableViewController: UITableViewController {
             let indexPath = tableView.indexPath(for: cell)!
             let vc = segue.destination as! DetailRegionInfoViewController
             
-            vc.infoRegion = regionRegion.regionRegion[indexPath.row]
+            vc.infoRegion = regionRegion.RegionInformation[indexPath.row]
         }
         
-        
     }
-
 }

@@ -12,8 +12,6 @@ class MainViewController: UIViewController {
     
     
     @IBOutlet weak var contentView: UIView!
-    let dataSource=["첫째날","둘째날","셋째날","넷째날"]
-    let dataImage=[UIImage(named: "img01"),UIImage(named: "img02"),UIImage(named: "img03"),UIImage(named: "img04")]
     
     var currentViewControllerIndex = 0
     

@@ -11,35 +11,26 @@ import UIKit
 class SelectedTableViewController: UITableViewController {
     
     var selectedIndex:Int = 0
-    
-    let Array = [ "서울", "제주", "부산" ]
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    // MARK: - Table view data source
-    
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return Array.count
+        return regionRegion.RegionInformation.count
     }
-    
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyTableCell", for: indexPath)
-        cell.textLabel?.text = Array[indexPath.row]
+        cell.textLabel?.text = regionRegion.RegionInformation[indexPath.row].region
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.selectedIndex = indexPath.row
-        print(Array[indexPath.row])
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -48,7 +39,7 @@ class SelectedTableViewController: UITableViewController {
         let vc = segue.destination as! SelectedDetailTableViewController
         
         //        vc.SelectedArray = Array[indexPath.row]
-        vc.Region = Array[indexPath.row]
+        vc.Region = regionRegion.RegionInformation[indexPath.row].region
         
         //        segue.source               identifier 을 통해서 설정가능
         //        segue.destination
