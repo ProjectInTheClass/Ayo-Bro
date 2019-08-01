@@ -16,6 +16,7 @@ class LocalTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         regionRegion.selectedIndex = indexPath.row
+        self.dismiss(animated: true, completion: nil)
     }
 
     @IBAction func Cancel(_ sender: Any) {

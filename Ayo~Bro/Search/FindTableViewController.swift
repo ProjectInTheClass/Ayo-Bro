@@ -14,10 +14,21 @@ class FindTableViewController: UITableViewController {
     
     @IBOutlet var resultRegionValue: UIButton!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        resultRegionValue.titleLabel?.text = regionRegion.RegionInformation[regionRegion.selectedIndex].region
+
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if regionRegion.selectedIndex < 0 {
+            resultRegionValue.titleLabel?.text = "전국"
+        }
+        else {
+            resultRegionValue.titleLabel?.text = regionRegion.RegionInformation[regionRegion.selectedIndex].region
+        }
+        self.tableView.reloadData()
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -25,12 +36,24 @@ class FindTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return regionRegion.RegionInformation.count
+        if regionRegion.selectedIndex < 0 {
+            return regionRegion.RegionInformation.count
+        }
+        else {
+            return 1
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let info = regionRegion.RegionInformation[indexPath.row]
+        let info:RegionInfomation
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyTableCell") as! RightImageTableViewCell
+        
+        if regionRegion.selectedIndex < 0 {
+            info = regionRegion.RegionInformation[indexPath.row]
+        }
+        else {
+            info = regionRegion.RegionInformation[regionRegion.selectedIndex]
+        }
 
         cell.labelRegion?.text = info.region
         cell.labelExplain?.text = info.Explain
