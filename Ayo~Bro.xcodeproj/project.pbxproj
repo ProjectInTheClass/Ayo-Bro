@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D4013A9D22F2CCC400F7A819 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4013A8F22F2CCC400F7A819 /* CustomCell.xib */; };
+		D4013A9E22F2CCC400F7A819 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4013A9022F2CCC400F7A819 /* CustomCell.swift */; };
+		D4013A9F22F2CCC400F7A819 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4013A9122F2CCC400F7A819 /* PageCell.swift */; };
+		D4013AA022F2CCC400F7A819 /* PageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4013A9222F2CCC400F7A819 /* PageCell.xib */; };
+		D4013AA322F2CCC400F7A819 /* NSObject + reusableIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4013A9722F2CCC400F7A819 /* NSObject + reusableIdentifier.swift */; };
+		D4013AA522F2CCC400F7A819 /* CustomMenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4013A9A22F2CCC400F7A819 /* CustomMenuBar.swift */; };
+		D4013AA722F2CCC400F7A819 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4013A9C22F2CCC400F7A819 /* MainVC.swift */; };
 		D420ADF922E875270090FEE5 /* LocalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D420ADF822E875270090FEE5 /* LocalTableViewController.swift */; };
 		D44533DA22F0194A005CAF17 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44533D922F0194A005CAF17 /* DataViewController.swift */; };
 		D44533DC22F01958005CAF17 /* CustomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44533DB22F01958005CAF17 /* CustomPageViewController.swift */; };
@@ -48,6 +55,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D4013A8F22F2CCC400F7A819 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		D4013A9022F2CCC400F7A819 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		D4013A9122F2CCC400F7A819 /* PageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
+		D4013A9222F2CCC400F7A819 /* PageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PageCell.xib; sourceTree = "<group>"; };
+		D4013A9722F2CCC400F7A819 /* NSObject + reusableIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject + reusableIdentifier.swift"; sourceTree = "<group>"; };
+		D4013A9A22F2CCC400F7A819 /* CustomMenuBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomMenuBar.swift; sourceTree = "<group>"; };
+		D4013A9C22F2CCC400F7A819 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		D420ADF822E875270090FEE5 /* LocalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalTableViewController.swift; sourceTree = "<group>"; };
 		D44533D922F0194A005CAF17 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		D44533DB22F01958005CAF17 /* CustomPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +102,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D4013A8D22F2CCC400F7A819 /* CustomTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				D4013A8E22F2CCC400F7A819 /* Cells */,
+				D4013A9622F2CCC400F7A819 /* Extensions */,
+				D4013A9922F2CCC400F7A819 /* Views */,
+				D4013A9C22F2CCC400F7A819 /* MainVC.swift */,
+			);
+			path = CustomTabBar;
+			sourceTree = "<group>";
+		};
+		D4013A8E22F2CCC400F7A819 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D4013A8F22F2CCC400F7A819 /* CustomCell.xib */,
+				D4013A9022F2CCC400F7A819 /* CustomCell.swift */,
+				D4013A9122F2CCC400F7A819 /* PageCell.swift */,
+				D4013A9222F2CCC400F7A819 /* PageCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D4013A9622F2CCC400F7A819 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D4013A9722F2CCC400F7A819 /* NSObject + reusableIdentifier.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D4013A9922F2CCC400F7A819 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D4013A9A22F2CCC400F7A819 /* CustomMenuBar.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		D44533CE22F0141B005CAF17 /* RoutePageView */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +170,7 @@
 		D45A5E4222E59F2600D75C7F /* Ayo~Bro */ = {
 			isa = PBXGroup;
 			children = (
+				D4013A8D22F2CCC400F7A819 /* CustomTabBar */,
 				D44533CE22F0141B005CAF17 /* RoutePageView */,
 				E477313622EB13050072C057 /* MyInfo */,
 				E477313322EAF8E80072C057 /* NoticeInfo */,
@@ -238,8 +291,10 @@
 			files = (
 				D45A5E4E22E59F2700D75C7F /* LaunchScreen.storyboard in Resources */,
 				D45A5E5822E5A0CC00D75C7F /* Route-Recommendation.storyboard in Resources */,
+				D4013A9D22F2CCC400F7A819 /* CustomCell.xib in Resources */,
 				D45A5E5C22E5A10600D75C7F /* My-Infomation.storyboard in Resources */,
 				D45A5E5622E5A05000D75C7F /* MainScreen.storyboard in Resources */,
+				D4013AA022F2CCC400F7A819 /* PageCell.xib in Resources */,
 				D45A5E4B22E59F2700D75C7F /* Assets.xcassets in Resources */,
 				D45A5E4922E59F2600D75C7F /* Main.storyboard in Resources */,
 				D45A5E5A22E5A0F000D75C7F /* Selected.storyboard in Resources */,
@@ -255,12 +310,17 @@
 			files = (
 				D4A3224F22EAD2FF003384BB /* SelectedTableViewController.swift in Sources */,
 				D44533DA22F0194A005CAF17 /* DataViewController.swift in Sources */,
+				D4013AA522F2CCC400F7A819 /* CustomMenuBar.swift in Sources */,
 				E477312C22EAD9630072C057 /* NoticeList.swift in Sources */,
 				D45A5E4622E59F2600D75C7F /* ViewController.swift in Sources */,
 				E477313222EAF8530072C057 /* NoticeInfoTableViewCell.swift in Sources */,
 				D4A3219322E6EA85003384BB /* Models.swift in Sources */,
+				D4013AA322F2CCC400F7A819 /* NSObject + reusableIdentifier.swift in Sources */,
+				D4013A9F22F2CCC400F7A819 /* PageCell.swift in Sources */,
 				D45A5E4422E59F2600D75C7F /* AppDelegate.swift in Sources */,
 				D420ADF922E875270090FEE5 /* LocalTableViewController.swift in Sources */,
+				D4013A9E22F2CCC400F7A819 /* CustomCell.swift in Sources */,
+				D4013AA722F2CCC400F7A819 /* MainVC.swift in Sources */,
 				D4D714D122F02089006552B0 /* RegionInfoTableViewController.swift in Sources */,
 				E477313522EB0DBD0072C057 /* NoticeInfoDetailViewController.swift in Sources */,
 				D445340022F02E92005CAF17 /* MainViewController.swift in Sources */,
