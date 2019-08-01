@@ -15,7 +15,7 @@ class LocalTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        regionRegion.selectedIndex = indexPath.row
+        regionRegion.selectedIndex = indexPath.row - 1
         self.dismiss(animated: true, completion: nil)
     }
 
@@ -32,11 +32,16 @@ class LocalTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return regionRegion.RegionInformation.count
+        return regionRegion.RegionInformation.count + 1
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyTableCell", for: indexPath)
-        cell.textLabel?.text = regionRegion.RegionInformation[indexPath.row].region
+        if indexPath.row == 0{
+            cell.textLabel?.text = "전국"
+        }
+        else {
+            cell.textLabel?.text = regionRegion.RegionInformation[indexPath.row - 1].region
+        }
         return cell
     }
 
