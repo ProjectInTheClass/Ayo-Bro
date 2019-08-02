@@ -410,12 +410,28 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="KYe-3X-c8i" kind="relationship" relationship="rootViewController" id="BRN-yH-kEx"/>
+                        <segue destination="UtH-hr-27N" kind="relationship" relationship="rootViewController" id="gpK-7W-KXY"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VVi-vm-2tj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="173.91304347826087" y="464.73214285714283"/>
+            <point key="canvasLocation" x="-975" y="465"/>
+        </scene>
+        <!--Search MainVC-->
+        <scene sceneID="7TG-rH-WvU">
+            <objects>
+                <viewController id="UtH-hr-27N" customClass="SearchMainVC" customModule="Ayo_Bro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RL4-RM-hhi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="4Ir-Lr-zDz"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Abu-sH-Nz5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VfR-LV-yEb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="96" y="465"/>
         </scene>
     </scenes>
     <resources>

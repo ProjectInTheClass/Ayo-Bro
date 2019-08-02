@@ -26,6 +26,8 @@
 		D45A5E5822E5A0CC00D75C7F /* Selected.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D45A5E5722E5A0CC00D75C7F /* Selected.storyboard */; };
 		D45A5E5A22E5A0F000D75C7F /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D45A5E5922E5A0F000D75C7F /* Search.storyboard */; };
 		D45A5E5C22E5A10600D75C7F /* My-Infomation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D45A5E5B22E5A10600D75C7F /* My-Infomation.storyboard */; };
+		D49E7F9522F41C8C00442B30 /* SearchCustomMenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49E7F8722F41C8C00442B30 /* SearchCustomMenuBar.swift */; };
+		D49E7F9E22F41C8C00442B30 /* SearchMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49E7F9322F41C8C00442B30 /* SearchMainVC.swift */; };
 		D4A3224F22EAD2FF003384BB /* SelectedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A3224E22EAD2FF003384BB /* SelectedTableViewController.swift */; };
 		D4A3225122EAD376003384BB /* SelectedDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A3225022EAD376003384BB /* SelectedDetailTableViewController.swift */; };
 		D4D714CD22F01ADF006552B0 /* RegionInfoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D714CC22F01ADF006552B0 /* RegionInfoCollectionViewController.swift */; };
@@ -115,6 +117,8 @@
 		D45A5E5722E5A0CC00D75C7F /* Selected.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Selected.storyboard; sourceTree = "<group>"; };
 		D45A5E5922E5A0F000D75C7F /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		D45A5E5B22E5A10600D75C7F /* My-Infomation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "My-Infomation.storyboard"; sourceTree = "<group>"; };
+		D49E7F8722F41C8C00442B30 /* SearchCustomMenuBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCustomMenuBar.swift; sourceTree = "<group>"; };
+		D49E7F9322F41C8C00442B30 /* SearchMainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchMainVC.swift; sourceTree = "<group>"; };
 		D4A3224E22EAD2FF003384BB /* SelectedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedTableViewController.swift; sourceTree = "<group>"; };
 		D4A3225022EAD376003384BB /* SelectedDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedDetailTableViewController.swift; sourceTree = "<group>"; };
 		D4D714CC22F01ADF006552B0 /* RegionInfoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionInfoCollectionViewController.swift; sourceTree = "<group>"; };
@@ -201,8 +205,6 @@
 		D4013A8D22F2CCC400F7A819 /* CustomTabBar */ = {
 			isa = PBXGroup;
 			children = (
-				D4013A8E22F2CCC400F7A819 /* Cells */,
-				D4013A9622F2CCC400F7A819 /* Extensions */,
 				D4013A9922F2CCC400F7A819 /* Views */,
 				D4013A9C22F2CCC400F7A819 /* MainVC.swift */,
 			);
@@ -249,6 +251,8 @@
 		D45A5E3722E59F2600D75C7F = {
 			isa = PBXGroup;
 			children = (
+				D4013A9622F2CCC400F7A819 /* Extensions */,
+				D4013A8E22F2CCC400F7A819 /* Cells */,
 				E433EB8B22F4150000531197 /* KakaoApi */,
 				D45A5E4222E59F2600D75C7F /* Ayo~Bro */,
 				D45A5E4122E59F2600D75C7F /* Products */,
@@ -286,6 +290,24 @@
 			path = "Ayo~Bro";
 			sourceTree = "<group>";
 		};
+		D49E7F8522F41C8C00442B30 /* SearchCustomTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				D49E7F8622F41C8C00442B30 /* SearchViews */,
+				D49E7F9322F41C8C00442B30 /* SearchMainVC.swift */,
+			);
+			name = SearchCustomTabBar;
+			path = "../../../SearchCustomTabBar 복사본/SearchCustomTabBar";
+			sourceTree = "<group>";
+		};
+		D49E7F8622F41C8C00442B30 /* SearchViews */ = {
+			isa = PBXGroup;
+			children = (
+				D49E7F8722F41C8C00442B30 /* SearchCustomMenuBar.swift */,
+			);
+			path = SearchViews;
+			sourceTree = "<group>";
+		};
 		D4D714F922F2D84E006552B0 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -298,6 +320,7 @@
 		D4D714FA22F2D8B1006552B0 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				D49E7F8522F41C8C00442B30 /* SearchCustomTabBar */,
 				D420ADF822E875270090FEE5 /* LocalTableViewController.swift */,
 				D4D714D422F17674006552B0 /* FindTableViewController.swift */,
 				D4D7150522F2D970006552B0 /* SearchModel.swift */,
@@ -545,6 +568,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4A3224F22EAD2FF003384BB /* SelectedTableViewController.swift in Sources */,
+				D49E7F9522F41C8C00442B30 /* SearchCustomMenuBar.swift in Sources */,
 				D44533DA22F0194A005CAF17 /* DataViewController.swift in Sources */,
 				D4013AA522F2CCC400F7A819 /* CustomMenuBar.swift in Sources */,
 				E477313222EAF8530072C057 /* NoticeInfoTableViewCell.swift in Sources */,
@@ -556,6 +580,7 @@
 				D4D7150422F2D964006552B0 /* SelectedModel.swift in Sources */,
 				D420ADF922E875270090FEE5 /* LocalTableViewController.swift in Sources */,
 				D4D7150622F2D970006552B0 /* SearchModel.swift in Sources */,
+				D49E7F9E22F41C8C00442B30 /* SearchMainVC.swift in Sources */,
 				D4013A9E22F2CCC400F7A819 /* CustomCell.swift in Sources */,
 				D4013AA722F2CCC400F7A819 /* MainVC.swift in Sources */,
 				D4D714D122F02089006552B0 /* RegionInfoTableViewController.swift in Sources */,
@@ -732,7 +757,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "test.company.Ayo-Bro";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = /Users/gw_13/Documents/Ayo_bro/KakaoApi/KakaoMapHeader.h;
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/gw_14/Desktop/bro/KakaoApi/KakaoMapHeader.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -760,7 +785,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "test.company.Ayo-Bro";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = /Users/gw_13/Documents/Ayo_bro/KakaoApi/KakaoMapHeader.h;
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/gw_14/Desktop/bro/KakaoApi/KakaoMapHeader.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
