@@ -20,3 +20,7 @@ let update1 = NoticeList(smallInfo: "업데이트", bigInfo: "업데이트 안�
 let update2 = NoticeList(smallInfo: "공지사항", bigInfo: "공지사항 안내 !", dateInfo: "2019.07.21",textInfo: "정기점검 일정 안내 : 07.23일 15시 ~ 17시")
 let update3 = NoticeList(smallInfo: "업데이트", bigInfo: "업데이트 안내 !", dateInfo: "2019.07.25", textInfo: "새로운 기능을 추가하였습니다.")
 let arrUpdate:Array<NoticeList> = [update3, update2,update1]
+
+
+
+
