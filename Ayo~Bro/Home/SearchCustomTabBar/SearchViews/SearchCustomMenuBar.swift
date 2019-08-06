@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol CustomMenuBarDelegate: class {
+protocol SearchCustomMenuBarDelegate: class {
     func customMenuBar(scrollTo index: Int)
 }
 
-class CustomMenuBar: UIView {
+class SearchCustomMenuBar: UIView {
     
-    weak var delegate: CustomMenuBarDelegate?
+    weak var delegate: SearchCustomMenuBarDelegate?
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .white
@@ -64,7 +64,7 @@ class CustomMenuBar: UIView {
         customTabBarCollectionView.heightAnchor.constraint(equalToConstant: 55).isActive = true
         
         self.addSubview(indicatorView)
-        indicatorViewWidthConstraint = indicatorView.widthAnchor.constraint(equalToConstant: self.frame.width / 3)
+        indicatorViewWidthConstraint = indicatorView.widthAnchor.constraint(equalToConstant: self.frame.width / 6)
         indicatorViewWidthConstraint.isActive = true
         indicatorView.heightAnchor.constraint(equalToConstant: 5).isActive = true
         indicatorViewLeadingConstraint = indicatorView.leadingAnchor.constraint(equalTo: self.leadingAnchor)
@@ -75,23 +75,22 @@ class CustomMenuBar: UIView {
 }
 
 //MARK:- UICollectionViewDelegate, DataSource
-extension CustomMenuBar: UICollectionViewDelegate, UICollectionViewDataSource {
+extension SearchCustomMenuBar: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCell.reusableIdentifier, for: indexPath) as! CustomCell
-        
-        let labelText:[String]=["담은장소","담은코스","만든코스"]
+        let labelText:[String]=["코스","관광지","음식","카페","숙박","문화"]
         
         cell.label.text = labelText[indexPath.row]
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return 6
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.frame.width / 3 , height: 55)
+        return CGSize(width: self.frame.width / 6 , height: 55)
         
     }
     
@@ -105,7 +104,7 @@ extension CustomMenuBar: UICollectionViewDelegate, UICollectionViewDataSource {
     }
 }
 //MARK:- UICollectionViewDelegateFlowLayout
-extension CustomMenuBar: UICollectionViewDelegateFlowLayout {
+extension SearchCustomMenuBar: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)

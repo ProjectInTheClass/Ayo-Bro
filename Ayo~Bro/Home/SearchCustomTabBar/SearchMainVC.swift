@@ -23,7 +23,7 @@ class SearchMainVC: UIViewController, SearchCustomMenuBarDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
-        title = "검색"
+        title = "홈"
         navigationController?.hidesBarsOnSwipe = true
         setupCustomTabBar()
         setupPageCollectionView()
