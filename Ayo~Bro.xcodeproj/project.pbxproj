@@ -128,8 +128,8 @@
 		E477312922EAD95E0072C057 /* NoticeInfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticeInfoTableViewController.swift; sourceTree = "<group>"; };
 		E477313122EAF8530072C057 /* NoticeInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeInfoTableViewCell.swift; sourceTree = "<group>"; };
 		E477313422EB0DBD0072C057 /* NoticeInfoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeInfoDetailViewController.swift; sourceTree = "<group>"; };
-		E4F3C92C22F40EDC006EECEB /* MyInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyInfoModel.swift; path = ../../../../../Downloads/MyInfoModel.swift; sourceTree = "<group>"; };
-		E4F3C92E22F40EE6006EECEB /* CommonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommonModel.swift; path = ../../../../Downloads/CommonModel.swift; sourceTree = "<group>"; };
+		E4F3C92C22F40EDC006EECEB /* MyInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyInfoModel.swift; sourceTree = "<group>"; };
+		E4F3C92E22F40EE6006EECEB /* CommonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonModel.swift; sourceTree = "<group>"; };
 		E4F3C93122F41429006EECEB /* DaumMap.embeddedframework.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = DaumMap.embeddedframework.zip; sourceTree = "<group>"; };
 		E4F3C93422F41429006EECEB /* map_pinup_custom@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_pinup_custom@3x.png"; sourceTree = "<group>"; };
 		E4F3C93522F41429006EECEB /* map_pin_custom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pin_custom.png; sourceTree = "<group>"; };
