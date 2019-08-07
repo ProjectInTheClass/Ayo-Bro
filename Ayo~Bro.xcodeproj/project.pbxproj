@@ -43,6 +43,8 @@
 		E477313522EB0DBD0072C057 /* NoticeInfoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E477313422EB0DBD0072C057 /* NoticeInfoDetailViewController.swift */; };
 		E47DD41122FA9477003915B6 /* PublicAPILocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47DD41022FA9477003915B6 /* PublicAPILocationViewController.swift */; };
 		E47DD41322FA94D5003915B6 /* PublicAPILocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47DD41222FA94D5003915B6 /* PublicAPILocationModel.swift */; };
+		E47DD41522FAB1DD003915B6 /* PublicAPICategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47DD41422FAB1DD003915B6 /* PublicAPICategoryViewController.swift */; };
+		E47DD41722FAB1F6003915B6 /* PublicAPICategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47DD41622FAB1F6003915B6 /* PublicAPICategoryModel.swift */; };
 		E4F3C92D22F40EDC006EECEB /* MyInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F3C92C22F40EDC006EECEB /* MyInfoModel.swift */; };
 		E4F3C92F22F40EE6006EECEB /* CommonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F3C92E22F40EE6006EECEB /* CommonModel.swift */; };
 		E4F3C95A22F41429006EECEB /* DaumMap.embeddedframework.zip in Resources */ = {isa = PBXBuildFile; fileRef = E4F3C93122F41429006EECEB /* DaumMap.embeddedframework.zip */; };
@@ -136,6 +138,8 @@
 		E477313422EB0DBD0072C057 /* NoticeInfoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeInfoDetailViewController.swift; sourceTree = "<group>"; };
 		E47DD41022FA9477003915B6 /* PublicAPILocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicAPILocationViewController.swift; sourceTree = "<group>"; };
 		E47DD41222FA94D5003915B6 /* PublicAPILocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicAPILocationModel.swift; sourceTree = "<group>"; };
+		E47DD41422FAB1DD003915B6 /* PublicAPICategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicAPICategoryViewController.swift; sourceTree = "<group>"; };
+		E47DD41622FAB1F6003915B6 /* PublicAPICategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicAPICategoryModel.swift; sourceTree = "<group>"; };
 		E4F3C92C22F40EDC006EECEB /* MyInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyInfoModel.swift; sourceTree = "<group>"; };
 		E4F3C92E22F40EE6006EECEB /* CommonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonModel.swift; sourceTree = "<group>"; };
 		E4F3C93122F41429006EECEB /* DaumMap.embeddedframework.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = DaumMap.embeddedframework.zip; sourceTree = "<group>"; };
@@ -213,6 +217,8 @@
 				1271725F22FA713A00B9BA56 /* PublicAPITableViewController.swift */,
 				E47DD41022FA9477003915B6 /* PublicAPILocationViewController.swift */,
 				E47DD41222FA94D5003915B6 /* PublicAPILocationModel.swift */,
+				E47DD41422FAB1DD003915B6 /* PublicAPICategoryViewController.swift */,
+				E47DD41622FAB1F6003915B6 /* PublicAPICategoryModel.swift */,
 			);
 			path = PublicAPI;
 			sourceTree = "<group>";
@@ -575,6 +581,8 @@
 				D4AE9AD222F9711E00600DEA /* LocalTableViewController.swift in Sources */,
 				E47DD41322FA94D5003915B6 /* PublicAPILocationModel.swift in Sources */,
 				D4AE9AD422F9711E00600DEA /* FindTableViewController.swift in Sources */,
+				E47DD41522FAB1DD003915B6 /* PublicAPICategoryViewController.swift in Sources */,
+				E47DD41722FAB1F6003915B6 /* PublicAPICategoryModel.swift in Sources */,
 				D45A5E4422E59F2600D75C7F /* AppDelegate.swift in Sources */,
 				D4AE9AD322F9711E00600DEA /* SearchModel.swift in Sources */,
 				D4AE9AF022F974F800600DEA /* CustomPageViewController.swift in Sources */,

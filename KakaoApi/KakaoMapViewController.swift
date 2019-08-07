@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import CoreLocation
 
-class ViewController: UIViewController, MTMapViewDelegate, CLLocationManagerDelegate {
+class KakaoMapViewController: UIViewController, MTMapViewDelegate, CLLocationManagerDelegate {
     var mapView: MTMapView?
     var mapMarker: MTMapPOIItem?
     var mapPoint: MTMapPoint?
@@ -24,7 +24,7 @@ class ViewController: UIViewController, MTMapViewDelegate, CLLocationManagerDele
         locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
-        let coor = locationManager.location?.coordinate
+     ///   let coor = locationManager.location?.coordinate
     
         mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: 37.619666, longitude: 127.059685))
         mapView?.setMapCenter(mapPoint!, animated: true)
@@ -36,7 +36,6 @@ class ViewController: UIViewController, MTMapViewDelegate, CLLocationManagerDele
             self.view.addSubview(mapView)
         }
         
-            print ("asd: ", coor?.latitude, coor?.longitude)
         
     }
 }

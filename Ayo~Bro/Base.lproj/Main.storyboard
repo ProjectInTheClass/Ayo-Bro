@@ -112,10 +112,10 @@
             </objects>
             <point key="canvasLocation" x="417" y="751"/>
         </scene>
-        <!--PublicAPI Location View Controller-->
+        <!--PublicAPI Category View Controller-->
         <scene sceneID="Hpk-jQ-K8b">
             <objects>
-                <viewController id="cyf-Cc-Goa" customClass="PublicAPILocationViewController" customModule="Ayo_Bro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cyf-Cc-Goa" customClass="PublicAPICategoryViewController" customModule="Ayo_Bro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4OO-tn-XdX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

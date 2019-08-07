@@ -1,5 +1,5 @@
 //
-//  PublicAPILocationViewController
+//  PublicAPICategoryViewController.swift
 //  Ayo~Bro
 //
 //  Created by GW_13 on 07/08/2019.
@@ -9,17 +9,15 @@
 import Foundation
 import UIKit
 
-class PublicAPILocationViewController : UIViewController {
+class PublicAPICategoryViewController : UIViewController {
     let queueSub = OperationQueue()
-    let modelPublicLocationAPI = PublicAPILocationModel()
+    let modelPublicCategoryAPI = PublicAPICategoryModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "지역 코드"
-        self.modelPublicLocationAPI.requestToServer()
+        self.title = "카테고리"
+        self.modelPublicCategoryAPI.requestToServer()
     }
     
-    
 }
-
