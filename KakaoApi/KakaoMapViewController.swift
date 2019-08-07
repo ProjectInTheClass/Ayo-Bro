@@ -25,8 +25,9 @@ class KakaoMapViewController: UIViewController, MTMapViewDelegate, CLLocationMan
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
         let coor = locationManager.location?.coordinate
-    
-        mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: coor!.latitude, longitude: coor!.longitude))
+        let coorLatitude = coor!.latitude
+        let coorLongitude = coor!.longitude
+        mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: coorLatitude, longitude: coorLongitude))
         mapView?.setMapCenter(mapPoint!, animated: true)
     
         
@@ -35,11 +36,11 @@ class KakaoMapViewController: UIViewController, MTMapViewDelegate, CLLocationMan
             mapView.baseMapType = .standard
             self.view.addSubview(mapView)
         }
-        print("latitude" + String(coor!.latitude) + "/ longitude" + String(coor!.longitude))
+      //  print("latitude" + String(coor!.latitude) + "/ longitude" + String(coor!.longitude))
         
         //latitude: 37.619675, longitude: 127.059803
         var items = [MTMapPOIItem]()
-        items.append(poiItem(name: "현재위치", latitude: coor!.latitude, longitude: coor!.longitude))
+        items.append(poiItem(name: "현재위치", latitude: coorLatitude, longitude: coorLongitude))
     
         //위 부분은 viewDidLoad()에서 수행해도 괜찮습니다
         
