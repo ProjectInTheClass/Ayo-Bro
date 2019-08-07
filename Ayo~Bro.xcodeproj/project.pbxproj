@@ -733,7 +733,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "test.company.Ayo-Bro";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = /Users/gw_14/Desktop/bro/KakaoApi/KakaoMapHeader.h;
+				SWIFT_OBJC_BRIDGING_HEADER = KakaoApi/KakaoMapHeader.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -761,7 +761,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "test.company.Ayo-Bro";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = /Users/gw_14/Desktop/bro/KakaoApi/KakaoMapHeader.h;
+				SWIFT_OBJC_BRIDGING_HEADER = KakaoApi/KakaoMapHeader.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
