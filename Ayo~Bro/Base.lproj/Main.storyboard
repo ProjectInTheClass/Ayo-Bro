@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -92,7 +93,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jCY-1s-Qiq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1338" y="751"/>
+            <point key="canvasLocation" x="1946" y="751"/>
         </scene>
         <!--공공샘플-->
         <scene sceneID="9xj-nI-PiA">
@@ -104,12 +105,28 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="6DT-3e-xoW" kind="relationship" relationship="rootViewController" id="AjJ-zz-wHh"/>
+                        <segue destination="cyf-Cc-Goa" kind="relationship" relationship="rootViewController" id="Wuj-DJ-VXZ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fcX-gF-fCY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="417" y="751"/>
+        </scene>
+        <!--PublicAPI Location View Controller-->
+        <scene sceneID="Hpk-jQ-K8b">
+            <objects>
+                <viewController id="cyf-Cc-Goa" customClass="PublicAPILocationViewController" customModule="Ayo_Bro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4OO-tn-XdX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="oI7-QB-Am7"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ep1-dO-KQ8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5ya-KG-AWB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1177" y="766"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Hmw-Uf-Jqa">

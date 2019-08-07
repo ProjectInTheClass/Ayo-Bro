@@ -15,7 +15,7 @@ class PublicAPITableViewController : UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        queueSub.maxConcurrentOperationCount = 1 // 0 이면 동작 안함.. 각 숫자는 최대 동작 갯수 지정.
+        //queueSub.maxConcurrentOperationCount = 1 // 0 이면 동작 안함.. 각 숫자는 최대 동작 갯수 지정.
         
         self.title = "공공 정보"
         self.modelPublicAPI.requestToServer()
@@ -33,7 +33,7 @@ class PublicAPITableViewController : UITableViewController {
         cell.textLabel?.text = modelPublicAPI.result[indexPath.row].title
         cell.imageView?.image = UIImage(named: "loading")
         
-        if let stringURL = modelPublicAPI.result[indexPath.row].firstimage {
+        if let stringURL = modelPublicAPI.result[indexPath.row].firstimage2 {
             let url = URL(string: stringURL)!
             self.queueSub.addOperation {
                 let image = try! Data(contentsOf: url)

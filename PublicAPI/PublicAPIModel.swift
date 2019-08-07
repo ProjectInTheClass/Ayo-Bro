@@ -27,11 +27,11 @@ struct PublicAPIResponse : Codable {
             
             struct Item : Codable {
                 var item : [ItemInside]
-                
+                ///Title
                 struct ItemInside : Codable {
                     var title : String
                     var addr1 : String?
-                    var firstimage : String?
+                    var firstimage2 : String?
                 }
             }
         }

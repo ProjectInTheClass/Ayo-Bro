@@ -24,10 +24,11 @@ class ViewController: UIViewController, MTMapViewDelegate, CLLocationManagerDele
         locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
-        //let coor = locationManager.location?.coordinate
-        
+        let coor = locationManager.location?.coordinate
+    
         mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: 37.619666, longitude: 127.059685))
         mapView?.setMapCenter(mapPoint!, animated: true)
+    
         
         if let mapView = mapView {
             mapView.delegate = self
@@ -35,7 +36,7 @@ class ViewController: UIViewController, MTMapViewDelegate, CLLocationManagerDele
             self.view.addSubview(mapView)
         }
         
-        
+            print ("asd: ", coor?.latitude, coor?.longitude)
         
     }
 }
