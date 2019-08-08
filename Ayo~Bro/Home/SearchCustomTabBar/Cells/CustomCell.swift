@@ -11,7 +11,7 @@ import UIKit
 class CustomCell: UICollectionViewCell {
     
     var label: UILabel = {
- //       let labelText:[String]=["담은장소","담은코스","만든코스"]
+ ///       let labelText:[String]=["담은장소","담은코스","만든코스"]
         let label = UILabel()
         label.text = "Tab"
         label.textAlignment = .center
@@ -23,8 +23,11 @@ class CustomCell: UICollectionViewCell {
     
     override var isSelected: Bool {
         didSet{
+            //let Modelapi = PublicAPIModel()
+            //Modelapi.requestToServer()
             print("Changed")
             self.label.textColor = isSelected ? .black : .lightGray
+            
         }
     }
     override func awakeFromNib() {

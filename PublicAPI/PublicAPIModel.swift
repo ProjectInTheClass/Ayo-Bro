@@ -40,20 +40,40 @@ struct PublicAPIResponse : Codable {
 
 class PublicAPIModel {
     
-    var result:[PublicAPIResponse.HeaderWithBody.Body.Item.ItemInside] = []
-    
+    var resultCourse:[PublicAPIResponse.HeaderWithBody.Body.Item.ItemInside] = []
+    var resultTripDestination:[PublicAPIResponse.HeaderWithBody.Body.Item.ItemInside] = []
+    var resultFood : [PublicAPIResponse.HeaderWithBody.Body.Item.ItemInside] = []
+    var resultLeports : [PublicAPIResponse.HeaderWithBody.Body.Item.ItemInside] = []
+    var resultStay : [PublicAPIResponse.HeaderWithBody.Body.Item.ItemInside] = []
+    var resultCulture : [PublicAPIResponse.HeaderWithBody.Body.Item.ItemInside] = []
     /// 서버로 정보 요청
     func requestToServer() {
         let authKey = "6N%2BwieYkPpXpi3hWL3wiKB9GHHU6tgsyFlxD0tSO4nyTbq3pVw3lCaZcvNp89oD7BnfJXP333QWeY4lOz5XDVA%3D%3D"
-        let url = URL(string: "http://api.visitkorea.or.kr/openapi/service/rest/KorService/areaBasedList?MobileOS=IOS&MobileApp=AppTest&ServiceKey=\(authKey)&_type=json&pageNo=1&numOfRows=100")!
-        
-        let result = try! String(contentsOf: url)
-        let decoder = JSONDecoder()
-        
-        let value = try! decoder.decode(PublicAPIResponse.self, from: result.data(using: .utf8)!)
-        
-        self.result = value.response.body.items.item
-        
-        print(value)
+        let contentTypeId: [Int] = [25, 12, 39, 28, 32, 14]
+        for typeId in contentTypeId {
+            let url = URL(string: "http://api.visitkorea.or.kr/openapi/service/rest/KorService/areaBasedList?MobileOS=IOS&MobileApp=AppTest&ServiceKey=\(authKey)&_type=json&pageNo=1&numOfRows=20&(contentTypeId=\(typeId)&arrange=P")!
+            let result = try! String(contentsOf: url)
+            let decoder = JSONDecoder()
+            
+            let value = try! decoder.decode(PublicAPIResponse.self, from: result.data(using: .utf8)!)
+            switch typeId {
+            case 25:
+                self.resultCourse = value.response.body.items.item
+            case 12:
+                self.resultTripDestination = value.response.body.items.item
+            case 39:
+                self.resultFood = value.response.body.items.item
+            case 28:
+                self.resultLeports = value.response.body.items.item
+            case 32:
+                self.resultStay = value.response.body.items.item
+            case 14:
+                self.resultCulture = value.response.body.items.item
+            default:
+                break
+            }
+            print (value)
+            
+        }
     }
 }

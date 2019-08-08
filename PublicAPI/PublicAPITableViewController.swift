@@ -24,26 +24,26 @@ class PublicAPITableViewController : UITableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.modelPublicAPI.result.count
-    }
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell1")!
-        
-        cell.textLabel?.text = modelPublicAPI.result[indexPath.row].title
-        cell.imageView?.image = UIImage(named: "loading")
-        
-        if let stringURL = modelPublicAPI.result[indexPath.row].firstimage2 {
-            let url = URL(string: stringURL)!
-            self.queueSub.addOperation {
-                let image = try! Data(contentsOf: url)
-                
-                OperationQueue.main.addOperation {
-                    cell.imageView?.image = UIImage(data: image)
-                }
-            }
-        }
-        return cell
-    }
+//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return self.modelPublicAPI.result.count
+//    }
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell1")!
+//        
+//        cell.textLabel?.text = modelPublicAPI.result[indexPath.row].title
+//        cell.imageView?.image = UIImage(named: "loading")
+//        
+//        if let stringURL = modelPublicAPI.result[indexPath.row].firstimage2 {
+//            let url = URL(string: stringURL)!
+//            self.queueSub.addOperation {
+//                let image = try! Data(contentsOf: url)
+//                
+//                OperationQueue.main.addOperation {
+//                    cell.imageView?.image = UIImage(data: image)
+//                }
+//            }
+//        }
+//        return cell
+//    }
     
 }

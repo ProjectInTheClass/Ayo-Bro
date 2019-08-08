@@ -2,7 +2,7 @@
 import UIKit
 import Foundation
 
-class RegionInfoTableViewController: UITableViewController {
+class RegionInfoTableViewController: UITableViewController{
     
     var selectedIndex:Int = 0
 

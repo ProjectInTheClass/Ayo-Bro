@@ -1,47 +1,46 @@
 //
-//  BigAreaTableViewController.swift
+//  HiddenTableViewController.swift
 //  Ayo~Bro
 //
-//  Created by A09 on 07/08/2019.
+//  Created by GW_19 on 08/08/2019.
 //  Copyright © 2019 GW_19. All rights reserved.
 //
 
 import UIKit
 
-class BigAreaTableViewController: UITableViewController {
-    
-    let Array = [ "전국", "서울", "부산", "제주도", "경기도", "경상북도", "경상남도", "전라북도", "전라남도", "충청남도", "충청북도"]
-    
-    @IBAction func Cancel(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
+class HiddenTableViewController: UITableViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        homeRegionSelectIndex = indexPath.row
-        self.dismiss(animated: true, completion: nil)
-    }
+    
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        // #warning Incomplete implementation, return the number of sections
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Array.count
+        // #warning Incomplete implementation, return the number of rows
+        return 0
     }
 
-    
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        cell.textLabel?.text = Array[indexPath.row]
+        // Configure the cell...
 
         return cell
     }
-    
+    */
 
     /*
     // Override to support conditional editing of the table view.

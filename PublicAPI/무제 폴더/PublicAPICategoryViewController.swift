@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class PublicAPICategoryViewController : UIViewController {
+class PublicAPICategoryViewController : UITableViewController {
     let queueSub = OperationQueue()
     let modelPublicCategoryAPI = PublicAPICategoryModel()
     

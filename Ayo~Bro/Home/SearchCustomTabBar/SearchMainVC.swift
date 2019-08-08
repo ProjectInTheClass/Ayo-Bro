@@ -5,21 +5,12 @@
 //  Created by 이동건 on 2018. 4. 18..
 //  Copyright © 2018년 이동건. All rights reserved.
 //
-var homeRegionSelectIndex = 0
 
 import UIKit
-
+var indexRow:Int = 0
 class SearchMainVC: UIViewController, SearchCustomMenuBarDelegate{
     
-     let Array = [ "전국", "서울", "부산", "제주도", "경기도", "경상북도", "경상남도", "전라북도", "전라남도", "충청남도", "충청북도"]
-    
-    @IBOutlet weak var bigAreaButton: UIButton!
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        bigAreaButton.titleLabel?.text = Array[homeRegionSelectIndex]
-    }
-    
+    //MARK: Outltes
     var pageCollectionView: UICollectionView = {
         let collectionViewLayout = UICollectionViewFlowLayout()
         collectionViewLayout.scrollDirection = .horizontal
@@ -32,6 +23,7 @@ class SearchMainVC: UIViewController, SearchCustomMenuBarDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
+        title = "홈"
         navigationController?.hidesBarsOnSwipe = true
         setupCustomTabBar()
         setupPageCollectionView()
@@ -87,6 +79,9 @@ extension SearchMainVC: UICollectionViewDelegate, UICollectionViewDataSource {
         let itemAt = Int(targetContentOffset.pointee.x / self.view.frame.width)
         let indexPath = IndexPath(item: itemAt, section: 0)
         customMenuBar.customTabBarCollectionView.selectItem(at: indexPath, animated: true, scrollPosition: [])
+        indexRow = indexPath.row
+        
+        print (indexRow)
     }
 }
 //MARK:- UICollectionViewDelegateFlowLayout

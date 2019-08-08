@@ -45,6 +45,7 @@ class PublicAPICategoryModel {
     /// 서버로 정보 요청
     func requestToServer() {
         let authKey = "6N%2BwieYkPpXpi3hWL3wiKB9GHHU6tgsyFlxD0tSO4nyTbq3pVw3lCaZcvNp89oD7BnfJXP333QWeY4lOz5XDVA%3D%3D"
+        
         let url = URL(string:"http://api.visitkorea.or.kr/openapi/service/rest/KorService/categoryCode?ServiceKey=\(authKey)&numOfRows=7&pageNo=1&MobileOS=IOS&MobileApp=TestApp&_type=json")!
         let result = try! String(contentsOf: url)
         let decoder = JSONDecoder()
