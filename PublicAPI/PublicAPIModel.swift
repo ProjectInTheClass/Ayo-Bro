@@ -38,20 +38,46 @@ struct PublicAPIResponse : Codable {
     }
 }
 
+/// 전역으로 선언.
+let sharedModelPublicAPI = PublicAPIModel()
+
 class PublicAPIModel {
+
+    func itemsForIndex(index:Int) -> [PublicAPIResponse.HeaderWithBody.Body.Item.ItemInside] {
+        var rValue:[PublicAPIResponse.HeaderWithBody.Body.Item.ItemInside] = []
+        
+        switch index {
+        case 0 :
+            rValue = self.resultCourse
+        case 1 :
+            rValue = self.resultTripDestination
+        case 2 :
+            rValue = self.resultFood
+        case 3 :
+            rValue = self.resultLeports
+        case 4 :
+            rValue = self.resultStay
+        case 5 :
+            rValue = self.resultCulture
+        default :
+            print ("Error")
+        }
+        return rValue
+    }
+
     
-    var resultCourse:[PublicAPIResponse.HeaderWithBody.Body.Item.ItemInside] = []
-    var resultTripDestination:[PublicAPIResponse.HeaderWithBody.Body.Item.ItemInside] = []
-    var resultFood : [PublicAPIResponse.HeaderWithBody.Body.Item.ItemInside] = []
-    var resultLeports : [PublicAPIResponse.HeaderWithBody.Body.Item.ItemInside] = []
-    var resultStay : [PublicAPIResponse.HeaderWithBody.Body.Item.ItemInside] = []
-    var resultCulture : [PublicAPIResponse.HeaderWithBody.Body.Item.ItemInside] = []
+    var resultCourse:           [PublicAPIResponse.HeaderWithBody.Body.Item.ItemInside] = []
+    var resultTripDestination:  [PublicAPIResponse.HeaderWithBody.Body.Item.ItemInside] = []
+    var resultFood :            [PublicAPIResponse.HeaderWithBody.Body.Item.ItemInside] = []
+    var resultLeports :         [PublicAPIResponse.HeaderWithBody.Body.Item.ItemInside] = []
+    var resultStay :            [PublicAPIResponse.HeaderWithBody.Body.Item.ItemInside] = []
+    var resultCulture :         [PublicAPIResponse.HeaderWithBody.Body.Item.ItemInside] = []
     /// 서버로 정보 요청
     func requestToServer() {
         let authKey = "6N%2BwieYkPpXpi3hWL3wiKB9GHHU6tgsyFlxD0tSO4nyTbq3pVw3lCaZcvNp89oD7BnfJXP333QWeY4lOz5XDVA%3D%3D"
         let contentTypeId: [Int] = [25, 12, 39, 28, 32, 14]
         for typeId in contentTypeId {
-            let url = URL(string: "http://api.visitkorea.or.kr/openapi/service/rest/KorService/areaBasedList?MobileOS=IOS&MobileApp=AppTest&ServiceKey=\(authKey)&_type=json&pageNo=1&numOfRows=20&(contentTypeId=\(typeId)&arrange=P")!
+            let url = URL(string: "http://api.visitkorea.or.kr/openapi/service/rest/KorService/areaBasedList?MobileOS=IOS&MobileApp=AppTest&ServiceKey=\(authKey)&_type=json&pageNo=1&numOfRows=20&contentTypeId=\(typeId)&arrange=P")!
             let result = try! String(contentsOf: url)
             let decoder = JSONDecoder()
             

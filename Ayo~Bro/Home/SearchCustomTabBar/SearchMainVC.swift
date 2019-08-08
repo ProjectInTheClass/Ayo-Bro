@@ -40,6 +40,15 @@ class SearchMainVC: UIViewController, SearchCustomMenuBarDelegate{
         customMenuBar.heightAnchor.constraint(equalToConstant: 60).isActive = true
     }
     
+//    func timeToUpdateContentTableView(indexPath:IndexPath) {
+//        let cell = pageCollectionView.cellForItem(at: indexPath) as! PageCell
+//        
+//        cell.activityTableViewController?.items = sharedModelPublicAPI.itemsForIndex(index: indexPath.row)
+//        
+//        //
+//        cell.activityTableView?.reloadData() // 각 카테고리 별 테이블뷰 데이터 업데이트.
+//    }
+    
     func customMenuBar(scrollTo index: Int) {
         let indexPath = IndexPath(row: index, section: 0)
         self.pageCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
@@ -63,7 +72,14 @@ class SearchMainVC: UIViewController, SearchCustomMenuBarDelegate{
 extension SearchMainVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PageCell.reusableIdentifier, for: indexPath) as! PageCell
-        cell.reloadTableView()
+//        cell.reloadTableView()
+
+        cell.activityTableViewController?.items = sharedModelPublicAPI.itemsForIndex(index: indexPath.row)
+        
+        //
+        cell.activityTableView?.reloadData() // 각 카테고리 별 테이블뷰 데이터 업데이트.
+
+        
         return cell
     }
     
@@ -79,8 +95,10 @@ extension SearchMainVC: UICollectionViewDelegate, UICollectionViewDataSource {
         let itemAt = Int(targetContentOffset.pointee.x / self.view.frame.width)
         let indexPath = IndexPath(item: itemAt, section: 0)
         customMenuBar.customTabBarCollectionView.selectItem(at: indexPath, animated: true, scrollPosition: [])
-        indexRow = indexPath.row
         
+//        self.timeToUpdateContentTableView(indexPath: indexPath)
+        
+        indexRow = indexPath.row
         print (indexRow)
     }
 }

@@ -23,7 +23,6 @@ class PageCell: UICollectionViewCell {
         activityTableView = activityTableViewController?.tableView
         activityTableView?.reloadData()
         self.addSubview(activityTableView!)
-        
     }
     
     override func awakeFromNib() {
