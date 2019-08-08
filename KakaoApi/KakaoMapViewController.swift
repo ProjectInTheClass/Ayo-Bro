@@ -24,6 +24,7 @@ class KakaoMapViewController: UIViewController, MTMapViewDelegate, CLLocationMan
         locationManager.requestWhenInUseAuthorization() //사용할때만 위치정보를 사용한다는 팝업
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
+        
         let coor = locationManager.location?.coordinate
         let coorLatitude = 37.619675//coor!.latitude
         let coorLongitude = 127.059803//coor!.longitude
