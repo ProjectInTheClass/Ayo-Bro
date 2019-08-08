@@ -25,12 +25,11 @@ class KakaoMapViewController: UIViewController, MTMapViewDelegate, CLLocationMan
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
         let coor = locationManager.location?.coordinate
-        let coorLatitude = coor!.latitude
-        let coorLongitude = coor!.longitude
+        let coorLatitude = 37.619675//coor!.latitude
+        let coorLongitude = 127.059803//coor!.longitude
         mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: coorLatitude, longitude: coorLongitude))
-        mapView?.setMapCenter(mapPoint!, animated: true)
-    
-        
+        //mapView?.setMapCenter(mapPoint!, animated: true)
+        mapView?.setMapCenter(mapPoint, zoomLevel: 0, animated: true)
         if let mapView = mapView {
             mapView.delegate = self
             mapView.baseMapType = .standard
