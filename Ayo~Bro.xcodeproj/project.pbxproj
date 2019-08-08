@@ -102,6 +102,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		120618A022FC7F680028514D /* nearJEJU.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = nearJEJU.gpx; sourceTree = "<group>"; };
 		1271725F22FA713A00B9BA56 /* PublicAPITableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicAPITableViewController.swift; sourceTree = "<group>"; };
 		1271726122FA719300B9BA56 /* PublicAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicAPIModel.swift; sourceTree = "<group>"; };
 		D4013A9722F2CCC400F7A819 /* NSObject + reusableIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject + reusableIdentifier.swift"; sourceTree = "<group>"; };
@@ -256,6 +257,7 @@
 		D45A5E3722E59F2600D75C7F = {
 			isa = PBXGroup;
 			children = (
+				120618A022FC7F680028514D /* nearJEJU.gpx */,
 				1271725E22FA711F00B9BA56 /* PublicAPI */,
 				E433EB8B22F4150000531197 /* KakaoApi */,
 				D45A5E4222E59F2600D75C7F /* Ayo~Bro */,

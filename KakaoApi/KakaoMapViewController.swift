@@ -16,6 +16,12 @@ class KakaoMapViewController: UIViewController, MTMapViewDelegate, CLLocationMan
     var mapPoint: MTMapPoint?
     var locationManager : CLLocationManager = CLLocationManager()
     
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        locations.first?.coordinate.latitude
+        locations.first?.coordinate.longitude
+        /// mapView?.addPOIItems(items) // 지도에 마커 표시 - 이 작업을 여기서..
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView = MTMapView(frame: self.view.bounds)
