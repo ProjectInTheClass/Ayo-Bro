@@ -5,12 +5,21 @@
 //  Created by 이동건 on 2018. 4. 18..
 //  Copyright © 2018년 이동건. All rights reserved.
 //
+var homeRegionSelectIndex = 0
 
 import UIKit
 
 class SearchMainVC: UIViewController, SearchCustomMenuBarDelegate{
     
-    //MARK: Outltes
+     let Array = [ "전국", "서울", "부산", "제주도", "경기도", "경상북도", "경상남도", "전라북도", "전라남도", "충청남도", "충청북도"]
+    
+    @IBOutlet weak var bigAreaButton: UIButton!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        bigAreaButton.titleLabel?.text = Array[homeRegionSelectIndex]
+    }
+    
     var pageCollectionView: UICollectionView = {
         let collectionViewLayout = UICollectionViewFlowLayout()
         collectionViewLayout.scrollDirection = .horizontal
@@ -23,7 +32,6 @@ class SearchMainVC: UIViewController, SearchCustomMenuBarDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
-        title = "홈"
         navigationController?.hidesBarsOnSwipe = true
         setupCustomTabBar()
         setupPageCollectionView()
@@ -63,7 +71,7 @@ class SearchMainVC: UIViewController, SearchCustomMenuBarDelegate{
 extension SearchMainVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PageCell.reusableIdentifier, for: indexPath) as! PageCell
-        cell.label.text = "\(indexPath.row + 1)번째 뷰"
+        cell.reloadTableView()
         return cell
     }
     

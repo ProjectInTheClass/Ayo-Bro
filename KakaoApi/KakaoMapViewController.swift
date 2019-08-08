@@ -24,13 +24,13 @@ class KakaoMapViewController: UIViewController, MTMapViewDelegate, CLLocationMan
         locationManager.requestWhenInUseAuthorization() //사용할때만 위치정보를 사용한다는 팝업
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
-        
         let coor = locationManager.location?.coordinate
-        let coorLatitude = 37.619675//coor!.latitude
-        let coorLongitude = 127.059803//coor!.longitude
+        let coorLatitude = coor!.latitude
+        let coorLongitude = coor!.longitude
         mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: coorLatitude, longitude: coorLongitude))
-        //mapView?.setMapCenter(mapPoint!, animated: true)
-        mapView?.setMapCenter(mapPoint, zoomLevel: 0, animated: true)
+        mapView?.setMapCenter(mapPoint!, animated: true)
+    
+        
         if let mapView = mapView {
             mapView.delegate = self
             mapView.baseMapType = .standard
