@@ -28,11 +28,21 @@ class HomeRegionTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! HomeTableViewCell
-        
+        let queueSub = OperationQueue()
+
         let item = items[indexPath.row]
-        
+
         cell.regionLabel.text = item.title
-        
+        if let stringURL = item.firstimage2 {
+            let url = URL(string: stringURL)!
+            queueSub.addOperation {
+                let image = try! Data(contentsOf: url)
+                
+                OperationQueue.main.addOperation {
+                    cell.regionImage.image = UIImage(data: image)
+            }
+        }
+    }
 //        switch indexRow {
 //
 //        case 0 :
@@ -51,7 +61,7 @@ class HomeRegionTableViewController: UITableViewController {
 //            print ("Error")
 //
 //        }
-        cell.regionImage.image = UIImage(named: "loading")
+//        cell.regionImage.image = UIImage(named: "loading")
         ///cell.regionLabel.text = modelPublicAPI.result[indexPath.row].title
         cell.explainLabel.text = "Loem ipsum"
         cell.selectButton.setImage(UIImage(named: "star"), for: .normal) //즐겨찾기
@@ -66,7 +76,10 @@ class HomeRegionTableViewController: UITableViewController {
 //            }
 //        }
         return cell
-    }
 
+    }
+    
 }
+
+
 
