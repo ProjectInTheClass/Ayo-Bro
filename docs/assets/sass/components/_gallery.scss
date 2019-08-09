@@ -34,7 +34,6 @@
 
 			img {
 				display: block;
-				height: 25vw;
 				min-height: 18rem;
 				object-fit: cover;
 				object-position: center;
@@ -49,11 +48,11 @@
 				}
 			}
 
-			&.portrait {
-				img {
-					height: 30vw;
-				}
-			}
+			// &.portrait {
+			// 	img {
+			// 		height: 30vw;
+			// 	}
+			// }
 		}
 
 		.modal {
@@ -89,7 +88,7 @@
 				background-size: 4rem;
 				content: '';
 				display: block;
-				height: 4rem;
+				// height: 4rem;
 				left: 50%;
 				margin: -2rem 0 0 -2rem;
 				opacity: 0;
@@ -106,7 +105,7 @@
 				content: '';
 				cursor: pointer;
 				display: block;
-				height: 4rem;
+				// height: 4rem;
 				position: absolute;
 				right: 0.5rem;
 				top: 0.5rem;
@@ -124,7 +123,7 @@
 				img {
 					box-shadow: 0 1rem 3rem 0 rgba(0, 0, 0, 0.35);
 					display: block;
-					max-height: 90vh;
+					// max-height: 90vh;
 					max-width: 90vw;
 				}
 			}
@@ -157,24 +156,24 @@
 			}
 		}
 
-		@include breakpoint('<=medium') {
-			a {
-				img {
-					height: 20rem;
-				}
+		// @include breakpoint('<=medium') {
+		// 	a {
+		// 		img {
+		// 			// height: 20rem;
+		// 		}
 
-				&.landscape {
-					img {
-						height: 25rem;
-					}
-				}
+		// 		&.landscape {
+		// 			img {
+		// 				height: 25rem;
+		// 			}
+		// 		}
 
-				&.portrait {
-					img {
-						height: 25rem;
-					}
-				}
-			}
+		// 		&.portrait {
+		// 			img {
+		// 				height: 25rem;
+		// 			}
+		// 		}
+		// 	}
 
 			.modal {
 				.inner {
