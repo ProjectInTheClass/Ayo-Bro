@@ -5,6 +5,8 @@ import Foundation
 class RegionInfoTableViewController: UITableViewController{
     
     var selectedIndex:Int = 0
+    
+    
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1

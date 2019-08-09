@@ -10,6 +10,11 @@ import UIKit
 var indexRow:Int = 0
 class SearchMainVC: UIViewController, SearchCustomMenuBarDelegate{
     
+    @IBOutlet var regionButton: UIButton!
+    override func viewWillAppear(_ animated: Bool) {
+        regionButton.titleLabel?.text = "\(RRArray[selectRegionIndex])"
+        
+    }
     //MARK: Outltes
     var pageCollectionView: UICollectionView = {
         let collectionViewLayout = UICollectionViewFlowLayout()

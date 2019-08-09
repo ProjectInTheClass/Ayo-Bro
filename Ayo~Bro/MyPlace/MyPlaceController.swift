@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+var RegionSection = 0
 struct SectionData {
     var isOpended: Bool
     var title:String
@@ -17,10 +17,10 @@ struct SectionData {
 class MyPlaceController: UITableViewController {
     
     var sectionDatas:[SectionData] = [
-        SectionData(isOpended: false, title: "Title1"),
-        SectionData(isOpended: false, title: "Title2"),
-        SectionData(isOpended: false, title: "Title3"),
-        SectionData(isOpended: false, title: "Title4")
+        SectionData(isOpended: false, title: "서울 맛집투어"),
+        SectionData(isOpended: false, title: "부산 해운대"),
+        SectionData(isOpended: false, title: "제주도 맛집여행"),
+        SectionData(isOpended: false, title: "안동 하회마을")
     ]
     //MARK: Life cycle
     override func viewDidLoad() {
@@ -33,6 +33,7 @@ class MyPlaceController: UITableViewController {
 
 extension MyPlaceController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        RegionSection = section
         if sectionDatas[section].isOpended {
             return 2
         }
@@ -57,7 +58,7 @@ extension MyPlaceController {
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 1 {
-            return 250
+            return CGFloat(dummyArray.count * 50 - 40)
         }
         return 50
     }
