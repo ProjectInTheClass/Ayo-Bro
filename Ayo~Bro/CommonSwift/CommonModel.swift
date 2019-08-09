@@ -29,9 +29,9 @@ let jeju_Day2 = ScheduleByDay(dayInfo: "2일차", destinations: [ "제주여행�
 let jeju_Day3 = ScheduleByDay(dayInfo: "3일차", destinations: [ "제주여행지7", "제주여행지8", "제주여행지9" ])
 let jejuEntireSchedule = ScheculeByRegion(regionName: "4박 5일 제주도여행", schedules: [ jeju_Day1, jeju_Day2, jeju_Day3 ])
 
-let busan_Day1 = ScheduleByDay(dayInfo: "1일차", destinations: [ "부산여행지1", "부산여행지2", "부산여행지3" ])
-let busan_Day2 = ScheduleByDay(dayInfo: "2일차", destinations: [ "부산여행지4", "부산여행지5", "부산여행지6" ])
-let busan_Day3 = ScheduleByDay(dayInfo: "3일차", destinations: [ "부산여행지7", "부산여행지8", "부산여행지9" ])
+let busan_Day1 = ScheduleByDay(dayInfo: "1일차", destinations: [ "부산역", "개미집", "송도 케이블카", "감천문화마을", "광안리 해수욕장","퍼지네이블" ])
+let busan_Day2 = ScheduleByDay(dayInfo: "2일차", destinations: [ "해동용궁사", "죽성드림성당", "기장카페", "누리마루APEC", "더베이 101" ])
+let busan_Day3 = ScheduleByDay(dayInfo: "3일차", destinations: [ "재기돼지국밥", "태종대", "국제시장", "보수동 책방거리", "초량밀면", "부산역" ])
 let busanEntireSchedule = ScheculeByRegion(regionName: "2박 3일 부산여행", schedules: [ busan_Day1, busan_Day2, busan_Day3 ])
 
 struct RegionInfomation {

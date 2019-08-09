@@ -7,7 +7,7 @@
 //
 
 import UIKit
-var dummyArray = [ "여행지1", "야행지2", "여행지3", "여행지4", "여행지5", "여행지6"]
+var dummyArray = [ "부산역", "송도 케이블카", "개미집", "감천문화마을", "광안리 해수욕장", "퍼지네이블", "해동용궁사", "죽성드림성당", "기장카페" ]
 class HiddenController: UITableViewController {
 
     override func viewDidLoad() {
@@ -64,7 +64,7 @@ class HiddenController: UITableViewController {
             cell.textLabel?.text = "여행지\(indexPath.row + 1)"
         }
         else if RegionSection == 3 {
-            cell.textLabel?.text = "여행지\(indexPath.row + 1)"
+            cell.textLabel?.text = dummyArray[indexPath.row]
         }
         
         

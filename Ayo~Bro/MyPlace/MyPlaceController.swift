@@ -18,9 +18,9 @@ class MyPlaceController: UITableViewController {
     
     var sectionDatas:[SectionData] = [
         SectionData(isOpended: false, title: "서울 맛집투어"),
-        SectionData(isOpended: false, title: "부산 해운대"),
+        SectionData(isOpended: false, title: "안동 하회마을"),
         SectionData(isOpended: false, title: "제주도 맛집여행"),
-        SectionData(isOpended: false, title: "안동 하회마을")
+        SectionData(isOpended: false, title: "부산 해운대")
     ]
     //MARK: Life cycle
     override func viewDidLoad() {
