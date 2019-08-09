@@ -63,7 +63,7 @@ class HomeRegionTableViewController: UITableViewController {
 //        }
 //        cell.regionImage.image = UIImage(named: "loading")
         ///cell.regionLabel.text = modelPublicAPI.result[indexPath.row].title
-        cell.explainLabel.text = "Loem ipsum"
+        cell.explainLabel.text = item.addr1
         cell.selectButton.setImage(UIImage(named: "star"), for: .normal) //즐겨찾기
 //        if let stringURL = modelPublicAPI.result[indexPath.row].firstimage2 {
 //            let url = URL(string: stringURL)!
