@@ -6,7 +6,7 @@
 //  Copyright © 2019 GW_19. All rights reserved.
 //
 
-var RRArray = [ "전국", "경기도", "경상남도", "경상북도", "강원도", "전라남도", "전라북도", "충청남도", "충청북도", "제주도"]
+var RRArray = ["서울", "강원도", "경기도", "경상남도", "경상북도", "전라남도", "전라북도", "충청남도", "충청북도", "제주도"]
 
 import UIKit
 var selectRegionIndex = 0
@@ -17,14 +17,24 @@ class BigAreaTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
+    
     @IBAction func Cancell(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectRegionIndex = indexPath.row
+        sharedModelPublicAPI.requestToServer()
+//        sharedModelPublicAPI.resultCourse = sharedModelPublicAPI.itemsForIndex(index: 0)
+//        sharedModelPublicAPI.resultTripDestination = sharedModelPublicAPI.itemsForIndex(index: 1)
+//        sharedModelPublicAPI.resultFood = sharedModelPublicAPI.itemsForIndex(index: 2)
+//        sharedModelPublicAPI.resultLeports = sharedModelPublicAPI.itemsForIndex(index: 3)
+//        sharedModelPublicAPI.resultStay = sharedModelPublicAPI.itemsForIndex(index: 4)
+//        sharedModelPublicAPI.resultCulture = sharedModelPublicAPI.itemsForIndex(index: 5)
+        
         self.dismiss(animated: true, completion: nil)
+        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -36,7 +46,7 @@ class BigAreaTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
         cell.textLabel?.text = "\(RRArray[indexPath.row])"
-
+    
         return cell
     }
     

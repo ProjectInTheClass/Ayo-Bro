@@ -37,7 +37,7 @@ class LocalTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyTableCell", for: indexPath)
         if indexPath.row == 0{
-            cell.textLabel?.text = "전국"
+            cell.textLabel?.text = "서울"
         }
         else {
             cell.textLabel?.text = regionRegion.RegionInformation[indexPath.row - 1].region

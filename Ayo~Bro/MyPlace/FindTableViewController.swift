@@ -23,7 +23,7 @@ class FindTableViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if regionRegion.selectedIndex < 0 {
-            resultRegionValue.titleLabel?.text = "전국"
+            resultRegionValue.titleLabel?.text = "지역선택"
         }
         else {
             resultRegionValue.titleLabel?.text = regionRegion.RegionInformation[regionRegion.selectedIndex].region

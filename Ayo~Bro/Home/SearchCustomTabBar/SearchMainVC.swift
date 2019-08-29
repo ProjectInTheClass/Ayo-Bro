@@ -82,8 +82,7 @@ extension SearchMainVC: UICollectionViewDelegate, UICollectionViewDataSource {
         cell.activityTableViewController?.items = sharedModelPublicAPI.itemsForIndex(index: indexPath.row)
         
         //
-        cell.activityTableView?.reloadData() // 각 카테고리 별 테이블뷰 데이터 업데이트.
-
+        cell.activityTableView?.reloadData() // 각 카테고리 별 테이블뷰 데이터 업데이트.@@@@@@@@@@ 이 부분을 어떻게 사용..
         
         return cell
     }

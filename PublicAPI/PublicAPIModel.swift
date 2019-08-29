@@ -76,8 +76,35 @@ class PublicAPIModel {
     func requestToServer() {
         let authKey = "6N%2BwieYkPpXpi3hWL3wiKB9GHHU6tgsyFlxD0tSO4nyTbq3pVw3lCaZcvNp89oD7BnfJXP333QWeY4lOz5XDVA%3D%3D"
         let contentTypeId: [Int] = [25, 12, 39, 28, 32, 14]
+        var areaCode : Int = 1
+        switch selectRegionIndex {
+        case 0:
+            areaCode = 1 ///서울
+        case 1:
+            areaCode = 32 ///강원도
+        case 2:
+            areaCode = 31 ///경기도
+        case 3:
+            areaCode = 36 ///경상남도
+        case 4:
+            areaCode = 35 ///경상북도
+        case 5:
+            areaCode = 38 ///전라남도
+        case 6:
+            areaCode = 37 ///전라북도
+        case 7:
+            areaCode = 34 ///충청남도
+        case 8:
+            areaCode = 33 ///충청북도
+        case 9:
+            areaCode = 39 ///제주도
+        default :
+            print ("selectRegionIndex Error")
+            break
+        }
+        
         for typeId in contentTypeId {
-            let url = URL(string: "http://api.visitkorea.or.kr/openapi/service/rest/KorService/areaBasedList?MobileOS=IOS&MobileApp=AppTest&ServiceKey=\(authKey)&_type=json&pageNo=1&numOfRows=20&contentTypeId=\(typeId)&arrange=P")!
+            let url = URL(string: "http://api.visitkorea.or.kr/openapi/service/rest/KorService/areaBasedList?MobileOS=IOS&MobileApp=AppTest&ServiceKey=\(authKey)&_type=json&pageNo=1&numOfRows=20&contentTypeId=\(typeId)&areaCode=\(areaCode)&arrange=P")!
             let result = try! String(contentsOf: url)
             let decoder = JSONDecoder()
             

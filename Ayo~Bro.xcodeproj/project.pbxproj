@@ -25,7 +25,7 @@
 		D45A5E5822E5A0CC00D75C7F /* MyCourse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D45A5E5722E5A0CC00D75C7F /* MyCourse.storyboard */; };
 		D45A5E5A22E5A0F000D75C7F /* MyPlace.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D45A5E5922E5A0F000D75C7F /* MyPlace.storyboard */; };
 		D45A5E5C22E5A10600D75C7F /* My-Infomation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D45A5E5B22E5A10600D75C7F /* My-Infomation.storyboard */; };
-		D47AD35D22FBF2FD00C704EE /* BigAreaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47AD35C22FBF2FD00C704EE /* BigAreaTableViewController.swift */; };
+		D47AD35D22FBF2FD00C704EE /* BigAreaTableViewController.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47AD35C22FBF2FD00C704EE /* BigAreaTableViewController.swift.swift */; };
 		D49D026D22FBED2B0043C22B /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D026C22FBED2B0043C22B /* HomeTableViewCell.swift */; };
 		D49D026F22FBED390043C22B /* HomeRegionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D026E22FBED390043C22B /* HomeRegionTableViewController.swift */; };
 		D49E7FA322F41E8300442B30 /* SearchMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49E7FA222F41E8300442B30 /* SearchMainVC.swift */; };
@@ -127,7 +127,7 @@
 		D45A5E5722E5A0CC00D75C7F /* MyCourse.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyCourse.storyboard; sourceTree = "<group>"; };
 		D45A5E5922E5A0F000D75C7F /* MyPlace.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPlace.storyboard; sourceTree = "<group>"; };
 		D45A5E5B22E5A10600D75C7F /* My-Infomation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "My-Infomation.storyboard"; sourceTree = "<group>"; };
-		D47AD35C22FBF2FD00C704EE /* BigAreaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigAreaTableViewController.swift; sourceTree = "<group>"; };
+		D47AD35C22FBF2FD00C704EE /* BigAreaTableViewController.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigAreaTableViewController.swift.swift; sourceTree = "<group>"; };
 		D49D026C22FBED2B0043C22B /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		D49D026E22FBED390043C22B /* HomeRegionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRegionTableViewController.swift; sourceTree = "<group>"; };
 		D49E7FA222F41E8300442B30 /* SearchMainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchMainVC.swift; sourceTree = "<group>"; };
@@ -312,7 +312,7 @@
 				D49E7FA222F41E8300442B30 /* SearchMainVC.swift */,
 				D49D026C22FBED2B0043C22B /* HomeTableViewCell.swift */,
 				D49D026E22FBED390043C22B /* HomeRegionTableViewController.swift */,
-				D47AD35C22FBF2FD00C704EE /* BigAreaTableViewController.swift */,
+				D47AD35C22FBF2FD00C704EE /* BigAreaTableViewController.swift.swift */,
 				D49E7F8622F41C8C00442B30 /* SearchViews */,
 			);
 			path = SearchCustomTabBar;
@@ -621,7 +621,7 @@
 				D4D714D322F02BA2006552B0 /* RighImageTableViewCell.swift in Sources */,
 				E477312A22EAD95E0072C057 /* NoticeInfoTableViewController.swift in Sources */,
 				D4D714CF22F01B1B006552B0 /* DetailRegionInfoViewController.swift in Sources */,
-				D47AD35D22FBF2FD00C704EE /* BigAreaTableViewController.swift in Sources */,
+				D47AD35D22FBF2FD00C704EE /* BigAreaTableViewController.swift.swift in Sources */,
 				D4D714CD22F01ADF006552B0 /* RegionInfoCollectionViewController.swift in Sources */,
 				3BA62E8C22FCCD3E009A20AC /* MyPlaceController.swift in Sources */,
 				D49D026D22FBED2B0043C22B /* HomeTableViewCell.swift in Sources */,

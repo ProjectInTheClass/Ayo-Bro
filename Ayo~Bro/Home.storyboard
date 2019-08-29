@@ -753,7 +753,7 @@
                         <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="e0n-W5-S99">
                             <rect key="frame" x="178" y="7" width="58" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="    전국    "/>
+                            <state key="normal" title="   서울   "/>
                             <connections>
                                 <segue destination="0Fy-61-zfA" kind="presentation" id="HEi-y9-Sde"/>
                             </connections>

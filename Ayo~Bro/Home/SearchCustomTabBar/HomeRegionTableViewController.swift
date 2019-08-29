@@ -39,7 +39,7 @@ class HomeRegionTableViewController: UITableViewController {
         if let stringURL = item.firstimage2 {
             let url = URL(string: stringURL)!
             queueSub.addOperation {
-                let image = try! Data(contentsOf: url)
+                    let image = try! Data(contentsOf: url)
                 
                 OperationQueue.main.addOperation {
                     cell.regionImage.image = UIImage(data: image)
