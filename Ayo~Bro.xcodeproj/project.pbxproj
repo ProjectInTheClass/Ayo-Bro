@@ -16,6 +16,8 @@
 		3BA62E8822FCCD1E009A20AC /* HiddenCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BA62E8622FCCD1E009A20AC /* HiddenCell.xib */; };
 		3BA62E8A22FCCD2D009A20AC /* HiddenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA62E8922FCCD2D009A20AC /* HiddenController.swift */; };
 		3BA62E8C22FCCD3E009A20AC /* MyPlaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA62E8B22FCCD3E009A20AC /* MyPlaceController.swift */; };
+		3BDDC0A62320B2B40078876D /* DetailInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDDC0A52320B2B40078876D /* DetailInfoTableViewController.swift */; };
+		3BDDC0A82320B50F0078876D /* DetailInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDDC0A72320B50F0078876D /* DetailInfoTableViewCell.swift */; };
 		D4013AA322F2CCC400F7A819 /* NSObject + reusableIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4013A9722F2CCC400F7A819 /* NSObject + reusableIdentifier.swift */; };
 		D45A5E4422E59F2600D75C7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A5E4322E59F2600D75C7F /* AppDelegate.swift */; };
 		D45A5E4922E59F2600D75C7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D45A5E4722E59F2600D75C7F /* Main.storyboard */; };
@@ -116,6 +118,8 @@
 		3BA62E8622FCCD1E009A20AC /* HiddenCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HiddenCell.xib; sourceTree = "<group>"; };
 		3BA62E8922FCCD2D009A20AC /* HiddenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenController.swift; sourceTree = "<group>"; };
 		3BA62E8B22FCCD3E009A20AC /* MyPlaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlaceController.swift; sourceTree = "<group>"; };
+		3BDDC0A52320B2B40078876D /* DetailInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoTableViewController.swift; sourceTree = "<group>"; };
+		3BDDC0A72320B50F0078876D /* DetailInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoTableViewCell.swift; sourceTree = "<group>"; };
 		D4013A9722F2CCC400F7A819 /* NSObject + reusableIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject + reusableIdentifier.swift"; sourceTree = "<group>"; };
 		D45A5E4022E59F2600D75C7F /* Ayo~Bro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ayo~Bro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D45A5E4322E59F2600D75C7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -310,6 +314,8 @@
 				D4013A8E22F2CCC400F7A819 /* Cells */,
 				D4013A9622F2CCC400F7A819 /* Extensions */,
 				D49E7FA222F41E8300442B30 /* SearchMainVC.swift */,
+				3BDDC0A72320B50F0078876D /* DetailInfoTableViewCell.swift */,
+				3BDDC0A52320B2B40078876D /* DetailInfoTableViewController.swift */,
 				D49D026C22FBED2B0043C22B /* HomeTableViewCell.swift */,
 				D49D026E22FBED390043C22B /* HomeRegionTableViewController.swift */,
 				D47AD35C22FBF2FD00C704EE /* BigAreaTableViewController.swift.swift */,
@@ -605,6 +611,7 @@
 				D4AE9AD322F9711E00600DEA /* SearchModel.swift in Sources */,
 				D4AE9AF022F974F800600DEA /* CustomPageViewController.swift in Sources */,
 				D4D714D122F02089006552B0 /* RegionInfoTableViewController.swift in Sources */,
+				3BDDC0A82320B50F0078876D /* DetailInfoTableViewCell.swift in Sources */,
 				D4AE9AE822F9734600600DEA /* PageCell.swift in Sources */,
 				D4AE9AE722F9734600600DEA /* CustomCell.swift in Sources */,
 				E4F3C92F22F40EE6006EECEB /* CommonModel.swift in Sources */,
@@ -613,6 +620,7 @@
 				1271726222FA719300B9BA56 /* PublicAPIModel.swift in Sources */,
 				D49D026F22FBED390043C22B /* HomeRegionTableViewController.swift in Sources */,
 				E477313522EB0DBD0072C057 /* NoticeInfoDetailViewController.swift in Sources */,
+				3BDDC0A62320B2B40078876D /* DetailInfoTableViewController.swift in Sources */,
 				D4AE9ADA22F971E200600DEA /* SelectedDetailTableViewController.swift in Sources */,
 				D4AE9AEF22F974F800600DEA /* DataViewController.swift in Sources */,
 				3BA62E6422FCC1C7009A20AC /* NSObject + reuseIdentifier.swift in Sources */,
