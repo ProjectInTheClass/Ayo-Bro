@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01A1DF82232AB20F002EE2F8 /* schemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A1DF81232AB20F002EE2F8 /* schemeViewController.swift */; };
 		1271726022FA713A00B9BA56 /* PublicAPITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1271725F22FA713A00B9BA56 /* PublicAPITableViewController.swift */; };
 		1271726222FA719300B9BA56 /* PublicAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1271726122FA719300B9BA56 /* PublicAPIModel.swift */; };
 		3BA62E6422FCC1C7009A20AC /* NSObject + reuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA62E6322FCC1C7009A20AC /* NSObject + reuseIdentifier.swift */; };
@@ -49,7 +50,6 @@
 		D4D714CF22F01B1B006552B0 /* DetailRegionInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D714CE22F01B1B006552B0 /* DetailRegionInfoViewController.swift */; };
 		D4D714D122F02089006552B0 /* RegionInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D714D022F02089006552B0 /* RegionInfoTableViewController.swift */; };
 		D4D714D322F02BA2006552B0 /* RighImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D714D222F02BA2006552B0 /* RighImageTableViewCell.swift */; };
-		E433EB8D22F4157700531197 /* KakaoMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E433EB8C22F4157700531197 /* KakaoMapViewController.swift */; };
 		E477312A22EAD95E0072C057 /* NoticeInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E477312922EAD95E0072C057 /* NoticeInfoTableViewController.swift */; };
 		E477313222EAF8530072C057 /* NoticeInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E477313122EAF8530072C057 /* NoticeInfoTableViewCell.swift */; };
 		E477313522EB0DBD0072C057 /* NoticeInfoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E477313422EB0DBD0072C057 /* NoticeInfoDetailViewController.swift */; };
@@ -108,6 +108,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		01A1DF81232AB20F002EE2F8 /* schemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = schemeViewController.swift; sourceTree = "<group>"; };
 		120618A022FC7F680028514D /* nearJEJU.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = nearJEJU.gpx; sourceTree = "<group>"; };
 		1271725F22FA713A00B9BA56 /* PublicAPITableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicAPITableViewController.swift; sourceTree = "<group>"; };
 		1271726122FA719300B9BA56 /* PublicAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicAPIModel.swift; sourceTree = "<group>"; };
@@ -153,7 +154,6 @@
 		D4D714CE22F01B1B006552B0 /* DetailRegionInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRegionInfoViewController.swift; sourceTree = "<group>"; };
 		D4D714D022F02089006552B0 /* RegionInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionInfoTableViewController.swift; sourceTree = "<group>"; };
 		D4D714D222F02BA2006552B0 /* RighImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RighImageTableViewCell.swift; sourceTree = "<group>"; };
-		E433EB8C22F4157700531197 /* KakaoMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoMapViewController.swift; sourceTree = "<group>"; };
 		E477312922EAD95E0072C057 /* NoticeInfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticeInfoTableViewController.swift; sourceTree = "<group>"; };
 		E477313122EAF8530072C057 /* NoticeInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeInfoTableViewCell.swift; sourceTree = "<group>"; };
 		E477313422EB0DBD0072C057 /* NoticeInfoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeInfoDetailViewController.swift; sourceTree = "<group>"; };
@@ -204,7 +204,6 @@
 		E4F3C98122F4149E006EECEB /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		E4F3C98322F414A5006EECEB /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		E4F3C98522F414AC006EECEB /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		E4F3C98722F414BF006EECEB /* KakaoMapHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KakaoMapHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,9 +268,9 @@
 		D45A5E3722E59F2600D75C7F = {
 			isa = PBXGroup;
 			children = (
+				01A1DF81232AB20F002EE2F8 /* schemeViewController.swift */,
 				120618A022FC7F680028514D /* nearJEJU.gpx */,
 				1271725E22FA711F00B9BA56 /* PublicAPI */,
-				E433EB8B22F4150000531197 /* KakaoApi */,
 				D45A5E4222E59F2600D75C7F /* Ayo~Bro */,
 				D45A5E4122E59F2600D75C7F /* Products */,
 				E4F3C93022F41429006EECEB /* lib */,
@@ -386,15 +385,6 @@
 				D4D714CE22F01B1B006552B0 /* DetailRegionInfoViewController.swift */,
 			);
 			path = CommonSwift;
-			sourceTree = "<group>";
-		};
-		E433EB8B22F4150000531197 /* KakaoApi */ = {
-			isa = PBXGroup;
-			children = (
-				E4F3C98722F414BF006EECEB /* KakaoMapHeader.h */,
-				E433EB8C22F4157700531197 /* KakaoMapViewController.swift */,
-			);
-			path = KakaoApi;
 			sourceTree = "<group>";
 		};
 		E477313322EAF8E80072C057 /* NoticeInfo */ = {
@@ -604,7 +594,6 @@
 				D4AE9AE222F9729400600DEA /* SearchCustomMenuBar.swift in Sources */,
 				E477313222EAF8530072C057 /* NoticeInfoTableViewCell.swift in Sources */,
 				D4013AA322F2CCC400F7A819 /* NSObject + reusableIdentifier.swift in Sources */,
-				E433EB8D22F4157700531197 /* KakaoMapViewController.swift in Sources */,
 				D4AE9AD222F9711E00600DEA /* LocalTableViewController.swift in Sources */,
 				D4AE9AD422F9711E00600DEA /* FindTableViewController.swift in Sources */,
 				D45A5E4422E59F2600D75C7F /* AppDelegate.swift in Sources */,
@@ -628,6 +617,7 @@
 				D4AE9AD822F971E200600DEA /* SelectedTableViewController.swift in Sources */,
 				D4D714D322F02BA2006552B0 /* RighImageTableViewCell.swift in Sources */,
 				E477312A22EAD95E0072C057 /* NoticeInfoTableViewController.swift in Sources */,
+				01A1DF82232AB20F002EE2F8 /* schemeViewController.swift in Sources */,
 				D4D714CF22F01B1B006552B0 /* DetailRegionInfoViewController.swift in Sources */,
 				D47AD35D22FBF2FD00C704EE /* BigAreaTableViewController.swift.swift in Sources */,
 				D4D714CD22F01ADF006552B0 /* RegionInfoCollectionViewController.swift in Sources */,
@@ -782,7 +772,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H2AHC8745H;
+				DEVELOPMENT_TEAM = 9DUV4SRL4B;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -797,9 +787,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/lib/DaumMap.embeddedframework/Resources",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "ayo-bro";
+				PRODUCT_BUNDLE_IDENTIFIER = ayo.bro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = KakaoApi/KakaoMapHeader.h;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -810,7 +800,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H2AHC8745H;
+				DEVELOPMENT_TEAM = 9DUV4SRL4B;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -825,9 +815,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/lib/DaumMap.embeddedframework/Resources",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "ayo-bro";
+				PRODUCT_BUNDLE_IDENTIFIER = ayo.bro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = KakaoApi/KakaoMapHeader.h;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

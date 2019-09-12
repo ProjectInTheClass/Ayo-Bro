@@ -10,18 +10,23 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Scheme View Controller-->
         <scene sceneID="Zmv-Q1-pW3">
             <objects>
-                <viewController id="bYK-ca-bsM" sceneMemberID="viewController">
+                <viewController id="bYK-ca-bsM" customClass="schemeViewController" customModule="Ayo_Bro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Oit-Mt-fjj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="로그인" translatesAutoresizingMaskIntoConstraints="NO" id="ery-jb-32J">
-                                <rect key="frame" x="5" y="315" width="404" height="396"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GcF-7w-0Tf">
+                                <rect key="frame" x="172" y="376" width="84" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <state key="normal" title="Kakao"/>
+                                <connections>
+                                    <action selector="kakao:" destination="bYK-ca-bsM" eventType="touchUpInside" id="STo-S4-g9d"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="K2a-4e-OKb"/>
@@ -410,7 +415,6 @@
         <image name="Image" width="478" height="532"/>
         <image name="camera" width="93" height="91"/>
         <image name="profile (3)" width="21.333333969116211" height="21.333333969116211"/>
-        <image name="로그인" width="1125" height="664"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="llz-t5-enN"/>
