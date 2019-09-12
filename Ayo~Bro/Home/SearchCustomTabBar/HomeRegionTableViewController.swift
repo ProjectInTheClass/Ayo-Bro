@@ -11,6 +11,7 @@ import UIKit
 class HomeRegionTableViewController: UITableViewController {
     
 //    var indexOfTab:Int = 0
+    var selectedIndex = 0
     
     var items:[PublicAPIResponse.HeaderWithBody.Body.Item.ItemInside] = []
     
@@ -82,6 +83,18 @@ class HomeRegionTableViewController: UITableViewController {
 //        }
         return cell
 
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedIndex = indexPath.row
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for: cell)!
+        let vc = segue.destination as! DetailInfoTableViewController
+        
+        vc.detailInfo = items[indexPath.row]
     }
     
 }
