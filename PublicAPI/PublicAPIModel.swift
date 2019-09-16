@@ -37,6 +37,42 @@ struct PublicAPIResponse : Codable {
                     var createdtime: Int
                     var overview : String?
                     var modifiedtime : Int
+                    var bookmark: Bool?
+                }
+            }
+        }
+    }
+}
+
+struct PublicAPIResponseDetail : Codable {
+    var response:HeaderWithBody
+    
+    struct HeaderWithBody : Codable {
+        var header:Header
+        var body:Body
+        
+        struct Header : Codable {
+            var resultCode : String
+            var resultMsg : String
+        }
+        struct Body : Codable {
+            var items :Item
+            var numOfRows : Int
+            var pageNo  : Int
+            var totalCount : Int
+            
+            struct Item : Codable {
+                var item : ItemInside
+                
+                struct ItemInside : Codable {
+                    var title : String
+                    var addr1 : String?
+                    var firstimage2 : String?
+                    var contentid : Int
+                    var contenttypeid: Int
+                    var createdtime: Int
+                    var overview : String?
+                    var modifiedtime : Int
                 }
             }
         }
@@ -143,13 +179,13 @@ class PublicAPIModel {
 let sharedModelPublicAPIDetail = PublicAPIDetail()
 
 class PublicAPIDetail {
-    func requestForDetail(contentId: Int) -> [PublicAPIResponse.HeaderWithBody.Body.Item.ItemInside] {
+    func requestForDetail(contentId: Int) -> [PublicAPIResponseDetail.HeaderWithBody.Body.Item.ItemInside] {
         let authKey = "6N%2BwieYkPpXpi3hWL3wiKB9GHHU6tgsyFlxD0tSO4nyTbq3pVw3lCaZcvNp89oD7BnfJXP333QWeY4lOz5XDVA%3D%3D"
         let url = URL(string: "http://api.visitkorea.or.kr/openapi/service/rest/KorService/detailCommon?MobileOS=IOS&MobileApp=Ayo_bro&ServiceKey=\(authKey)&contentId=\(contentId)&defaultYN=Y&firstImageYN=Y&_type=json&overviewYN=Y&addrinfoYN=Y")!
         let result = try! String(contentsOf: url)
         let decoder = JSONDecoder()
-        let value = try! decoder.decode(PublicAPIResponse.self, from: result.data(using: .utf8)!)
+        let value = try! decoder.decode(PublicAPIResponseDetail.self, from: result.data(using: .utf8)!)
         
-        return value.response.body.items.item
+        return [value.response.body.items.item]
     }
 }

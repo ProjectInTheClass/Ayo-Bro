@@ -22,7 +22,27 @@ class PageCell: UICollectionViewCell {
         activityTableViewController = (storyboard.instantiateViewController(withIdentifier: "HomeRegionTableViewController") as! HomeRegionTableViewController)
         activityTableView = activityTableViewController?.tableView
         activityTableView?.reloadData()
+        
         self.addSubview(activityTableView!)
+        
+//        let view = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 200))
+//
+//        view.translatesAutoresizingMaskIntoConstraints = false
+//
+//        view.backgroundColor = .red
+//
+//        self.addSubview(view)
+
+        activityTableView?.translatesAutoresizingMaskIntoConstraints = false
+        
+        let ascArtH = "H:|-(10)-[tV]-(20)-|"
+        let ascArtV = "V:|-(30)-[tV]-(40)-|"
+
+        let arrayH = NSLayoutConstraint.constraints(withVisualFormat: ascArtH, options: .alignmentMask, metrics: nil, views: ["tV":activityTableView!])
+        let arrayV = NSLayoutConstraint.constraints(withVisualFormat: ascArtV, options: .alignmentMask, metrics: nil, views: ["tV":activityTableView!])
+
+        self.addConstraints(arrayH)
+        self.addConstraints(arrayV)
     }
     
     override func awakeFromNib() {

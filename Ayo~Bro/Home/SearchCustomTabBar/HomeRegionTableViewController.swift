@@ -12,6 +12,7 @@ class HomeRegionTableViewController: UITableViewController {
     
     var indexOfMenu:Int = 0
     var selectedIndex = 0
+    var nc:UINavigationController?
     
     var items:[PublicAPIResponse.HeaderWithBody.Body.Item.ItemInside] = []
     
@@ -97,15 +98,24 @@ class HomeRegionTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.selectedIndex = indexPath.row
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let cell = sender as! UITableViewCell
-        let indexPath = tableView.indexPath(for: cell)!
-        let vc = segue.destination as! DetailInfoTableViewController
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "vcDetailInfo") as! DetailInfoTableViewController
         
         vc.originData = items[indexPath.row]
+//        vc.view.backgroundColor = .red
+        
+        self.nc?.pushViewController(vc, animated: true)
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let cell = sender as! UITableViewCell
+//        let indexPath = tableView.indexPath(for: cell)!
+//        let vc = segue.destination as! DetailInfoTableViewController
+//
+//        vc.originData = items[indexPath.row]
+//    }
+    
+    
     
 }
 

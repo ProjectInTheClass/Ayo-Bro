@@ -83,7 +83,8 @@ extension SearchMainVC: UICollectionViewDelegate, UICollectionViewDataSource {
 //        cell.reloadTableView()
         
         cell.activityTableViewController?.indexOfMenu = indexPath.row // 현 메뉴의 인덱스를 기억.
- 
+        cell.activityTableViewController?.nc = navigationController
+        
 //        cell.activityTableViewController?.items = sharedModelPublicAPI.itemsForIndex(index: indexPath.row)
 //
 //

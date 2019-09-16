@@ -11,7 +11,7 @@ import Foundation
 
 class DetailInfoTableViewController: UITableViewController {
     var originData : PublicAPIResponse.HeaderWithBody.Body.Item.ItemInside?
-    var detailInfo: [PublicAPIResponse.HeaderWithBody.Body.Item.ItemInside] = []
+    var detailInfo: [PublicAPIResponseDetail.HeaderWithBody.Body.Item.ItemInside] = []
     @IBOutlet weak var Image: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var explainLabel: UILabel!
