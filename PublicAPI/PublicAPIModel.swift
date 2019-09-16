@@ -113,7 +113,11 @@ class PublicAPIModel {
             let result = try! String(contentsOf: url)
             let decoder = JSONDecoder()
             
-            let value = try! decoder.decode(PublicAPIResponse.self, from: result.data(using: .utf8)!)
+            guard let value = try? decoder.decode(PublicAPIResponse.self, from: result.data(using: .utf8)!) else {
+                print("불러오기 실패!!!")
+                print(result)
+                return
+            }
             switch typeId {
             case 25:
                 self.resultCourse = value.response.body.items.item

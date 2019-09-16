@@ -10,13 +10,23 @@ import UIKit
 
 class HomeRegionTableViewController: UITableViewController {
     
-    //    var indexOfTab:Int = 0
+    var indexOfMenu:Int = 0
     var selectedIndex = 0
     
     var items:[PublicAPIResponse.HeaderWithBody.Body.Item.ItemInside] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        items = sharedModelPublicAPI.itemsForIndex(index: indexOfMenu)
+        
+        print("\(indexOfMenu) 번째 메뉴 안의 테이블뷰 컨트롤러")
+        
+        tableView.reloadData()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

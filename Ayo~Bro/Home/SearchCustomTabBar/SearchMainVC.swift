@@ -12,6 +12,7 @@ class SearchMainVC: UIViewController, SearchCustomMenuBarDelegate{
     
     @IBOutlet var regionButton: UIButton!
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         regionButton.titleLabel?.text = "\(RRArray[selectRegionIndex])"
         
     }
@@ -54,6 +55,8 @@ class SearchMainVC: UIViewController, SearchCustomMenuBarDelegate{
 //        cell.activityTableView?.reloadData() // 각 카테고리 별 테이블뷰 데이터 업데이트.
 //    }
     
+    /// 사용자가 메뉴를 선택하면, 이게 호출되고 - delegate - 이걸 통해서 뭘 선택했는지 알 수 있음.
+    /// selectedItem이 안먹힘 메뉴 컬렉션 뷰 에서.
     func customMenuBar(scrollTo index: Int) {
         let indexPath = IndexPath(row: index, section: 0)
         self.pageCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
@@ -78,11 +81,13 @@ extension SearchMainVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PageCell.reusableIdentifier, for: indexPath) as! PageCell
 //        cell.reloadTableView()
-
-        cell.activityTableViewController?.items = sharedModelPublicAPI.itemsForIndex(index: indexPath.row)
         
-        //
-        cell.activityTableView?.reloadData() // 각 카테고리 별 테이블뷰 데이터 업데이트.@@@@@@@@@@ 이 부분을 어떻게 사용..
+        cell.activityTableViewController?.indexOfMenu = indexPath.row // 현 메뉴의 인덱스를 기억.
+ 
+//        cell.activityTableViewController?.items = sharedModelPublicAPI.itemsForIndex(index: indexPath.row)
+//
+//
+//        cell.activityTableView?.reloadData() // 각 카테고리 별 테이블뷰 데이터 업데이트.@@@@@@@@@@ 이 부분을 어떻게 사용..
         
         return cell
     }
