@@ -11,16 +11,13 @@ import UIKit
 class DetailInfoTableViewController: UITableViewController {
     var detailInfo: PublicAPIResponse.HeaderWithBody.Body.Item.ItemInside?
     
+
+
     @IBOutlet weak var Image: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var explainLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     
-    
-    
-    @IBAction func Cancel(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
         titleLabel.text = detailInfo?.title
