@@ -27,11 +27,16 @@ struct PublicAPIResponse : Codable {
             
             struct Item : Codable {
                 var item : [ItemInside]
-                ///Title
+                
                 struct ItemInside : Codable {
                     var title : String
                     var addr1 : String?
                     var firstimage2 : String?
+                    var contentid : Int
+                    var contenttypeid: Int
+                    var createdtime: Int
+                    var overview : String?
+                    var modifiedtime : Int
                 }
             }
         }
@@ -42,7 +47,7 @@ struct PublicAPIResponse : Codable {
 let sharedModelPublicAPI = PublicAPIModel()
 
 class PublicAPIModel {
-
+    
     func itemsForIndex(index:Int) -> [PublicAPIResponse.HeaderWithBody.Body.Item.ItemInside] {
         var rValue:[PublicAPIResponse.HeaderWithBody.Body.Item.ItemInside] = []
         
@@ -64,7 +69,7 @@ class PublicAPIModel {
         }
         return rValue
     }
-
+    
     
     var resultCourse:           [PublicAPIResponse.HeaderWithBody.Body.Item.ItemInside] = []
     var resultTripDestination:  [PublicAPIResponse.HeaderWithBody.Body.Item.ItemInside] = []
@@ -128,5 +133,19 @@ class PublicAPIModel {
             print (value)
             
         }
+    }
+}
+
+let sharedModelPublicAPIDetail = PublicAPIDetail()
+
+class PublicAPIDetail {
+    func requestForDetail(contentId: Int) -> [PublicAPIResponse.HeaderWithBody.Body.Item.ItemInside] {
+        let authKey = "6N%2BwieYkPpXpi3hWL3wiKB9GHHU6tgsyFlxD0tSO4nyTbq3pVw3lCaZcvNp89oD7BnfJXP333QWeY4lOz5XDVA%3D%3D"
+        let url = URL(string: "http://api.visitkorea.or.kr/openapi/service/rest/KorService/detailCommon?MobileOS=IOS&MobileApp=Ayo_bro&ServiceKey=\(authKey)&contentId=\(contentId)&defaultYN=Y&firstImageYN=Y&_type=json&overviewYN=Y&addrinfoYN=Y")!
+        let result = try! String(contentsOf: url)
+        let decoder = JSONDecoder()
+        let value = try! decoder.decode(PublicAPIResponse.self, from: result.data(using: .utf8)!)
+        
+        return value.response.body.items.item
     }
 }
