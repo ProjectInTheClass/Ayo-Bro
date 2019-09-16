@@ -23,6 +23,7 @@ class SelectedTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return regionRegion.RegionInformation.count
     }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyTableCell", for: indexPath)
         cell.textLabel?.text = regionRegion.RegionInformation[indexPath.row].region
@@ -32,18 +33,19 @@ class SelectedTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.selectedIndex = indexPath.row
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        let cell = sender as! UITableViewCell
-        let indexPath = tableView.indexPath(for: cell)!
-        let vc = segue.destination as! SelectedDetailTableViewController
-        
-        //        vc.SelectedArray = Array[indexPath.row]
-        vc.Region = regionRegion.RegionInformation[indexPath.row].region
-        
-        //        segue.source               identifier 을 통해서 설정가능
-        //        segue.destination
-        //        segue.identifier
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        
+//        let cell = sender as! UITableViewCell
+//        let indexPath = tableView.indexPath(for: cell)!
+//        let vc = segue.destination as! DetailCourseTableViewController
+//        
+//        //        vc.SelectedArray = Array[indexPath.row]
+//        
+////        vc.Region = regionRegion.RegionInformation[indexPath.row].region
+//        
+//        //        segue.source               identifier 을 통해서 설정가능
+//        //        segue.destination
+//        //        segue.identifier
+//    }
     
 }

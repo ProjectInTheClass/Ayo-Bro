@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		01A1DF82232AB20F002EE2F8 /* schemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A1DF81232AB20F002EE2F8 /* schemeViewController.swift */; };
+		01A1DF88232AB782002EE2F8 /* ODsaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A1DF87232AB782002EE2F8 /* ODsaySDK.framework */; };
+		01A1DF8B232B6995002EE2F8 /* DetailCourseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A1DF8A232B6995002EE2F8 /* DetailCourseTableViewController.swift */; };
+		01A1DF8D232B7302002EE2F8 /* DetailCourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A1DF8C232B7302002EE2F8 /* DetailCourseTableViewCell.swift */; };
+		01A1DF93232B9014002EE2F8 /* PageMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A1DF92232B9014002EE2F8 /* PageMainViewController.swift */; };
+		01A1DF95232B904C002EE2F8 /* CoursePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A1DF94232B904C002EE2F8 /* CoursePageViewController.swift */; };
+		01A1DF97232B953D002EE2F8 /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A1DF96232B953D002EE2F8 /* DetailModel.swift */; };
 		1271726022FA713A00B9BA56 /* PublicAPITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1271725F22FA713A00B9BA56 /* PublicAPITableViewController.swift */; };
 		1271726222FA719300B9BA56 /* PublicAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1271726122FA719300B9BA56 /* PublicAPIModel.swift */; };
 		3BA62E6422FCC1C7009A20AC /* NSObject + reuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA62E6322FCC1C7009A20AC /* NSObject + reuseIdentifier.swift */; };
@@ -109,7 +115,13 @@
 
 /* Begin PBXFileReference section */
 		01A1DF81232AB20F002EE2F8 /* schemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = schemeViewController.swift; sourceTree = "<group>"; };
-		120618A022FC7F680028514D /* nearJEJU.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = nearJEJU.gpx; sourceTree = "<group>"; };
+		01A1DF87232AB782002EE2F8 /* ODsaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ODsaySDK.framework; sourceTree = "<group>"; };
+		01A1DF89232AB866002EE2F8 /* ODsaySDKHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ODsaySDKHeader.h; sourceTree = "<group>"; };
+		01A1DF8A232B6995002EE2F8 /* DetailCourseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCourseTableViewController.swift; sourceTree = "<group>"; };
+		01A1DF8C232B7302002EE2F8 /* DetailCourseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCourseTableViewCell.swift; sourceTree = "<group>"; };
+		01A1DF92232B9014002EE2F8 /* PageMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageMainViewController.swift; sourceTree = "<group>"; };
+		01A1DF94232B904C002EE2F8 /* CoursePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursePageViewController.swift; sourceTree = "<group>"; };
+		01A1DF96232B953D002EE2F8 /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
 		1271725F22FA713A00B9BA56 /* PublicAPITableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicAPITableViewController.swift; sourceTree = "<group>"; };
 		1271726122FA719300B9BA56 /* PublicAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicAPIModel.swift; sourceTree = "<group>"; };
 		3BA62E6322FCC1C7009A20AC /* NSObject + reuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject + reuseIdentifier.swift"; sourceTree = "<group>"; };
@@ -211,6 +223,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01A1DF88232AB782002EE2F8 /* ODsaySDK.framework in Frameworks */,
 				E4F3C98622F414AC006EECEB /* libsqlite3.tbd in Frameworks */,
 				E4F3C98422F414A5006EECEB /* libxml2.tbd in Frameworks */,
 				E4F3C98222F4149E006EECEB /* libc++.tbd in Frameworks */,
@@ -269,7 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				01A1DF81232AB20F002EE2F8 /* schemeViewController.swift */,
-				120618A022FC7F680028514D /* nearJEJU.gpx */,
+				01A1DF89232AB866002EE2F8 /* ODsaySDKHeader.h */,
 				1271725E22FA711F00B9BA56 /* PublicAPI */,
 				D45A5E4222E59F2600D75C7F /* Ayo~Bro */,
 				D45A5E4122E59F2600D75C7F /* Products */,
@@ -365,6 +378,11 @@
 				D4AE9AD722F971E200600DEA /* SelectedDetailTableViewController.swift */,
 				D4AE9AD622F971E200600DEA /* SelectedModel.swift */,
 				D4AE9AD522F971E100600DEA /* SelectedTableViewController.swift */,
+				01A1DF94232B904C002EE2F8 /* CoursePageViewController.swift */,
+				01A1DF8C232B7302002EE2F8 /* DetailCourseTableViewCell.swift */,
+				01A1DF8A232B6995002EE2F8 /* DetailCourseTableViewController.swift */,
+				01A1DF92232B9014002EE2F8 /* PageMainViewController.swift */,
+				01A1DF96232B953D002EE2F8 /* DetailModel.swift */,
 			);
 			path = MyCourse;
 			sourceTree = "<group>";
@@ -470,6 +488,7 @@
 		E4F3C97822F4147B006EECEB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				01A1DF87232AB782002EE2F8 /* ODsaySDK.framework */,
 				E4F3C98522F414AC006EECEB /* libsqlite3.tbd */,
 				E4F3C98322F414A5006EECEB /* libxml2.tbd */,
 				E4F3C98122F4149E006EECEB /* libc++.tbd */,
@@ -597,13 +616,16 @@
 				D4AE9AD222F9711E00600DEA /* LocalTableViewController.swift in Sources */,
 				D4AE9AD422F9711E00600DEA /* FindTableViewController.swift in Sources */,
 				D45A5E4422E59F2600D75C7F /* AppDelegate.swift in Sources */,
+				01A1DF93232B9014002EE2F8 /* PageMainViewController.swift in Sources */,
 				D4AE9AD322F9711E00600DEA /* SearchModel.swift in Sources */,
+				01A1DF8B232B6995002EE2F8 /* DetailCourseTableViewController.swift in Sources */,
 				D4AE9AF022F974F800600DEA /* CustomPageViewController.swift in Sources */,
 				D4D714D122F02089006552B0 /* RegionInfoTableViewController.swift in Sources */,
 				3BDDC0A82320B50F0078876D /* DetailInfoTableViewCell.swift in Sources */,
 				D4AE9AE822F9734600600DEA /* PageCell.swift in Sources */,
 				D4AE9AE722F9734600600DEA /* CustomCell.swift in Sources */,
 				E4F3C92F22F40EE6006EECEB /* CommonModel.swift in Sources */,
+				01A1DF95232B904C002EE2F8 /* CoursePageViewController.swift in Sources */,
 				1271726022FA713A00B9BA56 /* PublicAPITableViewController.swift in Sources */,
 				D49E7FA322F41E8300442B30 /* SearchMainVC.swift in Sources */,
 				1271726222FA719300B9BA56 /* PublicAPIModel.swift in Sources */,
@@ -616,8 +638,10 @@
 				3BA62E8322FCCCFC009A20AC /* MyPlaceCell.swift in Sources */,
 				D4AE9AD822F971E200600DEA /* SelectedTableViewController.swift in Sources */,
 				D4D714D322F02BA2006552B0 /* RighImageTableViewCell.swift in Sources */,
+				01A1DF97232B953D002EE2F8 /* DetailModel.swift in Sources */,
 				E477312A22EAD95E0072C057 /* NoticeInfoTableViewController.swift in Sources */,
 				01A1DF82232AB20F002EE2F8 /* schemeViewController.swift in Sources */,
+				01A1DF8D232B7302002EE2F8 /* DetailCourseTableViewCell.swift in Sources */,
 				D4D714CF22F01B1B006552B0 /* DetailRegionInfoViewController.swift in Sources */,
 				D47AD35D22FBF2FD00C704EE /* BigAreaTableViewController.swift.swift in Sources */,
 				D4D714CD22F01ADF006552B0 /* RegionInfoCollectionViewController.swift in Sources */,
@@ -787,9 +811,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/lib/DaumMap.embeddedframework/Resources",
 				);
+				OTHER_LIBTOOLFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = ayo.bro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = ODsaySDKHeader.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -815,9 +840,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/lib/DaumMap.embeddedframework/Resources",
 				);
+				OTHER_LIBTOOLFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = ayo.bro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = ODsaySDKHeader.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
