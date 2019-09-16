@@ -27,8 +27,8 @@ class PageMainViewController: UIViewController {
         guard let pageViewController = storyboard?.instantiateViewController(withIdentifier: String(describing: CoursePageViewController.self)) as? CoursePageViewController else{
             return
         }
-        pageViewController.delegate = self as? UIPageViewControllerDelegate
-        pageViewController.dataSource = self as? UIPageViewControllerDataSource
+        pageViewController.delegate = self
+        pageViewController.dataSource = self
         
         addChild(pageViewController)
         pageViewController.didMove(toParent: self)
@@ -59,9 +59,8 @@ class PageMainViewController: UIViewController {
     }
     func detailViewControllerAt(index: Int)->DetailCourseTableViewController?{
         
-        
-        //dataSource.count==코스만드는 장소의 개수
-        if index >= days || days == 0{
+        //dataSource.count==며칠인지/??
+        if index >= dataSource.count || dataSource.count == 0{
             return nil
         }
         
@@ -70,7 +69,7 @@ class PageMainViewController: UIViewController {
         }
         
         
-        //여기에 테이블뷰에 내용을 넣는 그런부분인가??
+        self.dayLabel.text = dataSource[index]
         
         return dataViewController
     }
@@ -89,19 +88,19 @@ extension PageMainViewController: UIPageViewControllerDelegate, UIPageViewContro
         return currentViewControllerIndex
     }
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return days//며칠인지 여기에 넣어준다
+        return dataSource.count//며칠인지 여기에 넣어준다
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         let dataViewController = viewController as? DetailCourseTableViewController
         
-        guard var currentIndex = dataViewController?.index else{
+        guard var currentIndex = dataViewController?.view.tag else{
             return nil
         }
         
         currentViewControllerIndex = currentIndex
         
-        if currentIndex == 0 {
+        if (currentIndex-1) < 0 {
             return nil
         }
         
@@ -113,11 +112,11 @@ extension PageMainViewController: UIPageViewControllerDelegate, UIPageViewContro
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         let dataViewController = viewController as? DetailCourseTableViewController
         
-        guard var currentIndex = dataViewController?.index else{
+        guard var currentIndex = dataViewController?.view.tag else{
             return nil
         }
         
-        if currentIndex == place.count //며칠인지 넣어준다
+        if (currentIndex+1) == dataSource.count //며칠인지 넣어준다
         {
             return nil
         }

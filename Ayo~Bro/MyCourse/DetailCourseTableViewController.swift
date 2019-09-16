@@ -44,7 +44,7 @@ class DetailCourseTableViewController: UITableViewController {
         }
         else if(indexPath.row == 4){
             cell.CourseDiagraming.image=UIImage(named: "CourseEnd")
-        }// 코스만들때 장소갯수를 넣어주기.
+        }// 코스만들때 장소갯수를 넣어주기.-1
         else{
             cell.CourseDiagraming.image=UIImage(named: "CourseMiddle")
         }

@@ -38,7 +38,6 @@
 		D49D026F22FBED390043C22B /* HomeRegionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D026E22FBED390043C22B /* HomeRegionTableViewController.swift */; };
 		D49E7FA322F41E8300442B30 /* SearchMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49E7FA222F41E8300442B30 /* SearchMainVC.swift */; };
 		D4AE9AD822F971E200600DEA /* SelectedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AE9AD522F971E100600DEA /* SelectedTableViewController.swift */; };
-		D4AE9AD922F971E200600DEA /* SelectedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AE9AD622F971E200600DEA /* SelectedModel.swift */; };
 		D4AE9ADA22F971E200600DEA /* SelectedDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AE9AD722F971E200600DEA /* SelectedDetailTableViewController.swift */; };
 		D4AE9AE222F9729400600DEA /* SearchCustomMenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AE9AE122F9729400600DEA /* SearchCustomMenuBar.swift */; };
 		D4AE9AE722F9734600600DEA /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AE9AE322F9734600600DEA /* CustomCell.swift */; };
@@ -137,7 +136,6 @@
 		D49D026E22FBED390043C22B /* HomeRegionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRegionTableViewController.swift; sourceTree = "<group>"; };
 		D49E7FA222F41E8300442B30 /* SearchMainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchMainVC.swift; sourceTree = "<group>"; };
 		D4AE9AD522F971E100600DEA /* SelectedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectedTableViewController.swift; path = "Ayo~Bro/MyCourse/SelectedTableViewController.swift"; sourceTree = SOURCE_ROOT; };
-		D4AE9AD622F971E200600DEA /* SelectedModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectedModel.swift; path = "Ayo~Bro/MyCourse/SelectedModel.swift"; sourceTree = SOURCE_ROOT; };
 		D4AE9AD722F971E200600DEA /* SelectedDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectedDetailTableViewController.swift; path = "Ayo~Bro/MyCourse/SelectedDetailTableViewController.swift"; sourceTree = SOURCE_ROOT; };
 		D4AE9AE122F9729400600DEA /* SearchCustomMenuBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchCustomMenuBar.swift; path = "Ayo~Bro/Home/SearchCustomMenuBar.swift"; sourceTree = SOURCE_ROOT; };
 		D4AE9AE322F9734600600DEA /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomCell.swift; path = "Ayo~Bro/Home/SearchCustomTabBar/Cells/CustomCell.swift"; sourceTree = SOURCE_ROOT; };
@@ -337,7 +335,6 @@
 			isa = PBXGroup;
 			children = (
 				D4AE9AD722F971E200600DEA /* SelectedDetailTableViewController.swift */,
-				D4AE9AD622F971E200600DEA /* SelectedModel.swift */,
 				D4AE9AD522F971E100600DEA /* SelectedTableViewController.swift */,
 				01A1DF94232B904C002EE2F8 /* CoursePageViewController.swift */,
 				01A1DF8C232B7302002EE2F8 /* DetailCourseTableViewCell.swift */,
@@ -567,7 +564,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4AE9AD922F971E200600DEA /* SelectedModel.swift in Sources */,
 				D4AE9AE222F9729400600DEA /* SearchCustomMenuBar.swift in Sources */,
 				E477313222EAF8530072C057 /* NoticeInfoTableViewCell.swift in Sources */,
 				D4013AA322F2CCC400F7A819 /* NSObject + reusableIdentifier.swift in Sources */,
