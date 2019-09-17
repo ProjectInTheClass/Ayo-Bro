@@ -67,7 +67,7 @@ struct PublicAPIResponseDetail : Codable {
                 struct ItemInside : Codable {
                     var title : String
                     var addr1 : String?
-                    var firstimage2 : String?
+                    var firstimage : String?
                     var contentid : Int
                     var contenttypeid: Int
                     var createdtime: Int

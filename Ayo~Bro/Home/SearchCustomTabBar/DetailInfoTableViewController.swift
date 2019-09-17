@@ -30,14 +30,15 @@ class DetailInfoTableViewController: UITableViewController {
         let detailData = detailInfo[0]
         super.viewDidLoad()
         titleLabel.text = detailData.title
-        explainLabel.text = detailData.overview
+        let explain = detailData.overview?.components(separatedBy: ["<","b","r","\\","n",">"]).joined() /// 문자열 쪼개고 합치기
+        explainLabel.text = explain
         if(detailData.contenttypeid != 25){
             justAdressLabel.text = "주소 : "
             addressLabel.text = detailData.addr1
         }
         let queueSub = OperationQueue()
         
-        if let stringURL = detailData.firstimage2 {
+        if let stringURL = detailData.firstimage {
             let url = URL(string: stringURL)!
             queueSub.addOperation {
                 let image = try! Data(contentsOf: url)
