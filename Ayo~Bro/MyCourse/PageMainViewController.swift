@@ -68,7 +68,7 @@ class PageMainViewController: UIViewController {
             return nil
         }
         
-        
+        dataViewController.index = index
         self.dayLabel.text = dataSource[index]
         
         return dataViewController
@@ -94,13 +94,13 @@ extension PageMainViewController: UIPageViewControllerDelegate, UIPageViewContro
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         let dataViewController = viewController as? DetailCourseTableViewController
         
-        guard var currentIndex = dataViewController?.view.tag else{
+        guard var currentIndex = dataViewController?.index else{
             return nil
         }
         
-        currentViewControllerIndex = currentIndex
+        dataViewController?.index = currentIndex
         
-        if (currentIndex-1) < 0 {
+        if currentIndex == 0 {
             return nil
         }
         
@@ -112,18 +112,20 @@ extension PageMainViewController: UIPageViewControllerDelegate, UIPageViewContro
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         let dataViewController = viewController as? DetailCourseTableViewController
         
-        guard var currentIndex = dataViewController?.view.tag else{
+        guard var currentIndex = dataViewController?.index else{
             return nil
         }
         
-        if (currentIndex+1) == dataSource.count //며칠인지 넣어준다
+        
+        dataViewController?.index = currentIndex
+        if currentIndex == dataSource.count //며칠인지 넣어준다
         {
             return nil
         }
         
         currentIndex += 1
         print("\(currentIndex)")
-        currentViewControllerIndex = currentIndex
+        
         
         return detailViewControllerAt(index: currentIndex)
         
