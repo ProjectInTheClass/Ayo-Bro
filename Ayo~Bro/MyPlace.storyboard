@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y15-R0-Ugl">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Le7-Rz-Npt">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NanumSquareRoundOTFB.otf">
+            <string>NanumSquareRoundOTFB</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--찜한장소-->
         <scene sceneID="vh2-b8-RCh">
@@ -23,7 +26,6 @@
                             <outlet property="delegate" destination="anf-Hu-bOr" id="jE9-pD-FPB"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="내장소" image="star (2)" id="xDD-jX-bvE"/>
                     <navigationItem key="navigationItem" title="찜한장소" id="2s3-yE-8du"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
@@ -41,7 +43,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="reusableidentifier" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="qZV-dt-6vF" customClass="HiddenTableViewCell" customModule="Ayo_Bro" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qZV-dt-6vF" id="sYm-Dw-lhL">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -77,8 +79,94 @@
             </objects>
             <point key="canvasLocation" x="-1942.0289855072465" y="515.625"/>
         </scene>
+        <!--즐겨찾기-->
+        <scene sceneID="akh-Is-3me">
+            <objects>
+                <tableViewController id="kKw-hZ-FOH" customClass="LoadPlaceTableViewController" customModule="Ayo_Bro" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="82" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Uw1-0H-t2L">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="82" id="tBW-Gz-onA" customClass="LoadPlaceTableViewCell" customModule="Ayo_Bro" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="82"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tBW-Gz-onA" id="L81-Wp-P91">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="82"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7ot-FL-JRw">
+                                            <rect key="frame" x="8.5" y="0.0" width="397" height="82"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y9I-4U-7f2">
+                                                    <rect key="frame" x="0.0" y="0.0" width="106.5" height="82"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="y9I-4U-7f2" secondAttribute="height" multiplier="92:71" id="4WY-Dp-AtM"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnl-mT-ncr">
+                                                    <rect key="frame" x="114.5" y="30" width="282.5" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="cnl-mT-ncr" secondAttribute="height" multiplier="274:21" id="5KU-pe-Jz9"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="NanumSquareRoundOTFB" family="NanumSquareRoundOTF" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="cnl-mT-ncr" secondAttribute="trailing" id="h0S-NG-WEI"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="7ot-FL-JRw" firstAttribute="top" secondItem="L81-Wp-P91" secondAttribute="top" id="61I-1T-7Fb"/>
+                                        <constraint firstAttribute="trailing" secondItem="7ot-FL-JRw" secondAttribute="trailing" constant="8.5" id="GcE-1C-l3u"/>
+                                        <constraint firstAttribute="bottom" secondItem="7ot-FL-JRw" secondAttribute="bottom" id="Lra-Kc-ejh"/>
+                                        <constraint firstItem="7ot-FL-JRw" firstAttribute="leading" secondItem="L81-Wp-P91" secondAttribute="leading" constant="8.5" id="Tzc-oL-mlf"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="bookmarkImage" destination="y9I-4U-7f2" id="w9C-Dx-Maj"/>
+                                    <outlet property="bookmarkLabel" destination="cnl-mT-ncr" id="Aoy-0h-5sR"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="kKw-hZ-FOH" id="mM6-dx-vCJ"/>
+                            <outlet property="delegate" destination="kKw-hZ-FOH" id="dJL-9q-YQg"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="즐겨찾기" image="Bookmark" id="QQg-FT-O4d"/>
+                    <navigationItem key="navigationItem" id="MwT-K8-jJ0"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QkD-6v-98w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1033.3333333333335" y="1210.0446428571429"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="GBd-eX-cf0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Le7-Rz-Npt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="fUv-y8-nnw"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9ap-e8-xyf">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.3228755593" green="0.65494698289999997" blue="0.96474248169999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kKw-hZ-FOH" kind="relationship" relationship="rootViewController" id="rRj-f4-uVT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="47T-dy-IaO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1942" y="1211"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="star (2)" width="32" height="32"/>
+        <image name="Bookmark" width="25" height="25"/>
     </resources>
 </document>

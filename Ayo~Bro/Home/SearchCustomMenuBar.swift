@@ -37,7 +37,7 @@ class SearchCustomMenuBar: UIView {
     var indicatorView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .black
+        view.backgroundColor = UIColor(red:68.0/255,green:154.0/255, blue: 248.0/255, alpha:1.0)
         return view
     }()
     //MARK: Properties
@@ -64,7 +64,7 @@ class SearchCustomMenuBar: UIView {
         customTabBarCollectionView.heightAnchor.constraint(equalToConstant: 55).isActive = true
         
         self.addSubview(indicatorView)
-        indicatorViewWidthConstraint = indicatorView.widthAnchor.constraint(equalToConstant: self.frame.width / 6)
+        indicatorViewWidthConstraint = indicatorView.widthAnchor.constraint(equalToConstant: self.frame.width / 5)
         indicatorViewWidthConstraint.isActive = true
         indicatorView.heightAnchor.constraint(equalToConstant: 5).isActive = true
         indicatorViewLeadingConstraint = indicatorView.leadingAnchor.constraint(equalTo: self.leadingAnchor)
@@ -74,23 +74,25 @@ class SearchCustomMenuBar: UIView {
     
 }
 
+
 //MARK:- UICollectionViewDelegate, DataSource
 extension SearchCustomMenuBar: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCell.reusableIdentifier, for: indexPath) as! CustomCell
-        let labelText:[String]=["코스","관광지","음식","카페","숙박","문화"]
+        let labelText:[String]=["관광지","음식","숙박","문화","레포츠"]
         
         cell.label.text = labelText[indexPath.row]
+        cell.label.font = UIFont(name: "NanumSquareRoundOTFB", size: 18)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.frame.width / 6 , height: 55)
+        return CGSize(width: self.frame.width / 5 , height: 50)
         
     }
     

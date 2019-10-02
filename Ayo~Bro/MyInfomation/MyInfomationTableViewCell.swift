@@ -7,12 +7,9 @@
 //
 
 import Foundation
+let infoViewCell = MyInfomationViewCell() 
 
 class MyInfomationViewCell : UITableViewCell {
-    
-    @IBOutlet weak var userImage: UIImageView!
-    @IBOutlet weak var changeImageButton: UIButton!
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()

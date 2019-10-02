@@ -15,7 +15,7 @@ class CustomCell: UICollectionViewCell {
         let label = UILabel()
         label.text = "Tab"
         label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        label.font = UIFont(name: "NanumSquareRoundOTFB", size: 20)
         label.textColor = .lightGray
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -23,8 +23,8 @@ class CustomCell: UICollectionViewCell {
     
     override var isSelected: Bool {
         didSet{
-            //let Modelapi = PublicAPIModel()
-            //Modelapi.requestToServer()
+//            let Modelapi = PublicAPIModel()
+//            Modelapi.requestToServer()
             print("Changed")
             self.label.textColor = isSelected ? .black : .lightGray
             

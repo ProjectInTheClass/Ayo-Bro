@@ -10,10 +10,17 @@ import UIKit
 var indexRow:Int = 0
 class SearchMainVC: UIViewController, SearchCustomMenuBarDelegate{
     
+    var RRArray = ["서울","인천","대전","대구","광주","부산","울산", "강원도", "경기도", "경상남도", "경상북도", "전라남도", "전라북도", "충청남도", "충청북도", "제주도"]
     @IBOutlet var regionButton: UIButton!
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        regionButton.titleLabel?.text = "\(RRArray[selectRegionIndex])"
+        regionButton.setTitleColor(UIColor.white, for: .normal)
+        if (selectRegionIndex != 0){
+            regionButton.setTitle("\(BigAreaArray![selectRegionSection].bigArea) " + "\(BigAreaArray![selectRegionSection].middleArea[selectRegionIndex])", for: .normal)
+        }
+        else{
+            regionButton.setTitle("\(BigAreaArray![selectRegionSection].bigArea)", for: .normal)
+        }
         
     }
     //MARK: Outltes
@@ -29,8 +36,8 @@ class SearchMainVC: UIViewController, SearchCustomMenuBarDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
-        title = "홈"
-        navigationController?.hidesBarsOnSwipe = true
+        title = "검색"
+        navigationController?.hidesBarsOnSwipe = false
         setupCustomTabBar()
         setupPageCollectionView()
     }
@@ -39,7 +46,7 @@ class SearchMainVC: UIViewController, SearchCustomMenuBarDelegate{
         self.view.addSubview(customMenuBar)
         customMenuBar.delegate = self
         customMenuBar.translatesAutoresizingMaskIntoConstraints = false
-        customMenuBar.indicatorViewWidthConstraint.constant = self.view.frame.width / 6
+        customMenuBar.indicatorViewWidthConstraint.constant = self.view.frame.width / 5
         customMenuBar.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
         customMenuBar.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
         customMenuBar.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor).isActive = true
@@ -86,19 +93,19 @@ extension SearchMainVC: UICollectionViewDelegate, UICollectionViewDataSource {
         cell.activityTableViewController?.nc = navigationController
         
 //        cell.activityTableViewController?.items = sharedModelPublicAPI.itemsForIndex(index: indexPath.row)
-//
-//
+
+
 //        cell.activityTableView?.reloadData() // 각 카테고리 별 테이블뷰 데이터 업데이트.@@@@@@@@@@ 이 부분을 어떻게 사용..
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return 5
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        customMenuBar.indicatorViewLeadingConstraint.constant = scrollView.contentOffset.x / 6
+        customMenuBar.indicatorViewLeadingConstraint.constant = scrollView.contentOffset.x / 5
     }
     
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {

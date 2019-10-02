@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>test</string>
-	<key>NSCameraUsageDescription</key>
-	<string>test</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -23,7 +19,7 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>KAKAO_APP_KEY</key>
-	<string>0b1d2b1b46b01197500e3a24f19509c3</string>
+	<string>e194da61a4f12ca85e080f4253ccde09</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>kakaomap</string>
@@ -35,8 +31,19 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>test</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>위치정보가 필요합니다</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>test</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>NanumBarunpenRegular_ttf</string>
+		<string>JalnanOTF_otf</string>
+		<string>NanumSquareRoundOTFB_otf</string>
+		<string>NanumSquareRoundOTFR_otf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -48,8 +55,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>

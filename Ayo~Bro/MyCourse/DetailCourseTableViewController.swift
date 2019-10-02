@@ -1,4 +1,3 @@
-
 //
 //  DetailCourseTableViewController.swift
 //  Ayo~Bro
@@ -8,94 +7,253 @@
 //
 
 import UIKit
+import CoreData
+
+struct DddcourseArray {
+    var courseArray : Array<CourseArray>
+    var title : String
+    var regionName : String
+    var currentIndex : Int
+}
+
+struct CourseArray {
+    var detail : Array<DetailCourseArray>
+    var dayInfo : Int
+}
+
+struct DetailCourseArray {
+    var area : Int
+    var sigungu : Int
+    var mapx : Double
+    var mapy : Double
+    var title : String
+    var courseID : Int
+    var dayID : Int
+    var addr1 : String
+
+}
+
+struct TransportationInfoArray{
+    var pathType : Int
+    var totalTime : Int
+    var totalDistance : Int
+    var firstStartStation : String
+    var lastEndStation : String
+}
+
+var ddcourseArray : Array<DddcourseArray> = []
+var transportationArray : Array<TransportationInfoArray> = []
 
 class DetailCourseTableViewController: UITableViewController {
+    //    var pathType : Int = 0
+    //    var totalTime : Int = 0
+    //    var totalDistance : Int = 0
+    //    var firstStartStation : String = ""
+    //    var lastEndStation : String = ""
+    var index: Int = 0
 
-    var index: Int=0
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
     }
-
-    // MARK: - Table view data source
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 5 //코스만드는 장소의 갯수를 리턴하는 것으로 수정
+        print("selectedCourseIndex = " + "\(selectedCourseIndex)")
+        print("currentViewControllerIndex = " + "\(currentViewControllerIndex)")
+        if ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail.count == 0 {
+            return 1
+        }
+        return ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail.count
     }
-
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! DetailCourseTableViewCell
-
+        //        let temp : [String:Any] = [:]
+        //        var result:[String:Any] = [:]
+        
+        
+        if ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail.count == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier") as! DetailCourseTableViewCell
+            cell.textLabel?.font = UIFont(name: "NanumSquareRoundOTFB", size: 14)
+            cell.textLabel?.text = "저장된 값이 없습니다."
+            cell.PlaceName.text = ""
+            cell.address.text = ""
+            cell.CourseDiagraming.image = UIImage(named: "noononnonono")
+//            cell.TotalTime.text = ""
+//            cell.TotalWalkingTime.text = ""
+//            cell.CourseDiagraming.image = UIImage(named: "default")
+//            cell.startStation.text = ""
+//            cell.endStation.text = ""
+//            cell.pathType.image = UIImage(named: "default")
+            return cell
+        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier") as! DetailCourseTableViewCell
+        cell.selectionStyle = .none
         if(indexPath.row == 0){
-            cell.CourseDiagraming.image=UIImage(named:"CourseStart")
+            cell.CourseDiagraming.image=UIImage(named:"1course")
+            cell.PlaceName.text = ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail[indexPath.row].title
+            
+            cell.address.text = ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail[indexPath.row].addr1
+            
         }
-        else if(indexPath.row == 4){
-            cell.CourseDiagraming.image=UIImage(named: "CourseEnd")
+        else if(indexPath.row == (ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail.count - 1)){
+            cell.CourseDiagraming.image=UIImage(named: "3course")
+            cell.PlaceName.text = ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail[indexPath.row].title
+            
+            cell.address.text = ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail[indexPath.row].addr1
+            
         }// 코스만들때 장소갯수를 넣어주기.-1
-        else{
-            cell.CourseDiagraming.image=UIImage(named: "CourseMiddle")
+        else if indexPath.row > (ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail.count - 1) {
+            return cell
         }
-
+        else {
+            cell.CourseDiagraming.image=UIImage(named: "2course")
+            cell.PlaceName.text = ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail[indexPath.row].title
+            
+            cell.address.text = ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail[indexPath.row].addr1
+        }
+        cell.textLabel?.text = ""
+        
+//        cell.address.text = ddcourse
+        
+        
+        //                cell.TotalTime.text = "\(totalTime)분"
+        //                cell.TotalWalkingTime.text = "\(totalWalk)m"
+        //                cell.startStation.text = "출발역 : \(firstStartStation)"
+        //                cell.endStation.text = "도착역 : \(lastEndStation)"
+//        if indexPath.row != ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail.count - 1 {
+//
+//            let lblApiKey : String = "4lxxDK1H2+9ggPtJcw2arw"              //발급받은 인증 키값 입력
+//            ODsayService.sharedInst().setApiKey(lblApiKey)    //SDK 인증
+//            ODsayService.sharedInst().setTimeout(10000)
+//            ODsayService.sharedInst().requestSearchPubTransPath("\(ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail[indexPath.row].mapy)", sy: "\(ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail[indexPath.row].mapx)", ex: "\(ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail[indexPath.row + 1].mapy)", ey: "\(ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail[indexPath.row + 1].mapx)", opt: 0, searchType: 0, searchPathType: 0) {
+//                (retCode:Int32, resultDic:[AnyHashable : Any]?) in
+//                if retCode == 200 {
+//                    let temp = resultDic as![String:Any]
+//                    if let result = temp["result"] as? [String:Any]{
+//
+//                        let path = result["path"] as! NSArray
+//                        let path0 = path[0] as! [String:Any]
+//                        let info = path0["info"] as! [String:Any]
+//                        self.pathType = path0["pathType"] as! Int
+//                        self.totalTime = info["totalTime"] as! Int
+//                        self.totalDistance = info["totalDistance"] as! Int
+//                        self.firstStartStation = info["firstStartStation"] as! String
+//                        self.lastEndStation = info["lastEndStation"] as! String
+//                        transportationArray.append(TransportationInfoArray(pathType: self.pathType, totalTime: self.totalTime, totalDistance: self.totalDistance, firstStartStation: self.firstStartStation, lastEndStation: self.lastEndStation))
+//                        let tD = self.totalDistance/1000
+//                        cell.TotalTime.text = "\(self.totalTime)분"
+//                        cell.TotalWalkingTime.text = "(\(tD) km"
+//                        cell.startStation.text = "출발역 : \(self.firstStartStation)"
+//                        cell.endStation.text = "도착역 : \(self.lastEndStation)"
+//
+//
+//
+//                        if( self.pathType == 0 ){
+//                            cell.pathType.image = UIImage(named: "subway")
+//                        }else if( self.pathType == 1){
+//                            cell.pathType.image = UIImage(named: "bus")
+//                        }else{
+//                            cell.pathType.image = UIImage(named: "subus")
+//                        }
+//
+//                    }
+//
+//                }
+//            }
+//
+//
+//        }
+//        else {
+//            cell.TotalTime.text = ""
+//            cell.TotalWalkingTime.text = ""
+//            cell.startStation.text = ""
+//            cell.endStation.text = ""
+//        }
+        
         return cell
     }
     
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if(indexPath.row != (ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail.count - 1) && ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail.count != 0)
+        {
+            openApp(name: "kakaomap://route?sp=\(ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail[indexPath.row].mapx),\(ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail[indexPath.row].mapy)&ep=\(ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail[indexPath.row + 1].mapx),\(ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail[indexPath.row + 1].mapy)&by=PUBLICTRANSIT")
+        }
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    func openApp (name:String) {
+        if let appUrl = URL(string: "\(name)://") {
+            if UIApplication.shared.canOpenURL(appUrl) {
+                UIApplication.shared.open(appUrl, options: [:], completionHandler: nil)
+            } else {
+                // app store 이동
+                openURLToAppStore(urlPath: name)
+            }
+        }
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    func openURLToAppStore(urlPath : String){
+        print("url = \(urlPath)")
+        if let url = URL(string: urlPath),
+            UIApplication.shared.canOpenURL(url)
+        {
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+        }
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+    
+    
+    
+//    func fetch() -> [NSManagedObject]? {
+//        guard let context = self.context else {
+//            return nil
+//        }
+//        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "ODSay")
+//        do {
+//            return try context.fetch(fetchRequest)
+//        } catch let error as NSError{
+//            print("error : \(error)")
+//        }
+//        return nil
+//    }
+//    func saveODSay() -> Bool {
+//        guard let context = self.context else{
+//            return false
+//        }
+//        guard let entity = NSEntityDescription.entity(forEntityName: "ODSay", in: context) else{
+//            return false
+//        }
+//        let courseData = NSManagedObject(entity: entity, insertInto: context)
+//        courseData.setValue(firstStartStation, forKey: "firstStartStation")
+//        courseData.setValue(lastEndStation, forKey: "lastEndStation")
+//        courseData.setValue(pathType, forKey: "pathType")
+//        courseData.setValue(totalDistance, forKey: "totalDistance")
+//        courseData.setValue(totalTime,forKey: "totalTime")
+//        courseData.setValue(contentId, forKey: "contentId")
+//        do {
+//            try context.save()
+//            return true
+//        } catch let error as NSError {
+//            print("error : \(error)")
+//        }
+//        return true
+//    }
 }

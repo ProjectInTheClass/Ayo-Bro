@@ -14,6 +14,10 @@ class DetailCourseTableViewCell: UITableViewCell {
     @IBOutlet weak var PlaceName: UILabel!
     @IBOutlet weak var TotalTime: UILabel!
     @IBOutlet weak var TotalWalkingTime: UILabel!
+    @IBOutlet weak var startStation: UILabel!
+    @IBOutlet weak var endStation: UILabel!
+    @IBOutlet weak var address: UILabel!
+    @IBOutlet weak var pathType: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

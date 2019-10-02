@@ -21,7 +21,7 @@ class schemeViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     @IBAction func kakao(_ sender: Any) {
-        openApp(name: "kakaomap://open")
+        openApp(name: "kakaomap://route?sp=37.537229,127.005515&ep=37.4979502,127.0276368&by=PUBLICTRANSIT")
     }
     /*
     // MARK: - Navigation
