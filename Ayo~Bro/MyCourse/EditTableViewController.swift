@@ -45,9 +45,26 @@ class EditTableViewController: UITableViewController {
         
     }
     
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 36
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail.count == 0 {
+            let button = UIButton(type: .system)
+            button.setTitle("저장된 값이 없습니다.", for: .normal)
+            button.setTitleColor(UIColor.black, for: .normal)
+            button.backgroundColor = UIColor.lightGray
+            button.titleLabel?.font = UIFont(name: "NanumSquareRoundOTFB", size: 14)
+            return button
+        }
+        
+        return nil
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail.count == 0 {
-            return 1
+            return 0
         }
         return ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail.count
     }
@@ -180,7 +197,6 @@ class EditTableViewController: UITableViewController {
 //                return
 //            }
             
-            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
             tableView.reloadData()
         }
     }
