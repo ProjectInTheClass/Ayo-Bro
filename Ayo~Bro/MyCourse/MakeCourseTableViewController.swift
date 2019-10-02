@@ -35,14 +35,17 @@ class MakeCourseTableViewController: UITableViewController {
             
             if aaa[i] {
                 ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail.append(DetailCourseArray(area: trueBookmarkArray[testTag].middleArray[i].areacode, sigungu: trueBookmarkArray[testTag].middleArray[i].sigungucode, mapx: trueBookmarkArray[testTag].middleArray[i].mapy, mapy: trueBookmarkArray[testTag].middleArray[i].mapx, title: trueBookmarkArray[testTag].middleArray[i].title, courseID: ddcourseArray[selectedCourseIndex].currentIndex, dayID: ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].dayInfo, addr1: trueBookmarkArray[testTag].middleArray[i].addr1!))
-                Title = ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail[i].title
-                mapx = ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail[i].mapx
-                mapy = ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail[i].mapy
-                area = ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail[i].area
-                sigungu = ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail[i].sigungu
-                courseId = ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail[i].courseID
+                
+                let tempcount = (ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail.count) - 1
+                
+                Title = ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail[tempcount].title
+                mapx = ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail[tempcount].mapx
+                mapy = ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail[tempcount].mapy
+                area = ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail[tempcount].area
+                sigungu = ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail[tempcount].sigungu
+                courseId = ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail[tempcount].courseID
                 dayId = ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].dayInfo
-                addr1 = ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail[i].addr1
+                addr1 = ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail[tempcount].addr1
                 saveCourseDetail()
             }
             i += 1

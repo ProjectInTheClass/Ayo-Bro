@@ -56,6 +56,7 @@ class SelectedTableViewController: UITableViewController {
             button.titleLabel?.font = UIFont(name: "NanumSquareRoundOTFB", size: 14)
             return button
         }
+        
         return nil
     }
     

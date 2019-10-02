@@ -78,12 +78,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
         if CheckInternet.Connection(){
             
             sharedModelPublicAPI.requestToServer()
             
         }
-        
         guard let resultPlace = fetchForPlace() else {
             return true
         }
