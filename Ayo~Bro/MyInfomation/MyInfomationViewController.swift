@@ -12,7 +12,7 @@ import UIKit
 class MyInfomationViewController : UIViewController {
 
     var labelarr1: [String] = ["닉네임", "로그인 계정"]
-    var labelarr2: [String] = ["건의사항","어플리케이션 정보"," 공지사항",]
+    var labelarr2: [String] = ["건의사항","어플리케이션 정보","공지사항",]
 //    lazy var imageView: UIImageView = {
 //        let height : CGFloat = 220
 //        let width : CGFloat = self.view.bounds.width / 2
