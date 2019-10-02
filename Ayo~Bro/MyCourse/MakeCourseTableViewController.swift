@@ -59,8 +59,7 @@ class MakeCourseTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         var i = 0
         while ( i < trueBookmarkArray.count ){
-            print(trueBookmarkArray[i].regionName)
-            print(ddcourseArray[selectedCourseIndex].regionName)
+            
             if ddcourseArray[selectedCourseIndex].regionName == trueBookmarkArray[i].regionName {
                 testTag = i
                 break;
@@ -103,7 +102,7 @@ class MakeCourseTableViewController: UITableViewController {
             cell.textLabel?.text = "저장된 지역이 없습니다."
             return cell
         }
-        //        print(testTag)
+
         cell.accessoryType = .checkmark
         cell.accessoryView?.tintColor = .lightGray
         
@@ -152,7 +151,7 @@ class MakeCourseTableViewController: UITableViewController {
         do {
             return try context.fetch(fetchRequest)
         } catch let error as NSError{
-            print("error : \(error)")
+
         }
         return nil
     }
@@ -176,7 +175,7 @@ class MakeCourseTableViewController: UITableViewController {
             try context.save()
             return true
         } catch let error as NSError {
-            print("error : \(error)")
+
         }
         return true
     }

@@ -72,8 +72,7 @@ class DetailCourseTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("selectedCourseIndex = " + "\(selectedCourseIndex)")
-        print("currentViewControllerIndex = " + "\(currentViewControllerIndex)")
+        
         if ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail.count == 0 {
             return 1
         }
@@ -207,7 +206,6 @@ class DetailCourseTableViewController: UITableViewController {
         }
     }
     func openURLToAppStore(urlPath : String){
-        print("url = \(urlPath)")
         if let url = URL(string: urlPath),
             UIApplication.shared.canOpenURL(url)
         {

@@ -112,7 +112,7 @@ class CourseEditTableViewController: UITableViewController {
         do {
             return try context.fetch(fetchRequest)
         } catch let error as NSError{
-            print("error : \(error)")
+
         }
         return nil
     }
@@ -124,7 +124,7 @@ class CourseEditTableViewController: UITableViewController {
         do {
             return try context.fetch(fetchRequest)
         } catch let error as NSError{
-            print("error : \(error)")
+
         }
         return nil
     }
@@ -137,7 +137,7 @@ class CourseEditTableViewController: UITableViewController {
             try context.save()
             return true
         } catch let error as NSError {
-            print("error : \(error)")
+
         }
         return false
     }

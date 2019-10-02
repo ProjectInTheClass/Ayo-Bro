@@ -25,7 +25,7 @@ class CustomCell: UICollectionViewCell {
         didSet{
 //            let Modelapi = PublicAPIModel()
 //            Modelapi.requestToServer()
-            print("Changed")
+
             self.label.textColor = isSelected ? .black : .lightGray
             
         }

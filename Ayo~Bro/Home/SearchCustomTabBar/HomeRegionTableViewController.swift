@@ -60,7 +60,7 @@ class HomeRegionTableViewController: UITableViewController {
     
     func procUpdateDataWithUI() {
         items = sharedModelPublicAPI.itemsForIndex(index: indexOfMenu)
-        print("\(indexOfMenu) 번째 메뉴 안의 테이블뷰 컨트롤러")
+
         tableView.contentOffset = CGPoint(x:0, y:0 - tableView.contentInset.top)
         tableView.reloadData()
     }
@@ -193,7 +193,6 @@ class HomeRegionTableViewController: UITableViewController {
         }
         else {
             tempBig = -1
-            print ("selectRegionIndex Error")
         }
         Title = items[sender.tag].title
         let contentID = items[sender.tag].contentid
@@ -312,7 +311,7 @@ class HomeRegionTableViewController: UITableViewController {
                     self.tableView.reloadData()
                     if newItems.count < self.itemsPerBatch {
                         self.reachedEndOfItems = true
-                        print("reached end of data. Batch count: \(newItems.count)")
+
                     }
                     
                     self.offset += self.itemsPerBatch
@@ -329,7 +328,7 @@ class HomeRegionTableViewController: UITableViewController {
         do {
             return try context.fetch(fetchRequest)
         } catch let error as NSError{
-            print("error : \(error)")
+
         }
         return nil
     }
@@ -354,7 +353,7 @@ class HomeRegionTableViewController: UITableViewController {
             try context.save()
             return true
         } catch let error as NSError {
-            print("error : \(error)")
+
         }
         return false
     }

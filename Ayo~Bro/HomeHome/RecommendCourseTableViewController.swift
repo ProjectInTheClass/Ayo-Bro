@@ -84,7 +84,7 @@ class RecommendCourseTableViewController: UITableViewController {
         }
     }
     func openURLToAppStore(urlPath : String){
-        print("url = \(urlPath)")
+
         if let url = URL(string: urlPath),
             UIApplication.shared.canOpenURL(url)
         {

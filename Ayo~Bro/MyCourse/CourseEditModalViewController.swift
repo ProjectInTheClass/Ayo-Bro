@@ -141,7 +141,6 @@ class CourseEditModalViewController: UIViewController, UITextFieldDelegate {
         do {
             return try context.fetch(fetchRequest)
         } catch let error as NSError{
-            print("error : \(error)")
         }
         return nil
     }
@@ -154,7 +153,7 @@ class CourseEditModalViewController: UIViewController, UITextFieldDelegate {
         do {
             return try context.fetch(fetchRequest)
         } catch let error as NSError{
-            print("error : \(error)")
+
         }
         return nil
     }
@@ -168,7 +167,7 @@ class CourseEditModalViewController: UIViewController, UITextFieldDelegate {
             try context.save()
             return true
         } catch let error as NSError {
-            print("error : \(error)")
+
         }
         return false
     }

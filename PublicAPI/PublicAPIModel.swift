@@ -298,7 +298,7 @@ class PublicAPIModel {
             rValue = self.resultLeports
             break
         default :
-            print ("Error")
+        
             break
         }
         return rValue
@@ -373,7 +373,7 @@ class PublicAPIModel {
             areaCode = 39 ///제주도
             break 
         default :
-            print ("selectRegionIndex Error")
+            
             break
         }
         
@@ -388,8 +388,7 @@ class PublicAPIModel {
             let decoder = JSONDecoder()
             
             guard let value = try? decoder.decode(PublicAPIResponse.self, from: result.data(using: .utf8)!) else {
-                print("불러오기 실패!!!")
-                print(result)
+                
                 return
             }
             switch typeId {
@@ -411,7 +410,6 @@ class PublicAPIModel {
             default:
                 break
             }
-            print (value)
             
         }
     }
@@ -492,7 +490,7 @@ class PublicAPIModel {
             areaCode = 39 ///제주도
             break
         default :
-            print ("selectRegionIndex Error")
+           
             break
         }
         if (selectRegionIndex == 0 ){

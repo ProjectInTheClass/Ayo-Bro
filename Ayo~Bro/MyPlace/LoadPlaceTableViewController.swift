@@ -163,7 +163,7 @@ class LoadPlaceTableViewController: UITableViewController {
         do {
             return try context.fetch(fetchRequest)
         } catch let error as NSError{
-            print("error : \(error)")
+
         }
         return nil
     }
@@ -172,7 +172,7 @@ class LoadPlaceTableViewController: UITableViewController {
             try context?.save()
             return true
         } catch let error as NSError {
-            print("error : \(error)")
+
         }
         return false
     }

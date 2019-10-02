@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         do {
             return try context.fetch(fetchRequest)
         } catch let error as NSError{
-            print("error : \(error)")
+
         }
         return nil
     }
@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         do {
             return try context.fetch(fetchRequest)
         } catch let error as NSError{
-            print("error : \(error)")
+
         }
         return nil
     }
@@ -57,7 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         do {
             return try context.fetch(fetchRequest)
         } catch let error as NSError{
-            print("error : \(error)")
+ 
         }
         return nil
     }
@@ -99,8 +99,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 i += 1
             }
             if i == trueBookmarkArray.count {
-                print(element.value(forKey: "areaCode") as! Int)
-                print(element.value(forKey: "sigunguCode") as! Int)
+                
                 trueBookmarkArray.append(realBookmarkArray(regionName: "\(BigAreaArray![element.value(forKey: "areaCode") as! Int].bigArea) \(BigAreaArray![element.value(forKey: "areaCode") as! Int].middleArea[element.value(forKey: "sigunguCode") as! Int])", isExpanded: true, middleArray: [locationArray(title: element.value(forKey: "title") as! String, contentid: element.value(forKey: "contentId") as! Int, contenttypeid: element.value(forKey: "contentTypeId") as! Int, image: element.value(forKey: "firstImage2") as? String, mapx: element.value(forKey: "mapx") as! Double, mapy: element.value(forKey: "mapy") as! Double, sigungucode: element.value(forKey: "sigunguCode") as! Int, areacode: element.value(forKey: "areaCode") as! Int, addr1: element.value(forKey: "addr1") as! String)]))
             }
         }

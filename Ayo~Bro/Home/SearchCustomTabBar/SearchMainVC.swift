@@ -116,7 +116,7 @@ extension SearchMainVC: UICollectionViewDelegate, UICollectionViewDataSource {
 //        self.timeToUpdateContentTableView(indexPath: indexPath)
         
         indexRow = indexPath.row
-        print (indexRow)
+
     }
 }
 //MARK:- UICollectionViewDelegateFlowLayout

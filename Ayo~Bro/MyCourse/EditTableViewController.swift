@@ -110,7 +110,7 @@ class EditTableViewController: UITableViewController {
     }
     
     @objc func longPressCalled(_ longPress: UILongPressGestureRecognizer) {
-        print("longPressCalled")
+
         
         let locationInView = longPress.location(in: tableView)
         let indexPath = tableView.indexPathForRow(at: locationInView)
@@ -126,7 +126,7 @@ class EditTableViewController: UITableViewController {
         switch longPress.state {
             
         case UIGestureRecognizerState.began:
-            print("began")
+
             
             guard let indexPath = indexPath else { return }
             guard let cell = tableView.cellForRow(at: indexPath) else { return }
@@ -208,7 +208,7 @@ class EditTableViewController: UITableViewController {
         do {
             return try context.fetch(fetchRequest)
         } catch let error as NSError{
-            print("error : \(error)")
+
         }
         return nil
     }
@@ -234,7 +234,7 @@ class EditTableViewController: UITableViewController {
             try context.save()
             return true
         } catch let error as NSError {
-            print("error : \(error)")
+
         }
         return false
     }
@@ -248,7 +248,7 @@ class EditTableViewController: UITableViewController {
             try context.save()
             return true
         } catch let error as NSError {
-            print("error : \(error)")
+
         }
         return false
     }
