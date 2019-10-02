@@ -40,8 +40,7 @@ class KakaoMapViewController: UIViewController, MTMapViewDelegate, CLLocationMan
         let coorLatitude = detailInfo.mapy
         let coorLongitude = detailInfo.mapx
         
-        
-        print("\(coorLatitude)")
+
         mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: coorLatitude, longitude: coorLongitude))
         mapView?.setMapCenter(mapPoint, zoomLevel: 2, animated: true)
         
@@ -51,8 +50,6 @@ class KakaoMapViewController: UIViewController, MTMapViewDelegate, CLLocationMan
             mapView.baseMapType = .standard
             self.view.addSubview(mapView)
         }
-        //  print("latitude" + String(coor!.latitude) + "/ longitude" + String(coor!.longitude)
-        //latitude: 37.619675, longitude: 127.059803
         
         var items = [MTMapPOIItem]()
         items.append(poiItem(name: "장소", latitude: coorLatitude, longitude: coorLongitude))

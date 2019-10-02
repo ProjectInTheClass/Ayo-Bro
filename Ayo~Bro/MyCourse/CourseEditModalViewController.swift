@@ -38,7 +38,7 @@ class CourseEditModalViewController: UIViewController, UITextFieldDelegate {
         CourseName.text = "\(ddcourseArray[courseEditIndex].title)"
         CourseName.textColor = UIColor.gray
         CourseName.clearsOnBeginEditing = true
-        Day.text = "\(days[ddcourseArray[courseEditIndex].courseArray[coursecurrentIndex].dayInfo - 1])"
+        Day.text = "\(days[ddcourseArray[courseEditIndex].courseArray.count - 1])"
         Day.textColor = UIColor.gray
         CourseName.delegate = self
     }
@@ -49,13 +49,13 @@ class CourseEditModalViewController: UIViewController, UITextFieldDelegate {
         return appDelegate.persistentContainer.viewContext
     }
     let days = ["당일 치기", "1박 2일", "2박 3일", "3박 4일", "4박 5일","5박 6일", "6박 7일", "7박 8일", "8박 9일"]
-    var courseName: String?
+    var courseName: String = "\(ddcourseArray[courseEditIndex].title)"
     var selectedDay : String?
     var siCode : String?
     var gunguCode : String?
     var bigAreaRow : Int?
     var smallAreaRow: Int?
-    var dayRow : Int?
+    var dayRow : Int = ddcourseArray[courseEditIndex].courseArray.count
     //    var siCode : Int?
     //    var gunguCode : Int?
     @IBOutlet var CourseName: UITextField!
@@ -123,8 +123,8 @@ class CourseEditModalViewController: UIViewController, UITextFieldDelegate {
             return
         }
         let element = result[courseEditIndex]
-        element.setValuesForKeys(["selectedDay" : dayRow ?? 0])
-        element.setValuesForKeys(["courseTitle" : CourseName.text ?? "제목 없음"])
+        element.setValuesForKeys(["selectedDay" : dayRow])
+        element.setValuesForKeys(["courseTitle" : CourseName.text])
         element.setValuesForKeys(["currentIndex" : courseEditIndex])
 
         guard save() else{
