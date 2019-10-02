@@ -188,14 +188,14 @@ class EditTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete{
             ddcourseArray[selectedCourseIndex].courseArray[coursecurrentIndex].detail.remove(at: indexPath.row)
-//            guard let result = fetch() else {
-//                return
-//            }
-//            let element = result[indexPath.row]
-//            context?.delete(element)
-//            guard save() else{
-//                return
-//            }
+            guard let result = fetch() else {
+                return
+            }
+            let element = result[indexPath.row]
+            context?.delete(element)
+            guard save() else{
+                return
+            }
             
             tableView.reloadData()
         }
