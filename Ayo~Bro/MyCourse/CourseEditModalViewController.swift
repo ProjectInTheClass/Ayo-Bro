@@ -102,17 +102,19 @@ class CourseEditModalViewController: UIViewController, UITextFieldDelegate {
         }
         else if (dayRow ?? ddcourseArray[courseEditIndex].courseArray.count - 2) + 1 < ddcourseArray[courseEditIndex].courseArray.count {
             i = ddcourseArray[courseEditIndex].courseArray.count - 1
-            while i > (dayRow ?? ddcourseArray[courseEditIndex].courseArray.count - 1) {
-                for element in resultDetail {
-                    if ddcourseArray[courseEditIndex].currentIndex == element.value(forKey: "courseId") as! Int {
-                        if (ddcourseArray[selectedCourseIndex].courseArray[i].dayInfo - 1) == element.value(forKey: "dayId") as! Int {
-                            context?.delete(element)
-                        }
+            
+            for element in resultDetail {
+                if ddcourseArray[courseEditIndex].currentIndex == element.value(forKey: "courseId") as! Int {
+                    if (ddcourseArray[selectedCourseIndex].courseArray[i].dayInfo - 1) == element.value(forKey: "dayId") as! Int {
+                        context?.delete(element)
                     }
                 }
-                guard save() else{
-                    return
-                }
+            }
+            guard save() else{
+                return
+            }
+            while i > (dayRow ?? ddcourseArray[courseEditIndex].courseArray.count - 1) {
+                
                 ddcourseArray[courseEditIndex].courseArray.remove(at: i)
                 i -= 1
             }
