@@ -77,25 +77,59 @@ class CourseEditTableViewController: UITableViewController {
    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete{
-            ddcourseArray.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
-            tableView.reloadData()
-            guard let result = fetch() else {
+            
+            guard let resultDetail = fetchCourseDetailData() else {
                 return
             }
-            let deleteObj = result[indexPath.row]
-            context?.delete(deleteObj)
+            for element in resultDetail{
+                if (ddcourseArray[indexPath.row].courseArray[i].detail[)
+            }
+            if ddcourseArray[indexPath.row].courseArray.count > 0 {
+                for i in 0 ... ddcourseArray[indexPath.row].courseArray.count - 1 {
+                    if ddcourseArray[indexPath.row].courseArray[i].detail[i].courseID != nil {
+                        let deleteDetailCourse = resultDetail[indexPath.row]
+                        context?.delete(deleteDetailCourse)
+                        guard save() else{
+                            return
+                        }
+                        
+                    }
+                }
+            }
+            
+            
+            
+            guard let resultCourse = fetchCourseData() else {
+                return
+            }
+            let deleteCourse = resultCourse[indexPath.row]
+            context?.delete(deleteCourse)
             guard save() else{
                 return
             }
             
+            ddcourseArray.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+            tableView.reloadData()
         }
     }
-    func fetch() -> [NSManagedObject]? {
+    func fetchCourseData() -> [NSManagedObject]? {
         guard let context = self.context else {
             return nil
         }
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "CourseData")
+        do {
+            return try context.fetch(fetchRequest)
+        } catch let error as NSError{
+            print("error : \(error)")
+        }
+        return nil
+    }
+    func fetchCourseDetailData() -> [NSManagedObject]? {
+        guard let context = self.context else {
+            return nil
+        }
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "CourseDetailData")
         do {
             return try context.fetch(fetchRequest)
         } catch let error as NSError{
