@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import SystemConfiguration
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -77,7 +78,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-//        sharedModelPublicAPI.requestToServer()
+
+        if CheckInternet.Connection(){
+            
+            sharedModelPublicAPI.requestToServer()
+            
+        }
         guard let resultPlace = fetchForPlace() else {
             return true
         }
