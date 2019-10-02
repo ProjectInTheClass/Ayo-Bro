@@ -81,23 +81,14 @@ class CourseEditTableViewController: UITableViewController {
             guard let resultDetail = fetchCourseDetailData() else {
                 return
             }
-            for element in resultDetail{
-                if (ddcourseArray[indexPath.row].courseArray[i].detail[)
-            }
-            if ddcourseArray[indexPath.row].courseArray.count > 0 {
-                for i in 0 ... ddcourseArray[indexPath.row].courseArray.count - 1 {
-                    if ddcourseArray[indexPath.row].courseArray[i].detail[i].courseID != nil {
-                        let deleteDetailCourse = resultDetail[indexPath.row]
-                        context?.delete(deleteDetailCourse)
-                        guard save() else{
-                            return
-                        }
-                        
-                    }
+            for element in resultDetail {
+                if ddcourseArray[indexPath.row].currentIndex == element.value(forKey: "courseId") as! Int {
+                    context?.delete(element)
                 }
             }
-            
-            
+            guard save() else{
+                return
+            }
             
             guard let resultCourse = fetchCourseData() else {
                 return

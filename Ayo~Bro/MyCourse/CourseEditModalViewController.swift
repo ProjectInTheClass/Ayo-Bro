@@ -89,7 +89,9 @@ class CourseEditModalViewController: UIViewController, UITextFieldDelegate {
     }
     @IBAction func Dismiss(_ sender: Any) {
         ddcourseArray[courseEditIndex].title = CourseName.text ?? "\(ddcourseArray[courseEditIndex].title)"
-        
+        guard let resultDetail = fetchCourseDetailData() else{
+            return
+        }
         var i = 0
         if (dayRow ?? ddcourseArray[courseEditIndex].courseArray.count - 2) + 1 > ddcourseArray[courseEditIndex].courseArray.count {
             i = ddcourseArray[courseEditIndex].courseArray.count
@@ -101,6 +103,16 @@ class CourseEditModalViewController: UIViewController, UITextFieldDelegate {
         else if (dayRow ?? ddcourseArray[courseEditIndex].courseArray.count - 2) + 1 < ddcourseArray[courseEditIndex].courseArray.count {
             i = ddcourseArray[courseEditIndex].courseArray.count - 1
             while i > (dayRow ?? ddcourseArray[courseEditIndex].courseArray.count - 1) {
+                for element in resultDetail {
+                    if ddcourseArray[courseEditIndex].currentIndex == element.value(forKey: "courseId") as! Int {
+                        if (ddcourseArray[selectedCourseIndex].courseArray[i].dayInfo - 1) == element.value(forKey: "dayId") as! Int {
+                            context?.delete(element)
+                        }
+                    }
+                }
+                guard save() else{
+                    return
+                }
                 ddcourseArray[courseEditIndex].courseArray.remove(at: i)
                 i -= 1
             }
@@ -117,6 +129,19 @@ class CourseEditModalViewController: UIViewController, UITextFieldDelegate {
             return
         }
         dismiss(animated: true, completion: nil)
+    }
+    
+    func fetchCourseDetailData() -> [NSManagedObject]? {
+        guard let context = self.context else {
+            return nil
+        }
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "CourseDetailData")
+        do {
+            return try context.fetch(fetchRequest)
+        } catch let error as NSError{
+            print("error : \(error)")
+        }
+        return nil
     }
     
     func fetch() -> [NSManagedObject]? {
