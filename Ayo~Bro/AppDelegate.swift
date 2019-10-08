@@ -18,12 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         return appDelegate.persistentContainer.viewContext
     }
-    var shouldSupportAllOrientation = true
     var window: UIWindow?
-
-    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
-        return UIInterfaceOrientationMask.portrait
-    }
 
     func fetchForPlace() -> [NSManagedObject]? {
         guard let context = self.context else {
