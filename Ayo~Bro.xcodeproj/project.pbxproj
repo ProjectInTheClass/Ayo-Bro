@@ -23,6 +23,7 @@
 		01A1DF95232B904C002EE2F8 /* CoursePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A1DF94232B904C002EE2F8 /* CoursePageViewController.swift */; };
 		01A1DF97232B953D002EE2F8 /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A1DF96232B953D002EE2F8 /* DetailModel.swift */; };
 		01A1DF9B2335E0E3002EE2F8 /* HomeHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01A1DF9A2335E0E3002EE2F8 /* HomeHome.storyboard */; };
+		01CA66D3234C67D30013324C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01CA66D5234C67D30013324C /* InfoPlist.strings */; };
 		01FCC95F233D1921000BCDB9 /* HHomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FCC95E233D1921000BCDB9 /* HHomeCollectionViewController.swift */; };
 		1271726222FA719300B9BA56 /* PublicAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1271726122FA719300B9BA56 /* PublicAPIModel.swift */; };
 		3B7B7A8F23365B7500E4D99B /* LoadPlaceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7B7A8E23365B7500E4D99B /* LoadPlaceTableViewController.swift */; };
@@ -148,6 +149,9 @@
 		01A1DF94232B904C002EE2F8 /* CoursePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursePageViewController.swift; sourceTree = "<group>"; };
 		01A1DF96232B953D002EE2F8 /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
 		01A1DF9A2335E0E3002EE2F8 /* HomeHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeHome.storyboard; sourceTree = "<group>"; };
+		01CA66CF234C676C0013324C /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
+		01CA66D0234C676C0013324C /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		01CA66D4234C67D30013324C /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		01FCC95E233D1921000BCDB9 /* HHomeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HHomeCollectionViewController.swift; sourceTree = "<group>"; };
 		1271726122FA719300B9BA56 /* PublicAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicAPIModel.swift; sourceTree = "<group>"; };
 		3B7B7A8E23365B7500E4D99B /* LoadPlaceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadPlaceTableViewController.swift; sourceTree = "<group>"; };
@@ -323,6 +327,7 @@
 		D45A5E3722E59F2600D75C7F = {
 			isa = PBXGroup;
 			children = (
+				01CA66D5234C67D30013324C /* InfoPlist.strings */,
 				015DF9F0233B1AB70078F901 /* KakaoMapViewController.swift */,
 				01A1DF81232AB20F002EE2F8 /* schemeViewController.swift */,
 				015DF9EB233A54520078F901 /* bridgingHeader.h */,
@@ -594,6 +599,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = D45A5E3722E59F2600D75C7F;
 			productRefGroup = D45A5E4122E59F2600D75C7F /* Products */;
@@ -644,6 +650,7 @@
 				E4F3C96722F41429006EECEB /* daum_copyright.png in Resources */,
 				D45A5E4B22E59F2700D75C7F /* Assets.xcassets in Resources */,
 				015DF9ED233B13580078F901 /* JalnanOTF.otf in Resources */,
+				01CA66D3234C67D30013324C /* InfoPlist.strings in Resources */,
 				015DF9EF233B17D00078F901 /* NanumBarunpenRegular.ttf in Resources */,
 				D45A5E4922E59F2600D75C7F /* Main.storyboard in Resources */,
 				E4F3C95B22F41429006EECEB /* map_pinup_custom@3x.png in Resources */,
@@ -724,10 +731,19 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		01CA66D5234C67D30013324C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01CA66D4234C67D30013324C /* ko */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		D45A5E4722E59F2600D75C7F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				D45A5E4822E59F2600D75C7F /* Base */,
+				01CA66CF234C676C0013324C /* ko */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -736,6 +752,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				D45A5E4D22E59F2700D75C7F /* Base */,
+				01CA66D0234C676C0013324C /* ko */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -747,6 +764,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -808,6 +826,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -880,8 +899,8 @@
 					"$(PROJECT_DIR)/lib/DaumMap.embeddedframework/Resources",
 				);
 				OTHER_LIBTOOLFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = ayo.bro;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.codershigh.ayo-bro";
+				PRODUCT_NAME = "Ayo~Bro";
 				SWIFT_OBJC_BRIDGING_HEADER = bridgingHeader.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -909,8 +928,8 @@
 					"$(PROJECT_DIR)/lib/DaumMap.embeddedframework/Resources",
 				);
 				OTHER_LIBTOOLFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = ayo.bro;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.codershigh.ayo-bro";
+				PRODUCT_NAME = "Ayo~Bro";
 				SWIFT_OBJC_BRIDGING_HEADER = bridgingHeader.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

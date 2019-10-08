@@ -36,21 +36,6 @@
             </objects>
             <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="PRU-fs-7IQ">
-            <objects>
-                <viewController id="C3u-dd-pB8" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="uoH-dQ-3MU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="U07-vh-XuH"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2Du-Rr-jox" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="989.85507246376824" y="407.8125"/>
-        </scene>
     </scenes>
     <resources>
         <image name="bro" width="1280" height="720"/>
