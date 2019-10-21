@@ -16,6 +16,7 @@
 		015DF9EF233B17D00078F901 /* NanumBarunpenRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 015DF9EE233B17C90078F901 /* NanumBarunpenRegular.ttf */; };
 		015DF9F1233B1AB70078F901 /* KakaoMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015DF9F0233B1AB70078F901 /* KakaoMapViewController.swift */; };
 		01A1DF82232AB20F002EE2F8 /* schemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A1DF81232AB20F002EE2F8 /* schemeViewController.swift */; };
+		01A1DF88232AB782002EE2F8 /* ODsaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A1DF87232AB782002EE2F8 /* ODsaySDK.framework */; };
 		01A1DF8B232B6995002EE2F8 /* DetailCourseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A1DF8A232B6995002EE2F8 /* DetailCourseTableViewController.swift */; };
 		01A1DF8D232B7302002EE2F8 /* DetailCourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A1DF8C232B7302002EE2F8 /* DetailCourseTableViewCell.swift */; };
 		01A1DF93232B9014002EE2F8 /* PageMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A1DF92232B9014002EE2F8 /* PageMainViewController.swift */; };
@@ -23,18 +24,6 @@
 		01A1DF97232B953D002EE2F8 /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A1DF96232B953D002EE2F8 /* DetailModel.swift */; };
 		01A1DF9B2335E0E3002EE2F8 /* HomeHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01A1DF9A2335E0E3002EE2F8 /* HomeHome.storyboard */; };
 		01CA66D3234C67D30013324C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01CA66D5234C67D30013324C /* InfoPlist.strings */; };
-		01CA66D6234CD5470013324C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F3C97D22F4148B006EECEB /* CoreLocation.framework */; };
-		01CA66D7234CD5470013324C /* CoreLocation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E4F3C97D22F4148B006EECEB /* CoreLocation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		01CA66D8234CD5490013324C /* DaumMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F3C95922F41429006EECEB /* DaumMap.framework */; };
-		01CA66D9234CD5490013324C /* DaumMap.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E4F3C95922F41429006EECEB /* DaumMap.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		01CA66DA234CD54C0013324C /* ODsaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A1DF87232AB782002EE2F8 /* ODsaySDK.framework */; };
-		01CA66DB234CD54C0013324C /* ODsaySDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 01A1DF87232AB782002EE2F8 /* ODsaySDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		01CA66DC234CD54E0013324C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F3C97922F4147B006EECEB /* OpenGLES.framework */; };
-		01CA66DD234CD54E0013324C /* OpenGLES.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E4F3C97922F4147B006EECEB /* OpenGLES.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		01CA66DE234CD54F0013324C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F3C97F22F41493006EECEB /* QuartzCore.framework */; };
-		01CA66DF234CD54F0013324C /* QuartzCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E4F3C97F22F41493006EECEB /* QuartzCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		01CA66E0234CD5510013324C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F3C97B22F41482006EECEB /* SystemConfiguration.framework */; };
-		01CA66E1234CD5510013324C /* SystemConfiguration.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E4F3C97B22F41482006EECEB /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		01FCC95F233D1921000BCDB9 /* HHomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FCC95E233D1921000BCDB9 /* HHomeCollectionViewController.swift */; };
 		1271726222FA719300B9BA56 /* PublicAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1271726122FA719300B9BA56 /* PublicAPIModel.swift */; };
 		3B7B7A8F23365B7500E4D99B /* LoadPlaceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7B7A8E23365B7500E4D99B /* LoadPlaceTableViewController.swift */; };
@@ -119,6 +108,11 @@
 		E4F3C97422F41429006EECEB /* map_present_background_update.png in Resources */ = {isa = PBXBuildFile; fileRef = E4F3C95622F41429006EECEB /* map_present_background_update.png */; };
 		E4F3C97522F41429006EECEB /* daum_th_line.png in Resources */ = {isa = PBXBuildFile; fileRef = E4F3C95722F41429006EECEB /* daum_th_line.png */; };
 		E4F3C97622F41429006EECEB /* map_pin_shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = E4F3C95822F41429006EECEB /* map_pin_shadow.png */; };
+		E4F3C97722F41429006EECEB /* DaumMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F3C95922F41429006EECEB /* DaumMap.framework */; };
+		E4F3C97A22F4147B006EECEB /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F3C97922F4147B006EECEB /* OpenGLES.framework */; };
+		E4F3C97C22F41482006EECEB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F3C97B22F41482006EECEB /* SystemConfiguration.framework */; };
+		E4F3C97E22F4148C006EECEB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F3C97D22F4148B006EECEB /* CoreLocation.framework */; };
+		E4F3C98022F41493006EECEB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F3C97F22F41493006EECEB /* QuartzCore.framework */; };
 		E4F3C98222F4149E006EECEB /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F3C98122F4149E006EECEB /* libc++.tbd */; };
 		E4F3C98422F414A5006EECEB /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F3C98322F414A5006EECEB /* libxml2.tbd */; };
 		E4F3C98622F414AC006EECEB /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F3C98522F414AC006EECEB /* libsqlite3.tbd */; };
@@ -131,12 +125,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				01CA66DF234CD54F0013324C /* QuartzCore.framework in Embed Frameworks */,
-				01CA66D9234CD5490013324C /* DaumMap.framework in Embed Frameworks */,
-				01CA66DB234CD54C0013324C /* ODsaySDK.framework in Embed Frameworks */,
-				01CA66D7234CD5470013324C /* CoreLocation.framework in Embed Frameworks */,
-				01CA66E1234CD5510013324C /* SystemConfiguration.framework in Embed Frameworks */,
-				01CA66DD234CD54E0013324C /* OpenGLES.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,15 +261,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01CA66DE234CD54F0013324C /* QuartzCore.framework in Frameworks */,
+				01A1DF88232AB782002EE2F8 /* ODsaySDK.framework in Frameworks */,
 				E4F3C98622F414AC006EECEB /* libsqlite3.tbd in Frameworks */,
 				E4F3C98422F414A5006EECEB /* libxml2.tbd in Frameworks */,
 				E4F3C98222F4149E006EECEB /* libc++.tbd in Frameworks */,
-				01CA66DC234CD54E0013324C /* OpenGLES.framework in Frameworks */,
-				01CA66D8234CD5490013324C /* DaumMap.framework in Frameworks */,
-				01CA66E0234CD5510013324C /* SystemConfiguration.framework in Frameworks */,
-				01CA66D6234CD5470013324C /* CoreLocation.framework in Frameworks */,
-				01CA66DA234CD54C0013324C /* ODsaySDK.framework in Frameworks */,
+				E4F3C98022F41493006EECEB /* QuartzCore.framework in Frameworks */,
+				E4F3C97E22F4148C006EECEB /* CoreLocation.framework in Frameworks */,
+				E4F3C97C22F41482006EECEB /* SystemConfiguration.framework in Frameworks */,
+				E4F3C97A22F4147B006EECEB /* OpenGLES.framework in Frameworks */,
+				E4F3C97722F41429006EECEB /* DaumMap.framework in Frameworks */,
 				E4F3C96622F41429006EECEB /* DaumMap in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
