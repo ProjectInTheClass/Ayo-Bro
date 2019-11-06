@@ -44,8 +44,6 @@
 		<string>NanumSquareRoundOTFB_otf</string>
 		<string>NanumSquareRoundOTFR_otf</string>
 	</array>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
